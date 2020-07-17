@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
     <link rel="shortcut icon" href="src/ts.png" type="image/png" />
     <!-- ! БАГ -->
     <title>TSlash</title>
@@ -18,61 +22,102 @@
         </div>
         <ul class="menu-list">
           <li class="menu-list-item">
-            <a href="#about">Про мене</a>
+            <a href="#about" class="nav-link">Про мене</a>
           </li>
           <li class="menu-list-item">
-            <a href="#projects">Портфоліо</a>
+            <a href="#projects" class="nav-link">Портфоліо</a>
           </li>
           <li class="menu-list-item">
-            <a href="#contacts">Контакти</a>
+            <a href="#contacts" class="nav-link">Контакти</a>
           </li>
           <li class="menu-list-item">
-            <a href="">GitHub</a>
+            <a
+              href="https://github.com/TFlashgamer?tab=overview&from=2020-06-01&to=2020-06-30"
+              class="nav-link"
+              >GitHub</a
+            >
           </li>
-
           <li class="menu-list-item">
-            <a href="">Discord Bot</a>
+            <a href="html/oni.html" class="nav-link">Discord Bot</a>
           </li>
         </ul>
       </nav>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-      <script src="js/index.js"></script>
+      <script src="js/menu.js"></script>
     </header>
 
     <main>
       <section id="about" class="about">
         <h1>Привіт! Я Тарас</h1>
         <p>Я цікавлюсь програмуванням</p>
+        <div class="video-background">
+          <script src="js/jquery.backgroundvideo.min.js"></script>
+          <script src="js/videobackground.js"></script>
+        </div>
       </section>
       <section id="projects" class="projects">
-        <h2>Ось декілька моїх робіт</h2>
+        <h2 class="project-heading">Ось декілька моїх робіт</h2>
         <div class="project-grid">
           <!-- * FrontDev1 -->
-          <a href="">
-            <img src="" alt="" />
-            <p></p>
+          <a class="project" href="">
+            <img class="project-image" src="src/job1.png" alt="Сайт комусь" />
+            <p class="project-title">
+              <span class="code"><</span>
+              Сайт присвячений комусь
+              <span class="code">/></span>
+            </p>
           </a>
           <!-- * FrontDev2 -->
-          <a href="">
-            <img src="" alt="" />
-            <p></p>
+          <a class="project" href="">
+            <img
+              class="project-image"
+              src="src/job2.png"
+              alt="Сайт опитування"
+            />
+            <p class="project-title">
+              <span class="code"><</span>
+              Сайт опитування
+              <span class="code">/></span>
+            </p>
           </a>
           <!-- * FrontDev3 -->
-          <a href="">
-            <img src="" alt="" />
-            <p></p>
+          <a class="project" href="">
+            <img
+              class="project-image"
+              src="src/job3.png"
+              alt="Сайт лендинг для продажу продукту"
+            />
+            <p class="project-title">
+              <span class="code"><</span>
+              Сайт лендинг для продажу продукту
+              <span class="code">/></span>
+            </p>
           </a>
           <!-- * FrontDev4 -->
-          <a href="">
-            <img src="" alt="" />
-            <p></p>
+          <a class="project" href="">
+            <img class="project-image" src="src/job4.png" alt="Сайт довідка" />
+            <p class="project-title">
+              <span class="code"><</span>
+              Сайт довідка
+              <span class="code">/></span>
+            </p>
           </a>
           <!-- * Discord Bot -->
-          <a href="">
-            <img src="" alt="" />
-            <p></p>
+          <a class="project" href="">
+            <img
+              class="project-image"
+              src="src/bot.jpg"
+              alt="Oni діскорд бот"
+            />
+            <p class="project-title">
+              <span class="code"><</span>
+              Oni діскорд бот
+              <span class="code">/></span>
+            </p>
           </a>
         </div>
+        <a class="project-button" href="html/allprojects.html">Показати ще</a>
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
       </section>
       <section id="contacts" class="contacts">
         <div class="contact-text">
