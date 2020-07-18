@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <title>Опитування</title>
+
+</head>
+
+<body>
+
+    <div type="navigations" class="navigations" id="navigations">
+        <script>
+          navigations.onclick = function () {
+            navigations.classList.add("navigations-active");
+          };
+        </script>
+  
+        <script>
+          function goBack() {
+            window.history.back();
+          }
+        </script>
+  
+        <button onclick="goBack()" class="back">
+          Назад
+        </button>
+        <button
+          onclick="location.href='https://github.com/TFlashgamer/FrontDev-practice2';"
+          class="view"
+        >
+          Джерело
+        </button>
+        <i class="fas fa-chevron-right" aria-hidden="true"></i>
+      </div>
+
+    <header>
+        <div class="around"><!-- * Текст поза формою -->
+            <h1>Опитування</h1>
+            <p>Дайте нам знати, як ми можемо покращити наш сервіс</p>
+        </div>
+    </header>
+
+    <form class="survey"><!-- * Робимо форму -->
+
+        <div class="formblock"><!-- * Кожен елемент повинен розміщуватись у блоці -->
+            <label class="name">Ім'я</label>
+            <input class="form-item" type="text" placeholder="Введіть Ваше ім'я"></input>
+        </div>
+        <div class="formblock">
+            <label class="email-label">Email</label>
+            <input class="form-item" type="email" placeholder="Введіть Ваш email"></input>
+        </div>
+        <div class="formblock">
+            <label class="age-label">Вік</label>
+            <input class="form-item" type="number" min="0" max="100" placeholder="Оберіть Ваш вік"></input>
+        </div>
+        <div class="formblock">
+            <label>Ваша роль</p></label>
+            <select class="form-item" name="role" required>
+                <option disabled selected value>Оберіть свою роль</option>
+                <option>Студент</option>
+                <option>Працюю</option>
+                <option>Не хочу відповідати</option>
+                <option>Інше</option>
+            </select>
+        </div>
+        <div class="formblock">
+            <lable class="choise">Чи порекомендуєте наш сервіс друзям?</lable>
+            <div>
+                <label for="contactChoice1">
+                    <input type="radio" class="form-input" name="recom" value="yes">
+                    Так</label>
+                <label for="contactChoice2">
+                    <input type="radio" class="form-input" name="recom" value="maybe">
+                    Можливо</label>
+                <label for="contactChoice3">
+                    <input type="radio" class="form-input" name="recom" value="no">
+                    Ні</label>
+            </div>
+        </div>
+        <div class="formblock">
+            <label>Що Ви ще хочете тут бачити?</label>
+            <label> <input class="form-input" type="checkbox" value="var1">Варіант 1</label>
+            <label> <input class="form-input" type="checkbox" value="var2">Варіант 2</label>
+            <label> <input class="form-input" type="checkbox" value="var3">Варіант 3</label>
+            <label> <input class="form-input" type="checkbox" value="var4">Варіант 4</label>
+            <label> <input class="form-input" type="checkbox" value="var5">Варіант 5</label>
+        </div>
+        <div class="formblock">
+            <p>Ще якісь побажання?</p>
+            <textarea class="comment" placeholder="Якщо є що написати, пишіть сюди."></textarea>
+        </div>
+        <div class="formblock">
+            <button class="submit" type="submit">Відправити ✔</button>
+        </div>
+    </form>
+
+    <footer>
+        <div class="down">
+            <p>Робота закінчена 08.07.2020</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

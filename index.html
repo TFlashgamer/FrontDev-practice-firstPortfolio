@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -41,26 +42,28 @@
           </li>
         </ul>
       </nav>
+
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
       <script src="js/menu.js"></script>
     </header>
 
     <main>
       <section id="about" class="about">
-        <h1>Привіт! Я Тарас</h1>
-        <p>Я цікавлюсь програмуванням</p>
+        <h1 class="about-heading">Привіт! Я Тарас</h1>
+        <p class="about-description">Я цікавлюсь програмуванням</p>
         <div class="video-background">
           <script src="js/jquery.backgroundvideo.min.js"></script>
           <script src="js/videobackground.js"></script>
         </div>
       </section>
+
       <section id="projects" class="projects">
         <div class="container">
           <h2 class="project-heading">Ось декілька моїх робіт</h2>
         </div>
         <div class="project-grid">
           <!-- * FrontDev1 -->
-          <a class="project" href="">
+          <a class="project" href="projects/FrontDev1/index.html">
             <img class="project-image" src="src/job1.png" alt="Сайт комусь" />
             <p class="project-title">
               <span class="code"><</span>
@@ -69,7 +72,7 @@
             </p>
           </a>
           <!-- * FrontDev2 -->
-          <a class="project" href="">
+          <a class="project" href="projects/FrontDev2/index.html">
             <img
               class="project-image"
               src="src/job2.png"
@@ -82,7 +85,7 @@
             </p>
           </a>
           <!-- * FrontDev3 -->
-          <a class="project" href="">
+          <a class="project" href="projects/FrontDev3/index.html">
             <img
               class="project-image"
               src="src/job3.png"
@@ -95,7 +98,7 @@
             </p>
           </a>
           <!-- * FrontDev4 -->
-          <a class="project" href="">
+          <a class="project" href="projects/FrontDev4/index.html">
             <img class="project-image" src="src/job4.png" alt="Сайт довідка" />
             <p class="project-title">
               <span class="code"><</span>
@@ -104,7 +107,7 @@
             </p>
           </a>
           <!-- * Discord Bot -->
-          <a class="project" href="">
+          <a class="project" href="html/oni.html">
             <img
               class="project-image"
               src="src/bot.jpg"
@@ -116,17 +119,29 @@
               <span class="code">/></span>
             </p>
           </a>
+          <!-- * Soon -->
+          <a class="project" href="">
+            <img class="project-image" src="src/soon.jpg" alt="Скоро..." />
+            <p class="project-title">
+              <span class="code"><</span>
+              Найближчим часом тут з'являться нові проекти...
+              <span class="code">/></span>
+            </p>
+          </a>
         </div>
         <a class="project-button" href="html/allprojects.html"
           >Показати ще <i class="fas fa-chevron-right" aria-hidden="true"></i
         ></a>
       </section>
+
       <section id="contacts" class="contacts">
         <div class="contact-text">
-          <h2>
+          <h2 class="contacts-heading">
             Потрібно зв'язатись зі мною?
           </h2>
-          <p>Якщо виникли якісь питання, можете використати посилання нижче</p>
+          <p class="contacts-description">
+            Якщо виникли якісь питання, можете використати посилання нижче
+          </p>
         </div>
         <div class="contact-links">
           <a class="contact-link" href="https://discord.gg/yJ9j87P">
@@ -153,9 +168,9 @@
       </section>
     </main>
 
-    <footer>
-      <p>Робота закінчена 17.07</p>
-      <p>/TSlash</p>
+    <footer class="footer">
+      <p class="footer-text">Робота над сайтом ще не закінчена!</p>
+      <p class="footer-text">🖤/TSlash</p>
     </footer>
   </body>
 </html>

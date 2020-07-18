@@ -1,0 +1,142 @@
+@import url(
+  https://fonts.googleapis.com/css?family=Roboto + Slab|PT + Sans + Caption&subset=latin,
+  cyrillic
+);
+
+html,
+body {
+  min-width: 290px;
+  color: #4d4e53;
+  background-color: #ffffff;
+  font-family: "Roboto Slab", serif;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+}
+
+header {
+  color: #000000;
+  margin: 10px;
+  text-align: center;
+  font-size: 29px;
+  font-weight: thin;
+}
+
+article {
+  color: #4d4e53;
+  margin: 15px;
+  font-size: 14px;
+}
+
+code {
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 2;
+  background-color: #dad8d8;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.main-heading {
+  color: #000000;
+  margin: 10px;
+  font-size: 29px;
+  text-align: left;
+  margin: 0px;
+}
+
+.navbar {
+  position: fixed;
+  min-width: 290px;
+  top: 0px;
+  left: 0px;
+  border-right: solid;
+  border-right-color: currentcolor;
+  border-color: rgba(34, 34, 34, 0.4);
+}
+
+.nav-table {
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: background-color 0.5s;
+}
+
+/* ! Іншого способу як поокремо анімувати елементи не знайшов */
+#animation-element-1:hover,
+#animation-element-2:hover,
+#animation-element-3:hover,
+#animation-element-4:hover,
+#animation-element-5:hover,
+#animation-element-6:hover,
+#animation-element-7:hover,
+#animation-element-8:hover,
+#animation-element-9:hover,
+#animation-element-10:hover,
+#animation-element-11:hover,
+#animation-element-12:hover,
+#animation-element-13:hover,
+#animation-element-14:hover {
+  background-color: rgba(204, 201, 201, 0.4);
+  transition: background-color 0.5s;
+}
+
+main {
+  position: absolute;
+  margin-left: 310px;
+  padding: 20px;
+  margin-bottom: 110px;
+}
+
+.nav-element {
+  color: #4d4e53;
+  border-top: 1px solid;
+  list-style: none;
+  position: relative;
+}
+
+.nav-link {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-text {
+  display: block;
+  padding: 10px 30px;
+  color: #4d4e53;
+  text-decoration: none;
+  cursor: default;
+}
+
+.content {
+  color: #4d4e53;
+  font-size: 15px;
+}
+
+.content-table {
+  margin: 15px 0px 0px 20px;
+}
+
+.attention {
+  display: block;
+  text-align: left;
+  white-space: pre;
+  position: relative;
+  background-color: #dad8d8;
+  padding: 0;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.attention-text {
+  color: #000000;
+  text-align: center;
+}

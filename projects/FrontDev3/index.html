@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="src/icon.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <title>Lenovo</title>
+</head>
+
+<body>
+
+  <div type="navigations" class="navigations" id="navigations">
+    <script>
+      navigations.onclick = function () {
+        navigations.classList.add("navigations-active");
+      };
+    </script>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+
+    <button onclick="goBack()" class="back">
+      Назад
+    </button>
+    <button
+      onclick="location.href='https://github.com/TFlashgamer/FrontDev-practice3';"
+      class="view"
+    >
+      Джерело
+    </button>
+    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+  </div>
+
+  <header>
+    <!-- * Меню -->
+    <div class="logo">
+      <img class="logo-file" src="src/lenovo.png" alt="lenovo">
+      </a>
+    </div>
+    <nav class="menu">
+      <ul class="menu-main">
+        <li class="nav-section"><a class="nav-link" href="#features">Особливості</a></li>
+        <li class="nav-section"><a class="nav-link" href="#specifications">Характеристики</a></li>
+        <li class="nav-section"><a class="nav-link" href="#colors">Кольори</a></li>
+        <li class="nav-section"><a class="nav-link" href="#sell">Ціна</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- * Блок з передзамовленням -->
+    <section class="background-container">
+      <div class="container">
+        <div id="prebuy" class="prebuy">
+          <h1 class="main-heading">
+            Оформіть передзаказ, щоб отримати найкращі враження від користування
+          </h1>
+          <form class="form" action="https://youtu.be/dQw4w9WgXcQ">
+            <input class="email" type="email" placeholder="Введіть свій email" required />
+            <button class="submit">Оформити</button>
+          </form>
+        </div>
+    </section>
+    </div>
+
+
+    <!-- * Блок з особливостями -->
+    <section class="background-container">
+      <div id="features" class="features">
+        <h2 class="heading">Особливості</h2>
+        <div class="grid">
+          <div class="icon">
+            <container class="fa fa-rocket fa-4x" aria-hidden="true"></container>
+          </div>
+          <div class="description">
+            <h3 class="description-heading">Високошвидкісний Wi-Fi</h3>
+            <p>
+              Високошвидкісний Wi-Fi модуль з підтримкою швидкості до 50 мб/c.
+              Цього більше ніж достатньо для повсякденного використання.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="icon">
+            <container class="fa fa-usb fa-3x" aria-hidden="true"></container>
+          </div>
+          <div class="description">
+            <h3 class="description-heading">Тип-С ( USB 3.1 Gen 1)</h3>
+            <p>
+              Технологія USB 3.1 Gen 1 значно підвищує швидкість роботи і
+              дозволяє здійснювати багатопотокову передачу даних. Пікова
+              пропускна здатність досягає 5Гбіт / в порівнянні з 480Мбіт / з USB
+              2.0.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="icon">
+            <container class="fa fa-fire fa-4x" aria-hidden="true"></container>
+          </div>
+          <div class="description">
+            <h3 class="description-heading">Стильний дизайн</h3>
+            <p>Гладка матова поверхня та безрамковий дисплей.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- * Блок з характеристиками -->
+    <section class="specification-container">
+      <div id="specifications" class="specifications">
+        <div class="specifications-class">
+          <h2 class="heading">Коротка характеристика</h2>
+          <ul class="specification-description">
+            <li class="specifications-item">
+              Дисплей : 17.3" Full HD (1920x1080) IPS 300 Nit 144Hz, з
+              антибліковим покриттям
+            </li>
+            <li class="specifications-item">
+              Процессор: Intel® Core ™ i7-8750H Processor (9M Cache, up to
+              4.10 GHz)
+            </li>
+            <li class="specifications-item">Оперативна пам'ять: 16 ГБ DDR4 2666 MHz</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- * Блок з кольорами -->
+    <section class="color-container">
+      <div id="colors" class="colors">
+        <h2 class="heading">Кольори</h2>
+        <p class="specifications-text"> Модель доступна поки що в цих кольорах</p>
+        <div class="gradient"></div>
+      </div>
+    </section>
+
+
+    <!-- * Блок з цінами -->
+    <section class="sell-container">
+      <div id="sell" class="sell">
+
+        <div class="product">
+          <div class="level">Сore i7 + 8Gb</div>
+          <h2 class="product-item">$600</h2>
+          <ol class="product-table">
+            <li class="product-section">Варіант з 8гб оперативної</li>
+            <li class="product-section">1 тб фізичної памяті</li>
+            <li class="product-section">та core i7 на борту</li>
+            <li class="product-section">без операційної системи.</li>
+          </ol>
+          <button class="buy">Придбати</button>
+        </div>
+
+        <div class="product">
+          <div class="level">16gb + 2tb</div>
+          <h2 class="product-item">$900</h2>
+          <ol class="product-table">
+            <li class="product-section">Варіант з 16гб оперативної</li>
+            <li class="product-section">2тб фізичної пам'яті</li>
+            <li class="product-section">та core i7 на борту</li>
+            <li class="product-section">без операційної системи.</li>
+          </ol>
+          <button class="buy">Придбати</button>
+        </div>
+
+        <div class="product">
+          <div class="level">Повна комплектація</div>
+          <h2 class="product-item">$1200</h2>
+          <ol class="product-table">
+            <li class="product-section">Варіант з 16гб оперативної</li>
+            <li class="product-section">2тб фізичної пам'яті</li>
+            <li class="product-section">та core i7 на борту</li>
+            <li class="product-section">з операційною системою</li>
+          </ol>
+          <button class="buy">Придбати</button>
+        </div>
+
+      </div>
+    </section>
+    
+  </main>
+</body>
+
+</html>

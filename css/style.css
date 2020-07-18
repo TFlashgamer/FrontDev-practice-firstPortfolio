@@ -1,12 +1,14 @@
 /*
  TODO: Адаптивність
- TODO: Градієнт
  TODO: Анімації
  TODO: Поправити менюшку
  TODO: БІЛЬШЕ АНІМАЦІЙ
 */
 
-@import url(https://fonts.googleapis.com/css?family=Lato:400);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@1,200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@900&display=swap");
+
 * {
   box-sizing: border-box;
 }
@@ -26,7 +28,8 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.4;
-  color: rgb(224, 224, 224);
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 
 /* * Меню */
@@ -185,7 +188,42 @@ body {
 .projects {
   text-align: center;
   padding: 10rem 2rem;
-  background: rgba(48, 48, 48, 0.9);
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 22, 22, 0.1) 0%,
+    rgba(24, 24, 24, 0.253) 3%,
+    rgba(24, 24, 24, 0.486) 6%,
+    rgba(24, 24, 24, 0.637) 9%,
+    rgba(24, 24, 24, 0.7) 10%,
+    rgba(24, 24, 24, 0.719) 20%,
+    rgba(24, 24, 24, 0.74) 30%,
+    rgba(24, 24, 24, 0.76) 40%,
+    rgba(24, 24, 24, 0.788) 50%,
+    rgba(24, 24, 24, 0.795) 60%,
+    rgba(24, 24, 24, 0.801) 70%,
+    rgba(24, 24, 24, 0.856) 80%,
+    rgba(24, 24, 24, 0.918) 90%,
+    rgb(24, 24, 24) 100%
+  );
+  background: -moz-linear-gradient(
+    to bottom,
+    rgba(22, 22, 22, 0.1) 0%,
+    rgba(24, 24, 24, 0.253) 3%,
+    rgba(24, 24, 24, 0.486) 6%,
+    rgba(24, 24, 24, 0.637) 9%,
+    rgba(24, 24, 24, 0.7) 10%,
+    rgba(24, 24, 24, 0.719) 20%,
+    rgba(24, 24, 24, 0.74) 30%,
+    rgba(24, 24, 24, 0.76) 40%,
+    rgba(24, 24, 24, 0.788) 50%,
+    rgba(24, 24, 24, 0.795) 60%,
+    rgba(24, 24, 24, 0.801) 70%,
+    rgba(24, 24, 24, 0.856) 80%,
+    rgba(24, 24, 24, 0.918) 90%,
+    rgb(24, 24, 24) 100%
+  );
+  content: "";
 }
 
 .contacts {
@@ -195,35 +233,37 @@ body {
   align-items: center;
   text-align: center;
   width: 100%;
-  height: 80vh;
+  height: 75vh;
   padding: 0 2rem;
-  background: rgb(97, 97, 97);
+  background: rgba(23, 22, 22, 0.97);
 }
 
 footer {
   font-weight: 300;
   display: flex;
   justify-content: space-evenly;
-  padding: 2rem;
-  background: rgb(110, 110, 110);
+  background: rgb(31, 31, 31);
   border-top: 4px solid rgb(113, 94, 121);
 }
 
-h1 {
-  font-size: 6rem;
-}
-h1,
-h2 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
+.contacts-heading {
+  font-family: "impact", fantasy;
+  font-weight: 1000;
   text-align: center;
+  font-size: 70px;
+}
+
+.contacts-description {
+  font-style: italic;
+  font-family: "Montserrat Alternates", sans-serif;
+  position: relative;
+  bottom: 20px;
 }
 
 .about > p {
   font-size: 3rem;
   font-weight: 200;
-  font-style: italic;
-  color: rgb(146, 74, 74);
+  color: rgb(113, 94, 121);
 }
 
 .project-grid {
@@ -238,9 +278,10 @@ h2 {
 }
 
 .project {
-  background: gray;
+  background: rgb(255, 255, 255);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 2px;
+  text-decoration: none;
 }
 
 .project-image {
@@ -251,18 +292,22 @@ h2 {
 
 .project-title {
   font-size: 2rem;
-  padding: 2rem 0.5rem;
   margin: 0;
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-family: "Comfortaa", cursive;
 }
 
 .project-button {
   font-size: 2rem;
-  background: gray;
+  background: rgb(255, 255, 255);
   transition: background 0.3s ease-out;
   display: inline-block;
   padding: 1rem 2rem;
   border-radius: 2px;
   text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: "Comfortaa", cursive;
 }
 
 .contact-link:hover {
@@ -276,6 +321,13 @@ h2 {
   display: inline-block;
   padding: 1rem 2rem;
   border-radius: 2px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  font-family: "Comfortaa", cursive;
+}
+
+.footer-text {
+  font-family: "Comfortaa", cursive;
 }
 
 .project-button > i {
@@ -285,16 +337,15 @@ h2 {
 }
 
 .project-button:hover > i {
-  transform: translateX(2px);
+  transform: translateX(5px);
 }
 
 .project-button:hover {
-  background: rgb(134, 78, 78);
+  background: rgb(17, 17, 17);
+  color: white;
 }
 
 .container {
-  position: relative;
-  display: inline-block;
   padding: 10px;
 }
 .container:before {
@@ -338,30 +389,44 @@ h2 {
 .contact-links {
   display: flex;
   justify-content: center;
-  width: 100%;
   max-width: 980px;
-  margin-top: 4rem;
   flex-wrap: wrap;
+  position: relative;
+  bottom: 40px;
 }
 
 body {
-  background: #000;
   font-family: sans-serif;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
 }
 .video {
   text-align: center;
   margin-top: 200px;
 }
-h1 {
+.about-heading {
   text-transform: uppercase;
+  font-size: 6rem;
+  font-family: "Raleway", sans-serif;
+  text-align: center;
 }
 
-h1,
-p {
-  animation-duration: 10s;
-  animation-name: transition;
+.about-heading {
+  animation-duration: 5s;
+  animation-name: transition-white;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+}
+
+.about-description {
+  font-family: "Montserrat Alternates", sans-serif;
+  text-align: center;
+}
+
+.about-description {
+  animation-duration: 5s;
+  animation-name: transition-purple;
   animation-iteration-count: 1;
   animation-direction: alternate;
 }
@@ -369,15 +434,16 @@ p {
 .project-heading {
   max-width: 640px;
   margin: 0 auto 6rem auto;
+  font-family: "Comfortaa", cursive;
 }
 
 .code {
-  color: gray;
+  color: rgb(255, 255, 255);
   transition: color 0.3s ease-out;
 }
 
 .project:hover .code {
-  color: #ff7f50;
+  color: #000000;
 }
 
 /* * Налаштування під анімацію кнопок на меню */
@@ -408,7 +474,7 @@ p {
 .nav-link {
   position: relative;
   transition: all 2s;
-  font-family: "Roboto Slab", serif;
+  font-family: "Comfortaa", cursive;
 }
 
 .nav-link:after {
@@ -463,7 +529,7 @@ p {
   }
 }
 
-@keyframes transition {
+@keyframes transition-white {
   0% {
     color: rgba(255, 255, 255, 0);
   }
@@ -474,5 +540,19 @@ p {
 
   100% {
     color: rgb(255, 255, 255);
+  }
+}
+
+@keyframes transition-purple {
+  0% {
+    color: rgba(113, 94, 121, 0);
+  }
+
+  50% {
+    color: rgba(113, 94, 121, 0.582);
+  }
+
+  100% {
+    color: rgb(113, 94, 121);
   }
 }

@@ -1,0 +1,517 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab|PT+Sans+Caption&subset=latin,cyrillic");
+
+html ::-webkit-scrollbar {
+  /* *Ховаємо скроллбар   */
+  width: 0px;
+  background: transparent;
+}
+
+html {
+  /* *Ховаємо скроллбар по горизонталі */
+  overflow-x: hidden;
+}
+
+.navigations {
+  position: fixed;
+  margin: 40% 0% 0% 0%;
+  transition-timing-function: ease-in;
+  transition-duration: 0.5s;
+  right: 96%;
+  background: rgba(51, 51, 51, 0.712);
+  padding: 20px 20px 20px 20px;
+  width: 20%;
+}
+
+.navigations-active {
+  transform: translateX(75%);
+  transition-timing-function: ease-in;
+  transition-duration: 0.5s;
+}
+
+.back,
+.view {
+  display: grid;
+  padding: 7% 10%;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  max-width: 150px;
+  margin: 10px auto;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.904);
+  color: #ffffff;
+  transition: background-color 1s, color 0.5s;
+}
+
+.fas {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+  margin: 0% 0% 0% 104%;
+  bottom: 45px;
+  position: relative;
+}
+
+.back:hover,
+.view:hover {
+  background-color: #ffffff;
+  color: #0f0f0f;
+  transition: background-color 1s, color 0.5s;
+}
+
+header {
+  top: 0;
+  min-height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+body {
+  /* *Використовуємо нульові значення, щоб уникнути проблем */
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #0f0f0f;
+}
+
+main {
+  margin-top: 200px;
+}
+
+.logo {
+  /* *Робимо логотип монохромним */
+  filter: grayscale(100%);
+  display: grid;
+  grid-template-columns: 80%;
+  grid-gap: 1%;
+}
+
+@media (max-width: 650px) {
+  .logo {
+    margin-top: 15px;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+
+.logo-file {
+  width: 100%;
+  height: 100%;
+}
+
+/* *Блок навігації меню */
+.menu {
+  font-weight: 400;
+}
+
+@media (max-width: 650px) {
+  .menu {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 50px;
+  }
+
+  .nav-section {
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 10px;
+  }
+}
+
+.menu-main {
+  display: contents;
+}
+
+@media (max-width: 650px) {
+  .menu-main {
+    flex-direction: column;
+  }
+}
+
+/* * Налаштування під анімацію кнопок на меню */
+.menu-main {
+  list-style: none;
+  text-align: center;
+}
+
+.nav-section {
+  display: inline-block;
+}
+
+.nav-link {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #a7a6a6;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.nav-link,
+.nav-link:after,
+.nav-link:before {
+  transition: all 0.5s;
+}
+
+.nav-link:hover {
+  color: #555;
+}
+
+.nav-link {
+  position: relative;
+  transition: all 2s;
+  font-family: "Roboto Slab", serif;
+}
+
+.nav-link:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: ".";
+  color: transparent;
+  background: #aaa;
+  height: 1px;
+}
+
+.nav-link:after {
+  text-align: left;
+  content: ".";
+  margin: 0;
+  opacity: 0;
+}
+
+.nav-link:hover {
+  color: #fff;
+  z-index: 1;
+}
+
+.nav-link:hover:after {
+  z-index: -10;
+  animation: fill 1s forwards;
+  -webkit-animation: fill 1s forwards;
+  -moz-animation: fill 1s forwards;
+  opacity: 1;
+}
+
+/* *Блок передзаказу */
+.main-heading {
+  color: #ffffff;
+  margin: 30px 0;
+}
+
+.email {
+  box-sizing: border-box;
+  background: black;
+  color: white;
+  border: 1px solid #363636;
+  opacity: 70%;
+  padding: 15px 30px;
+  max-width: 275px;
+  margin: 10px;
+  font-size: 18px;
+  font-family: "Roboto Slab", serif;
+}
+
+.prebuy {
+  text-align: center;
+  padding: 200px 0px 50px 0px;
+  font-family: "Roboto Slab", serif;
+  margin: auto;
+}
+
+.background-container {
+  background-image: url(src/background1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  margin: auto;
+  margin-top: 400px;
+}
+
+.sell-container {
+  max-width: 1000px;
+  margin: 0px auto 10px auto;
+}
+
+@media (max-width: 650px) {
+  .prebuy {
+    margin-top: 120px;
+  }
+}
+
+.submit {
+  display: grid;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  max-width: 150px;
+  margin: 10px auto;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  transition: background-color 1s, color 0.5s;
+}
+
+.submit:hover {
+  background-color: #ffffff;
+  color: #0f0f0f;
+  transition: background-color 1s, color 0.5s;
+}
+
+.fas {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+.grid {
+  display: flex;
+}
+
+.heading {
+  text-align: center;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-size: 30px;
+}
+
+.description-heading {
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Roboto Slab", serif;
+}
+
+/* *Блок з особливостями */
+.features {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0 60px;
+  margin: auto;
+}
+
+.icon {
+  display: grid;
+  grid-template-columns: 61px;
+  color: #7e7e7e;
+  margin-right: 60px;
+  align-items: center;
+}
+
+@media (max-width: 550px) {
+  .icon {
+    display: none;
+  }
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5px;
+  font-family: "Roboto Slab", serif;
+}
+
+@media (max-width: 550px) {
+  .description {
+    width: 100%;
+    text-align: center;
+    padding: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .features {
+    margin-top: 0;
+  }
+}
+
+.blackback {
+  background: #0f0f0f;
+}
+
+.specifications-class {
+  text-align: center;
+  margin: auto;
+  border: 7px solid #ffffff;
+  border-radius: 3px;
+  font-family: "Roboto Slab", serif;
+  color: #ffffff;
+  padding: 60px 0;
+}
+
+.specifications-item {
+  padding: 5px 0;
+  margin: 15px 0;
+  list-style-type: none;
+}
+
+/* *Блок з кольорами */
+.colorsimg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 10px;
+  border: 1px solid #000000;
+  border-radius: 3px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.colors {
+  text-align: center;
+  font-family: "Roboto Slab", serif;
+}
+
+.specifications-text {
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+
+.specification-description {
+  padding: 0px 0px 0px 0px;
+}
+
+/* *Блок з ціною*/
+.sell {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(255px, 1fr));
+  grid-gap: 1%;
+}
+
+.product {
+  text-align: center;
+  border: 3px solid #ddd;
+  border-radius: 3px;
+  color: #ffffff;
+  padding: 4% 4%;
+  width: -moz-fit-content; /* * Firefox */
+  width: -webkit-fit-content; /* * Chrome */
+  margin: auto;
+}
+
+.level {
+  background-color: #ddd;
+  color: #0f0f0f;
+  padding: 7% 0;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 3px;
+}
+
+.product-table {
+  list-style-type: none;
+  text-align: left;
+}
+
+.product-section {
+  padding: 5px 0;
+  font-family: "Roboto Slab", serif;
+  font-size: 12px;
+}
+
+@media (max-width: 800px) {
+  .pricing {
+    flex-direction: column;
+  }
+
+  .product {
+    max-width: 300px;
+    margin-bottom: 10px;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.specification-container,
+.color-container {
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+.buy {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-radius: 2px;
+  cursor: pointer;
+  max-width: 150px;
+  margin: 15px auto;
+  border: 0;
+  background-color: #ffffff;
+  color: #0f0f0f;
+  opacity: 80%;
+  transition: background-color 1s, color 0.5s;
+}
+
+.buy:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #ffffff;
+  transition: background-color 1s, color 0.5s;
+  opacity: 80%;
+}
+
+/* * Ключові кадри (анімації)*/
+@keyframes fill {
+  0% {
+    width: 0%;
+    height: 1px;
+  }
+
+  50% {
+    width: 100%;
+    height: 1px;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+}
+
+.gradient {
+  width: 100%;
+  max-width: 100%;
+  height: 200px;
+  background: #ffe700;
+  box-shadow: 0 -200px 100px -120px #ff9100 inset;
+  border-radius: 3px;
+  animation: background 3s infinite alternate;
+}
+
+@keyframes background {
+  50% {
+    background: #422f85;
+    box-shadow: 0 -200px 100px -100px #522881 inset;
+  }
+}
