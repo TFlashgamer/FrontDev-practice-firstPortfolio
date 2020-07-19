@@ -1,5 +1,46 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab|PT+Sans+Caption&subset=latin,cyrillic");
 
+.navigations {
+  margin: 0px;
+  z-index: 2;
+  position: fixed;
+  top: 92%;
+  left: 0;
+}
+
+.back,
+.view {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #e2e2e2;
+  background: rgb(37, 37, 37);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border: rgb(37, 37, 37);
+  cursor: pointer;
+}
+
+.back:hover,
+.view:hover {
+  background: #ffffff;
+  box-shadow: 0 15px 20px rgba(255, 255, 255, 0.4);
+  color: rgb(0, 0, 0);
+  border: #ffffff;
+  transform: translateY(-7px);
+}
+
 html ::-webkit-scrollbar {
   /* *Ховаємо скроллбар   */
   width: 0px;
@@ -9,61 +50,6 @@ html ::-webkit-scrollbar {
 html {
   /* *Ховаємо скроллбар по горизонталі */
   overflow-x: hidden;
-}
-
-.navigations {
-  position: fixed;
-  margin: 40% 0% 0% 0%;
-  transition-timing-function: ease-in;
-  transition-duration: 0.5s;
-  right: 96%;
-  background: rgba(51, 51, 51, 0.712);
-  padding: 20px 20px 20px 20px;
-  width: 20%;
-}
-
-.navigations-active {
-  transform: translateX(75%);
-  transition-timing-function: ease-in;
-  transition-duration: 0.5s;
-}
-
-.back,
-.view {
-  display: grid;
-  padding: 7% 10%;
-  font-weight: 900;
-  text-transform: uppercase;
-  border-radius: 2px;
-  cursor: pointer;
-  max-width: 150px;
-  margin: 10px auto;
-  border: 0;
-  background-color: rgba(0, 0, 0, 0.904);
-  color: #ffffff;
-  transition: background-color 1s, color 0.5s;
-}
-
-.fas {
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
-  margin: 0% 0% 0% 104%;
-  bottom: 45px;
-  position: relative;
-}
-
-.back:hover,
-.view:hover {
-  background-color: #ffffff;
-  color: #0f0f0f;
-  transition: background-color 1s, color 0.5s;
 }
 
 header {
@@ -274,18 +260,6 @@ main {
   background-color: #ffffff;
   color: #0f0f0f;
   transition: background-color 1s, color 0.5s;
-}
-
-.fas {
-  font-weight: 900;
-  font-family: "Font Awesome 5 Free";
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  font-style: normal;
-  font-variant: normal;
-  text-rendering: auto;
-  line-height: 1;
 }
 
 .grid {

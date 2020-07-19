@@ -3,43 +3,40 @@
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+    />
   <link rel="shortcut icon" href="/src/js.png" type="image/x-icon" />
   <link rel="stylesheet" href="style.css" />
-  <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-    />
   <title>JS Документація</title>
 </head>
 
 <body>
 
-  <body>
-    <div type="navigations" class="navigations" id="navigations">
-      <script>
-        navigations.onclick = function () {
-          navigations.classList.add("navigations-active");
-        };
-      </script>
+  <div type="navigations" class="navigations" id="navigations">
+    <script>
+      navigations.onclick = function () {
+        navigations.classList.add("navigations-active");
+      };
+    </script>
 
-      <script>
-        function goBack() {
-          window.history.back();
-        }
-      </script>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
 
-      <button onclick="goBack()" class="back">
-        Назад
-      </button>
-      <button
-        onclick="location.href='https://github.com/TFlashgamer/FrontDev-practice4';"
-        class="view"
-      >
-        Джерело
-      </button>
-      <i class="fas fa-chevron-right" aria-hidden="true"></i>
-    </div>
+    <button onclick="goBack()" class="back">
+      Назад
+    </button>
+    <button
+      onclick="location.href='https://github.com/TFlashgamer/FrontDev-practice4';"
+      class="view"
+    >
+      github
+    </button>
+  </div>
 
   <!-- * Навігаційна панель -->
   <nav class="navbar">

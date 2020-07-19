@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -22,13 +21,17 @@
         </div>
         <ul class="menu-list">
           <li class="menu-list-item">
-            <a href="#about" class="nav-link">Про мене</a>
+            <a href="#about" class="nav-link" text="menuabout">Обо мне</a>
           </li>
           <li class="menu-list-item">
-            <a href="#projects" class="nav-link">Портфоліо</a>
+            <a href="#projects" class="nav-link" text="menuprojects"
+              >Портфолио</a
+            >
           </li>
           <li class="menu-list-item">
-            <a href="#contacts" class="nav-link">Контакти</a>
+            <a href="#contacts" class="nav-link" text="menucontacts"
+              >Контакты</a
+            >
           </li>
           <li class="menu-list-item">
             <a
@@ -40,6 +43,12 @@
           <li class="menu-list-item">
             <a href="html/oni.html" class="nav-link">Discord Bot</a>
           </li>
+          <script src="js/languages.js"></script>
+          <li class="menu-list-item">
+            <input id="lang" type="checkbox" onclick="changeLagnuage()" />
+            <label for="lang" class="rus">Текущий язык: RUS</label
+            ><label for="lang" class="ukr">Поточна мова: UKR</label>
+          </li>
         </ul>
       </nav>
 
@@ -49,8 +58,12 @@
 
     <main>
       <section id="about" class="about">
-        <h1 class="about-heading">Привіт! Я Тарас</h1>
-        <p class="about-description">Я цікавлюсь програмуванням</p>
+        <h1 class="about-heading" text="aboutheading">
+          Добро пожаловать! Я /TSlash
+        </h1>
+        <p class="about-description" text="aboutdescription">
+          Я занимаюсь FrontEnd разработкой и так же серверной частью на node.js
+        </p>
         <div class="video-background">
           <script src="js/jquery.backgroundvideo.min.js"></script>
           <script src="js/videobackground.js"></script>
@@ -58,17 +71,23 @@
       </section>
 
       <section id="projects" class="projects">
-        <div class="container">
-          <h2 class="project-heading">Ось декілька моїх робіт</h2>
+        <div class="project-container">
+          <h2 class="project-heading" text="projectheading">
+            Вот несколько моих работ
+          </h2>
         </div>
         <div class="project-grid">
           <!-- * FrontDev1 -->
           <a class="project" href="projects/FrontDev1/index.html">
-            <img class="project-image" src="src/job1.png" alt="Сайт комусь" />
-            <p class="project-title">
-              <span class="code"><</span>
-              Сайт присвячений комусь
-              <span class="code">/></span>
+            <img
+              class="project-image"
+              src="src/job1.png"
+              alt="Сайт предназначен кому то"
+            />
+            <p class="project-title" text="projecttitle1">
+              <span class="code" text="code1"><</span>
+              Сайт предназначен кому то
+              <span class="code" text="code2">/></span>
             </p>
           </a>
           <!-- * FrontDev2 -->
@@ -76,12 +95,12 @@
             <img
               class="project-image"
               src="src/job2.png"
-              alt="Сайт опитування"
+              alt="Сайт с опросом"
             />
-            <p class="project-title">
-              <span class="code"><</span>
-              Сайт опитування
-              <span class="code">/></span>
+            <p class="project-title" text="projecttitle2">
+              <span class="code" text="code1"><</span>
+              Сайт с опросом
+              <span class="code" text="code2">/></span>
             </p>
           </a>
           <!-- * FrontDev3 -->
@@ -89,21 +108,21 @@
             <img
               class="project-image"
               src="src/job3.png"
-              alt="Сайт лендинг для продажу продукту"
+              alt="Сайт лендинг для продаж продуктов"
             />
-            <p class="project-title">
-              <span class="code"><</span>
-              Сайт лендинг для продажу продукту
-              <span class="code">/></span>
+            <p class="project-title" text="projecttitle3">
+              <span class="code" text="code1"><</span>
+              Сайт лендинг для продаж продуктов
+              <span class="code" text="code2">/></span>
             </p>
           </a>
           <!-- * FrontDev4 -->
           <a class="project" href="projects/FrontDev4/index.html">
-            <img class="project-image" src="src/job4.png" alt="Сайт довідка" />
-            <p class="project-title">
-              <span class="code"><</span>
-              Сайт довідка
-              <span class="code">/></span>
+            <img class="project-image" src="src/job4.png" alt="Сайт справка" />
+            <p class="project-title" text="projecttitle4">
+              <span class="code" text="code1"><</span>
+              Сайт справка
+              <span class="code" text="code2">/></span>
             </p>
           </a>
           <!-- * Discord Bot -->
@@ -113,34 +132,35 @@
               src="src/bot.jpg"
               alt="Oni діскорд бот"
             />
-            <p class="project-title">
-              <span class="code"><</span>
-              Oni діскорд бот
-              <span class="code">/></span>
+            <p class="project-title" text="projecttitle5">
+              <span class="code" text="code1"><</span>
+              Oni Discord бот
+              <span class="code" text="code2">/></span>
             </p>
           </a>
           <!-- * Soon -->
           <a class="project" href="">
             <img class="project-image" src="src/soon.jpg" alt="Скоро..." />
-            <p class="project-title">
-              <span class="code"><</span>
-              Найближчим часом тут з'являться нові проекти...
-              <span class="code">/></span>
+            <p class="project-title" text="projecttitle6">
+              <span class="code" text="code1"><</span>
+              В ближайшее время здесь будут новые работы...
+              <span class="code" text="code2">/></span>
             </p>
           </a>
         </div>
-        <a class="project-button" href="html/allprojects.html"
-          >Показати ще <i class="fas fa-chevron-right" aria-hidden="true"></i
+        <a class="project-button" href="html/allprojects.html" text="buttontext"
+          >Показать ещё <i class="fas fa-chevron-right" aria-hidden="true"></i
         ></a>
       </section>
 
       <section id="contacts" class="contacts">
         <div class="contact-text">
-          <h2 class="contacts-heading">
-            Потрібно зв'язатись зі мною?
+          <h2 class="contacts-heading" text="contactsheading">
+            Нужно связаться со мной?
           </h2>
-          <p class="contacts-description">
-            Якщо виникли якісь питання, можете використати посилання нижче
+          <p class="contacts-description" text="contactsdescription">
+            Если возникли какие-то вопросы вы можете воспользоваться ссылками
+            ниже
           </p>
         </div>
         <div class="contact-links">
@@ -169,8 +189,10 @@
     </main>
 
     <footer class="footer">
-      <p class="footer-text">Робота над сайтом ще не закінчена!</p>
-      <p class="footer-text">🖤/TSlash</p>
+      <p class="footer-text" text="footertext1">
+        Работа над сайтом ещё не закончена!
+      </p>
+      <p class="footer-text" text="footertext2">🖤/TSlash</p>
     </footer>
   </body>
 </html>
