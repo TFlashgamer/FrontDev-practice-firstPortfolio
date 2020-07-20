@@ -3,19 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     />
     <link rel="shortcut icon" href="src/ts.png" type="image/png" />
+    <script src="js/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <title>TSlash</title>
   </head>
 
   <body>
+    <!-- * Прелоадер -->
+    <div class="preloader">
+      <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+      </div>
+    </div>
+    <script src="js/loading.js"></script>
     <header>
       <!-- * Меню -->
-      <nav class="navigation-menu" id="js-nav-menu">
+      <nav class="wow backInLeft navigation-menu" id="js-nav-menu">
         <div class="navigation-menu-toggle" id="js-nav-menu-toggle">
           <span class="navigation-menu-bars"></span>
         </div>
@@ -46,13 +57,16 @@
           <script src="js/languages.js"></script>
           <li class="menu-list-item">
             <input id="lang" type="checkbox" onclick="changeLagnuage()" />
-            <label for="lang" class="rus">Текущий язык: RUS</label
-            ><label for="lang" class="ukr">Поточна мова: UKR</label>
+            <label for="lang" class="rus" id="langanimation"
+              >Текущий язык: RUS</label
+            ><label for="lang" class="ukr" id="langanimation"
+              >Поточна мова: UKR</label
+            >
+            <script src="js/animation.js"></script>
           </li>
         </ul>
       </nav>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
       <script src="js/menu.js"></script>
     </header>
 
@@ -72,11 +86,14 @@
 
       <section id="projects" class="projects">
         <div class="project-container">
-          <h2 class="project-heading" text="projectheading">
+          <script>
+            new WOW().init();
+          </script>
+          <h2 class="wow fadeInDown project-heading" text="projectheading">
             Вот несколько моих работ
           </h2>
         </div>
-        <div class="project-grid">
+        <div class="wow slideInLeft project-grid" data-wow-delay="0.2s">
           <!-- * FrontDev1 -->
           <a class="project" href="projects/FrontDev1/index.html">
             <img
@@ -84,11 +101,12 @@
               src="src/job1.png"
               alt="Сайт предназначен кому то"
             />
+
             <p class="project-title" text="projecttitle1">
-              <span class="code" text="code1"><</span>
               Сайт предназначен кому то
-              <span class="code" text="code2">/></span>
             </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
           </a>
           <!-- * FrontDev2 -->
           <a class="project" href="projects/FrontDev2/index.html">
@@ -97,11 +115,12 @@
               src="src/job2.png"
               alt="Сайт с опросом"
             />
+
             <p class="project-title" text="projecttitle2">
-              <span class="code" text="code1"><</span>
               Сайт с опросом
-              <span class="code" text="code2">/></span>
             </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
           </a>
           <!-- * FrontDev3 -->
           <a class="project" href="projects/FrontDev3/index.html">
@@ -110,20 +129,22 @@
               src="src/job3.png"
               alt="Сайт лендинг для продаж продуктов"
             />
+
             <p class="project-title" text="projecttitle3">
-              <span class="code" text="code1"><</span>
               Сайт лендинг для продаж продуктов
-              <span class="code" text="code2">/></span>
             </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
           </a>
           <!-- * FrontDev4 -->
           <a class="project" href="projects/FrontDev4/index.html">
             <img class="project-image" src="src/job4.png" alt="Сайт справка" />
+
             <p class="project-title" text="projecttitle4">
-              <span class="code" text="code1"><</span>
               Сайт справка
-              <span class="code" text="code2">/></span>
             </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
           </a>
           <!-- * Discord Bot -->
           <a class="project" href="html/oni.html">
@@ -132,38 +153,49 @@
               src="src/bot.jpg"
               alt="Oni діскорд бот"
             />
+
             <p class="project-title" text="projecttitle5">
-              <span class="code" text="code1"><</span>
               Oni Discord бот
-              <span class="code" text="code2">/></span>
             </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
           </a>
           <!-- * Soon -->
           <a class="project" href="">
             <img class="project-image" src="src/soon.jpg" alt="Скоро..." />
+
             <p class="project-title" text="projecttitle6">
-              <span class="code" text="code1"><</span>
               В ближайшее время здесь будут новые работы...
-              <span class="code" text="code2">/></span>
             </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
           </a>
         </div>
-        <a class="project-button" href="html/allprojects.html" text="buttontext"
-          >Показать ещё <i class="fas fa-chevron-right" aria-hidden="true"></i
-        ></a>
+        <div class="wow zoomIn button">
+          <i class="fas fa-chevron-right" aria-hidden="true"></i>
+          <a
+            class="project-button"
+            href="html/allprojects.html"
+            text="buttontext"
+            >Показать ещё
+          </a>
+        </div>
       </section>
 
       <section id="contacts" class="contacts">
         <div class="contact-text">
-          <h2 class="contacts-heading" text="contactsheading">
+          <h2 class="wow zoomInLeft contacts-heading" text="contactsheading">
             Нужно связаться со мной?
           </h2>
-          <p class="contacts-description" text="contactsdescription">
+          <p
+            class="wow fadeInLeftBig contacts-description"
+            text="contactsdescription"
+          >
             Если возникли какие-то вопросы вы можете воспользоваться ссылками
             ниже
           </p>
         </div>
-        <div class="contact-links">
+        <div class="wow fadeInLeftBig contact-links">
           <a class="contact-link" href="https://discord.gg/yJ9j87P">
             <i class="fab fa-discord" aria-hidden="true"></i>
             Discord
@@ -188,7 +220,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="wow fadeInUp footer">
       <p class="footer-text" text="footertext1">
         Работа над сайтом ещё не закончена!
       </p>
