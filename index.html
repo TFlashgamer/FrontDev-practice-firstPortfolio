@@ -12,10 +12,11 @@
     <link rel="shortcut icon" href="src/ts.png" type="image/png" />
     <script src="js/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/jquery.vide.js"></script>
     <title>TSlash</title>
   </head>
 
-  <body>
+  <body data-vide-bg="src/particle" data-vide-options="loop: true, muted: true">
     <!-- * Прелоадер -->
     <div class="preloader">
       <div class="preloader__row">
@@ -66,7 +67,6 @@
           </li>
         </ul>
       </nav>
-
       <script src="js/menu.js"></script>
     </header>
 
@@ -78,10 +78,6 @@
         <p class="about-description" text="aboutdescription">
           Я занимаюсь FrontEnd разработкой и так же серверной частью на node.js
         </p>
-        <div class="video-background">
-          <script src="js/jquery.backgroundvideo.min.js"></script>
-          <script src="js/videobackground.js"></script>
-        </div>
       </section>
 
       <section id="projects" class="projects">
@@ -184,7 +180,7 @@
 
       <section id="contacts" class="contacts">
         <div class="contact-text">
-          <h2 class="wow zoomInLeft contacts-heading" text="contactsheading">
+          <h2 class="wow fadeInDownBig contacts-heading" text="contactsheading">
             Нужно связаться со мной?
           </h2>
           <p
