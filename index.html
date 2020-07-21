@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+  />
     <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link
@@ -35,19 +38,28 @@
           ☰
         </div>
         <div class="spacer"></div>
-        <div class="item"><a class="menu-link" href="#about"><span text="menuabout">Обо мне</span></a></div>
-        <div class="item"><a class="menu-link" href="#projects"><span text="menuprojects">Портфолио</span></a></div>
-        <div class="item"><a class="menu-link" href="#contacts"><span text="menucontacts">Контакты</span></a></div>
-        <div class="item"><a class="menu-link" href="https://github.com/TFlashgamer?tab=overview&from=2020-06-01&to=2020-06-30"><span>GitHub</span></a></div>
-        <div class="item"><a class="menu-link" href="html/oni.html"><span>Discord bot</span></a></div>
+        <a class="item" href="#about">
+            <span text="menuabout">Обо мне</span></a>
+          <a class="item" href="#projects"
+            ><span text="menuprojects">Портфолио</span></a>
+          <a class="item" href="#contacts"
+            ><span text="menucontacts">Контакты</span></a>
+          <a
+            class="item"
+            href="https://github.com/TFlashgamer?tab=overview&from=2020-06-01&to=2020-06-30"
+            ><span>GitHub</span></a>
+          <a class="item" href="html/oni.html"><span>Discord bot</span></a>
         <script src="js/languages.js"></script>
-        <div class="item"><input id="lang" type="checkbox" onclick="changeLagnuage()" />
-        <label for="lang" class="rus" id="langanimation"
-          ><span>Текущий язык: RUS</span></label
-        ><label for="lang" class="ukr" id="langanimation"
-          ><span>Поточна мова: UKR</span></label
-        >
-        <script src="js/animation.js"></script>
+        <a class="item">
+          <input id="lang" type="checkbox" onclick="changeLagnuage()" />
+          <label for="lang" class="rus" id="langanimation"
+            ><span>Текущий язык: RUS</span></label
+          ><label for="lang" class="ukr" id="langanimation"
+            ><span>Поточна мова: UKR</span></label
+          >
+        </a>
+          <script src="js/animation.js"></script>
+        </div>
       </div>
       <!-- ! Старе меню --><!--
       <nav class="wow backInLeft navigation-menu" id="js-nav-menu">

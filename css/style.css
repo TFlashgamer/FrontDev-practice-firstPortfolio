@@ -1,6 +1,5 @@
 /*
  TODO: Розібратись з адаптивністю 4 роботи
- TODO: Адаптивність менюшки за допомогою @media
 */
 
 /* * Імпорт кастомних шрифтів  */
@@ -93,6 +92,85 @@
     height: 0%;
   }
 }
+
+@media screen and (min-width: 700px) {
+  .item {
+    display: inline-block;
+    background: rgba(24, 24, 24, 0.6);
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 699px) {
+  .item {
+    display: inline-block;
+    background: rgba(24, 24, 24, 0.6);
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+  .item {
+    display: block;
+    text-align: center;
+    background: rgba(24, 24, 24, 0.9);
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 499px) {
+  .item {
+    display: block;
+    background: rgba(24, 24, 24, 0.9);
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .label {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 699px) {
+  .label {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+  .label {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 499px) {
+  .label {
+    display: inline-block;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .menu {
+    bottom: 2%;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 699px) {
+  .menu {
+    bottom: -5%;
+  }
+}
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+  .menu {
+    bottom: 22%;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 499px) {
+  .menu {
+    bottom: 32%;
+  }
+}
+
 .preloader__row {
   position: relative;
   top: 50%;
@@ -186,7 +264,6 @@ body {
   cursor: pointer;
   pointer-events: none;
   position: fixed;
-  bottom: 20px;
   left: 20px;
 }
 .menu:hover {
@@ -217,7 +294,6 @@ body {
 }
 .item {
   position: relative;
-  display: inline-block;
   margin-right: 30px;
   top: 10px;
   opacity: 0;
@@ -228,7 +304,6 @@ body {
   font-family: "Comfortaa", cursive;
   text-decoration: none;
   color: white;
-  background: rgba(24, 24, 24, 0.6);
   padding: 20px;
   margin: auto;
 }
