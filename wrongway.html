@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/wrongway.css" />
+    <title>Упс</title>
+  </head>
+  <body>
+    <div type="navigations" class="navigations" id="navigations">
+      <script>
+        navigations.onclick = function () {
+          navigations.classList.add("navigations-active");
+        };
+      </script>
+
+      <script>
+        function goBack() {
+          window.history.back();
+        }
+      </script>
+
+      <button onclick="goBack()" class="back">
+        Назад
+      </button>
+    </div>
+    <h1>Ой! кажется тут пусто...</h1>
+    <canvas id="canvas" class="canvas"></canvas>
+    <script src="js/wrongway.js"></script>
+  </body>
+</html>

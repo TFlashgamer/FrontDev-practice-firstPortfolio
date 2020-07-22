@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+    />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/wow.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/jquery.vide.js"></script>
+    <title text="allprojecttitle">Все работы</title>
+  </head>
+
+  <body data-vide-bg="src/particle" data-vide-options="loop: true, muted: true">
+
+<!-- * Курсор -->
+<div class='cursor' id="cursor"></div>
+<div class='cursor2' id="cursor2"></div>
+<div class='cursor3' id="cursor3"></div>
+
+    <!-- * Прелоадер -->
+    <div class="preloader">
+      <div class="preloader__row">
+        <div class="preloader__item"></div>
+        <div class="preloader__item"></div>
+      </div>
+    </div>
+    <script src="js/loading.js"></script>
+    <header>
+      <div class="menu">
+        <div
+          class="wow heartBeat label"
+          data-wow-delay="2s"
+          data-wow-iteration="3"
+        >
+          ☰
+        </div>
+        <div class="spacer"></div>
+        <a class="item" href="index.html">
+            <span text="allprojectmenumain">Головна</span></a>
+          <a
+            class="item"
+            href="https://github.com/TFlashgamer?tab=overview&from=2020-06-01&to=2020-06-30"
+            ><span>GitHub</span></a>
+          <a class="item" href="oni.html"><span>Discord bot</span></a>
+        <script src="js/languages.js"></script>
+        <a class="item">
+          <input id="lang" type="checkbox" onclick="changeLagnuage()" />
+          <label for="lang" class="rus" id="langanimation"
+            ><span>Текущий язык: RUS</span></label
+          ><label for="lang" class="ukr" id="langanimation"
+            ><span>Поточна мова: UKR</span></label
+          >
+        </a>
+          <script src="js/animation.js"></script>
+        </div>
+      </div>
+    <main>
+
+      <section id="projects" class="projects">
+        <div class="project-container">
+          <script>
+            new WOW().init();
+          </script>
+          <h2 class="wow fadeInLeft project-heading" data-wow-delay="2s" text="allprojectheading">
+            Все мои работы
+          </h2>
+        </div>
+        <div class="project-grid">
+          <!-- * FrontDev1 -->
+          <a class="wow fadeInLeft project" data-wow-delay="1s" href="projects/FrontDev1/index.html" >
+            <img
+              class="project-image"
+              src="src/job1.png"
+              alt="Сайт предназначен кому то"
+            />
+
+            <p class="project-title" text="projecttitle1">
+              Сайт предназначен кому то
+            </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
+          </a>
+          <!-- * FrontDev2 -->
+          <a class="wow fadeInLeft project" data-wow-delay="1.2s" href="projects/FrontDev2/index.html">
+            <img
+              class="project-image"
+              src="src/job2.png"
+              alt="Сайт с опросом"
+            />
+
+            <p class="project-title" text="projecttitle2">
+              Сайт с опросом
+            </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
+          </a>
+          <!-- * FrontDev3 -->
+          <a class="wow fadeInLeft project" data-wow-delay="1.4s" href="projects/FrontDev3/index.html">
+            <img
+              class="project-image"
+              src="src/job3.png"
+              alt="Сайт лендинг для продаж продуктов"
+            />
+
+            <p class="project-title" text="projecttitle3">
+              Сайт лендинг для продаж продуктов
+            </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
+          </a>
+          <!-- * FrontDev4 -->
+          <a class="wow fadeInLeft project" data-wow-delay="1.6s" href="projects/FrontDev4/index.html">
+            <img class="project-image" src="src/job4.png" alt="Сайт справка" />
+
+            <p class="project-title" text="projecttitle4">
+              Сайт справка
+            </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
+          </a>
+          <!-- * Discord Bot -->
+          <a class="wow fadeInLeft project" data-wow-delay="1.8s" href="oni.html">
+            <img
+              class="project-image"
+              src="src/bot.jpg"
+              alt="Oni діскорд бот"
+            />
+
+            <p class="project-title" text="projecttitle5">
+              Oni Discord бот
+            </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
+          </a>
+          <!-- * Soon -->
+          <a class="wow fadeInLeft project" data-wow-delay="2s" href="wrongway.html">
+            <img class="project-image" src="src/soon.jpg" alt="Скоро..." />
+
+            <p class="project-title" text="projecttitle6">
+              В ближайшее время здесь будут новые работы...
+            </p>
+            <span class="code1" text="code1"><</span>
+            <span class="code2" text="code2">/></span>
+          </a>
+        </div>
+ </section>
+ <script src="js/cursor.js"></script>
+    </main>
+  </body>
+</html>

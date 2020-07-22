@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8" />
     <meta
     name="viewport"
     content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
   />
+
     <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link
@@ -16,10 +18,19 @@
     <script src="js/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/jquery.vide.js"></script>
+    
+
     <title>TSlash</title>
+
   </head>
 
   <body data-vide-bg="src/particle" data-vide-options="loop: true, muted: true">
+
+    <!-- * Курсор -->
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+
     <!-- * Прелоадер -->
     <div class="preloader">
       <div class="preloader__row">
@@ -27,30 +38,33 @@
         <div class="preloader__item"></div>
       </div>
     </div>
+
     <script src="js/loading.js"></script>
+
     <header>
+
       <div class="menu">
         <div
-          class="wow heartBeat label"
+          class="wow heartBeat label hover-target"
           data-wow-delay="2s"
           data-wow-iteration="3"
         >
           ☰
         </div>
         <div class="spacer"></div>
-        <a class="item" href="#about">
+        <a class="item hover-target" href="#about">
             <span text="menuabout">Обо мне</span></a>
-          <a class="item" href="#projects"
+          <a class="item hover-target" href="#projects"
             ><span text="menuprojects">Портфолио</span></a>
-          <a class="item" href="#contacts"
+          <a class="item hover-target" href="#contacts"
             ><span text="menucontacts">Контакты</span></a>
           <a
-            class="item"
+            class="item hover-target"
             href="https://github.com/TFlashgamer?tab=overview&from=2020-06-01&to=2020-06-30"
             ><span>GitHub</span></a>
-          <a class="item" href="html/oni.html"><span>Discord bot</span></a>
+          <a class="item hover-target" href="oni.html"><span>Discord bot</span></a>
         <script src="js/languages.js"></script>
-        <a class="item">
+        <a class="item hover-target">
           <input id="lang" type="checkbox" onclick="changeLagnuage()" />
           <label for="lang" class="rus" id="langanimation"
             ><span>Текущий язык: RUS</span></label
@@ -61,6 +75,7 @@
           <script src="js/animation.js"></script>
         </div>
       </div>
+
       <!-- ! Старе меню --><!--
       <nav class="wow backInLeft navigation-menu" id="js-nav-menu">
         <div class="navigation-menu-toggle" id="js-nav-menu-toggle">
@@ -104,9 +119,10 @@
       </nav>
       <script src="js/menu.js"></script>
   -->
-    </header>
 
+    </header>
     <main>
+      <!-- * Секція "about"  -->
       <section id="about" class="about">
         <h1 class="about-heading" text="aboutheading">
           Добро пожаловать! Я /TSlash
@@ -116,6 +132,7 @@
         </p>
       </section>
 
+       <!-- * Секція "projects"  -->
       <section id="projects" class="projects">
         <div class="project-container">
           <script>
@@ -125,95 +142,101 @@
             Вот несколько моих работ
           </h2>
         </div>
+
         <div class="wow slideInLeft project-grid" data-wow-delay="0.2s">
+
           <!-- * FrontDev1 -->
-          <a class="project" href="projects/FrontDev1/index.html">
+          <a class="project hover-target" href="projects/FrontDev1/index.html">
             <img
               class="project-image"
               src="src/job1.png"
               alt="Сайт предназначен кому то"
             />
-
             <p class="project-title" text="projecttitle1">
               Сайт предназначен кому то
             </p>
             <span class="code1" text="code1"><</span>
             <span class="code2" text="code2">/></span>
           </a>
+
           <!-- * FrontDev2 -->
-          <a class="project" href="projects/FrontDev2/index.html">
+          <a class="project hover-target" href="projects/FrontDev2/index.html">
             <img
               class="project-image"
               src="src/job2.png"
               alt="Сайт с опросом"
             />
-
             <p class="project-title" text="projecttitle2">
               Сайт с опросом
             </p>
             <span class="code1" text="code1"><</span>
             <span class="code2" text="code2">/></span>
           </a>
+
           <!-- * FrontDev3 -->
-          <a class="project" href="projects/FrontDev3/index.html">
+          <a class="project hover-target" href="projects/FrontDev3/index.html">
             <img
               class="project-image"
               src="src/job3.png"
               alt="Сайт лендинг для продаж продуктов"
             />
-
             <p class="project-title" text="projecttitle3">
               Сайт лендинг для продаж продуктов
             </p>
             <span class="code1" text="code1"><</span>
             <span class="code2" text="code2">/></span>
           </a>
-          <!-- * FrontDev4 -->
-          <a class="project" href="projects/FrontDev4/index.html">
-            <img class="project-image" src="src/job4.png" alt="Сайт справка" />
 
+          <!-- * FrontDev4 -->
+          <a class="project hover-target" href="projects/FrontDev4/index.html">
+            <img class="project-image" src="src/job4.png" alt="Сайт справка" />
             <p class="project-title" text="projecttitle4">
               Сайт справка
             </p>
             <span class="code1" text="code1"><</span>
             <span class="code2" text="code2">/></span>
           </a>
+
           <!-- * Discord Bot -->
-          <a class="project" href="html/oni.html">
+          <a class="project hover-target" href="oni.html">
             <img
               class="project-image"
               src="src/bot.jpg"
               alt="Oni діскорд бот"
             />
-
             <p class="project-title" text="projecttitle5">
               Oni Discord бот
             </p>
             <span class="code1" text="code1"><</span>
             <span class="code2" text="code2">/></span>
           </a>
-          <!-- * Soon -->
-          <a class="project" href="">
-            <img class="project-image" src="src/soon.jpg" alt="Скоро..." />
 
+          <!-- * Soon -->
+          <a class="project hover-target" href="wrongway.html">
+            <img class="project-image" src="src/soon.jpg" alt="Скоро..." />
             <p class="project-title" text="projecttitle6">
               В ближайшее время здесь будут новые работы...
             </p>
             <span class="code1" text="code1"><</span>
             <span class="code2" text="code2">/></span>
           </a>
+
         </div>
-        <div class="wow zoomIn button">
+
+        <div class="wow zoomIn button hover-target">
           <i class="fas fa-chevron-right" aria-hidden="true"></i>
           <a
             class="project-button"
-            href="html/allprojects.html"
+            href="allprojects.html"
             text="buttontext"
             >Показать ещё
           </a>
         </div>
+
       </section>
 
+
+ <!-- * Секція "contacts"  -->
       <section id="contacts" class="contacts">
         <div class="contact-text">
           <h2 class="wow fadeInDownBig contacts-heading" text="contactsheading">
@@ -228,35 +251,39 @@
           </p>
         </div>
         <div class="wow fadeInLeftBig contact-links">
-          <a class="contact-link" href="https://discord.gg/yJ9j87P">
+          <a class="contact-link hover-target" href="https://discord.gg/yJ9j87P">
             <i class="fab fa-discord" aria-hidden="true"></i>
             Discord
           </a>
-          <a class="contact-link" href="https://vk.com/tslashdream">
+          <a class="contact-link hover-target" href="https://vk.com/tslashdream">
             <i class="fab fa-vk"></i>
             VK
           </a>
-          <a class="contact-link" href="https://github.com/TFlashgamer">
+          <a class="contact-link hover-target" href="https://github.com/TFlashgamer">
             <i class="fab fa-github"></i>
             GitHub
           </a>
-          <a class="contact-link" href="mailto:supergamerzxtata@gmail.com">
+          <a class="contact-link hover-target" href="mailto:supergamerzxtata@gmail.com">
             <i class="fas fa-at"></i>
             Email
           </a>
-          <a class="contact-link" href="https://twitter.com/TSlash_">
+          <a class="contact-link hover-target" href="https://twitter.com/TSlash_">
             <i class="fab fa-twitter"></i>
             Twitter
           </a>
         </div>
+
       </section>
+      <script src="js/cursor.js"></script>
     </main>
 
     <footer class="wow fadeInUp footer">
+
       <p class="footer-text" text="footertext1">
         Работа над сайтом ещё не закончена!
       </p>
       <p class="footer-text" text="footertext2">🖤/TSlash</p>
+
     </footer>
   </body>
 </html>
