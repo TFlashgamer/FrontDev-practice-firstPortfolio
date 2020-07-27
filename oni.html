@@ -1,71 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>Oni💎</title>
+
+    <!-- ? Materialize Framework & CSS ( testing ) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/morphext.css" />
+    <link rel="stylesheet" href="css/onistyle.css" />
+    <link rel="stylesheet" href="css/animate.min.css" />
 
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
-    />
-
-<!-- * Привязка стилей и лого -->
-    <link rel="shortcut icon" href="src/logo.png" type="image/png" />
-    <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
-    <link rel="stylesheet" href="css/onistyle.css" />
-    
-    <title>Oni💎 Discord bot</title>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
 
   <body>
+    <!-- ? JavaScript materialize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/morphext.min.js"></script>
 
-    <header>
+    <!-- * Структура для выпадающего меню-->
+    <ul id="dropdown1" class="dropdown-content">
+      <li><a href="#!">Ruby Guardians</a></li>
+      <li><a href="#!">Oni support</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">Discord: /TSlash#2499</a></li>
+    </ul>
 
-      <nav>
-<!-- * Меню -->
-        <div class="nav-but-wrap">
-          <div class="menu-icon hover-target">
-            <span class="menu-icon__line menu-icon__line-left"></span>
-            <span class="menu-icon__line"></span>
-            <span class="menu-icon__line menu-icon__line-right"></span>
-          </div>					
-        </div>					
-      </div>				
-    
-  
-    <div class="nav">
-      <div class="nav__content">
-        <ul class="nav__list">
-          <li class="nav__list-item active-nav"><a href="#" class="hover-target">Об боте</a></li>
-          <li class="nav__list-item"><a href="#" class="hover-target">Команды</a></li>
-          <li class="nav__list-item"><a href="#" class="hover-target">Поддержка</a></li>
-          <li class="nav__list-item"><a href="index.html" class="hover-target">Моё портфолио</a></li>
+    <!-- * Структура для выпадающего меню(адаптивная)-->
+    <ul id="dropdown2" class="dropdown-content">
+      <li><a href="#!">Ruby Guardians</a></li>
+      <li><a href="#!">Oni support</a></li>
+      <li class="divider"></li>
+      <li><a href="#!">Discord: /TSlash#2499</a></li>
+    </ul>
+
+    <!-- * Меню (навбар) -->
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo"
+          ><img src="src/logo.png" alt="Oni💎" width="50" height="50" />Oni</a
+        >
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
+          <li><a class="nav-link" href="#">Об боте</a></li>
+          <li><a class="nav-link" href="#">Команды</a></li>
+          <li><a class="nav-link" href="#">Моё портфолио</a></li>
+          <li>
+            <a class="dropdown-trigger" href="#!" data-target="dropdown1"
+              >Поддержка<i class="material-icons right">arrow_drop_down</i></a
+            >
+          </li>
         </ul>
       </div>
-    </div>
-    <script src="js/onimenu.js"></script>
-      </nav>
-      
-    </header>
+    </nav>
 
-    <main>
+    <!-- * Адаптивное меню (навбар) -->
+    <ul class="sidenav" id="mobile-demo">
+      <li><a class="nav-link" href="#">Об боте</a></li>
+      <li><a class="nav-link" href="#">Команды</a></li>
+      <li><a class="nav-link" href="#">Моё портфолио</a></li>
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdown2"
+          >Поддержка<i class="material-icons right">arrow_drop_down</i></a
+        >
+      </li>
+    </ul>
+    <script src="js/navbartrigger.js"></script>
 
-<!-- * Секция "Музыка" -->
-<section></section>
-<!-- * Секция "Арты" -->
-<section></section>
-<!-- * Секция "Взаимодействие" -->
-<section></section>
-<!-- * Секция "Развлечения" -->
-<section></section>
-<!-- * Секция "OSU" -->
-<section></section>
-<!-- * Секция "Модерация" -->
-<section></section>
-<!-- * Секция "NSFW" -->
-<section></section>
-
-    </main>
-
+    <!-- *Секция "об боте" -->
+    <section id="about" class="about">
+      <div class="container">
+        <hr>
+        <div class="row">
+          <div class="col xl7 center-align about-col">
+            <img src="src/logo.png" alt="Oni" width="200" height="200" />
+            <p class="about-text">Oni</p>
+            <h1 class="about-heading">Дискорд бот для</h1>
+            <span class="about-span" id="js-rotating"
+              >музыки, развлечений, артов, пикч, модерации, бугуртов, Вас</span
+            >
+            <script>
+              $("#js-rotating").Morphext({
+                animation: "fadeInUp",
+                separator: ",",
+                speed: 4500,
+                complete: function () {},
+              });
+            </script>
+            <div class="button-container">
+              <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Добавить на сервер</a>
+              <a class="btn tooltipped grey lighten-1" data-position="bottom" data-tooltip="Не доступно до тех пор, пока не будет доступна публичная версия.">
+                <i class="material-icons left">get_app</i>Скачать исходник</a>
+                <script>
+                  document.addEventListener('DOMContentLoaded', function() {
+               var elems = document.querySelectorAll('.tooltipped');
+               var instances = M.Tooltip.init(elems, options);
+             });
+           
+             // Or with jQuery
+           
+             $(document).ready(function(){
+               $('.tooltipped').tooltip();
+             });
+                       </script>
+            </div>
+          </div>
+          <div class="col xl1 center-align">
+            <img class="overview" src="src/oni.png" alt="Oni" />
+        </div>
+      </div>
+      <hr>
+    </section>
   </body>
 </html>
