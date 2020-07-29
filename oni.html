@@ -3,11 +3,13 @@
   <head>
     <title>Oni💎</title>
 
-    <!-- ? Materialize Framework & CSS ( testing ) -->
+    <!-- ? Работаем с фреймворком Materialize -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
+
+    <!-- * Привязка остальных css стилей для поправок во фреймворке -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -21,12 +23,14 @@
   </head>
 
   <body>
+
     <!-- ? JavaScript materialize-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/morphext.min.js"></script>
 
-    <!-- * Структура для выпадающего меню-->
+
+    <!-- * Структура для выпадающего меню на навбаре-->
     <ul id="dropdown1" class="dropdown-content">
       <li><a href="#!">Ruby Guardians</a></li>
       <li><a href="#!">Oni support</a></li>
@@ -34,7 +38,7 @@
       <li><a href="#!">Discord: /TSlash#2499</a></li>
     </ul>
 
-    <!-- * Структура для выпадающего меню(адаптивная)-->
+    <!-- * Структура для выпадающего меню на навбаре(адаптивная)-->
     <ul id="dropdown2" class="dropdown-content">
       <li><a href="#!">Ruby Guardians</a></li>
       <li><a href="#!">Oni support</a></li>
@@ -75,20 +79,24 @@
         >
       </li>
     </ul>
+    <!-- * Скрипт для триггера выпадающего меню на навбаре -->
     <script src="js/navbartrigger.js"></script>
+
 
     <!-- *Секция "об боте" -->
     <section id="about" class="about">
-      <div class="container">
+      <div class="container page card-b">
         <hr>
         <div class="row">
           <div class="col xl7 center-align about-col">
-            <img src="src/logo.png" alt="Oni" width="200" height="200" />
+            <img class="responsive-img circle" src="src/logo.png" alt="Oni" width="200" height="200" />
             <p class="about-text">Oni</p>
             <h1 class="about-heading">Дискорд бот для</h1>
             <span class="about-span" id="js-rotating"
               >музыки, развлечений, артов, пикч, модерации, бугуртов, Вас</span
             >
+
+  <!-- * Скрипт для Morphtext -->
             <script>
               $("#js-rotating").Morphext({
                 animation: "fadeInUp",
@@ -97,17 +105,123 @@
                 complete: function () {},
               });
             </script>
+
+<!-- * Отдельный контейнер для кнопок-->
             <div class="button-container">
-              <a class="waves-effect waves-light btn grey darken-4 z-depth-3"><i class="material-icons left">cloud</i>Добавить на сервер</a>
-              <a class="notactive btn tooltipped grey lighten-1" data-position="bottom" data-tooltip="Пока что не доступно, извините😅">
+              <a id="addbutton" class="waves-effect waves-light btn grey darken-4 z-depth-3 modal-trigger" 
+              href="#modal1">
+              <i class="material-icons left">cloud</i>Добавить на сервер</a>
+
+              <!-- * Мадальное окно "Предупреждение о бете" -->
+              <div id="startmodal" class="modal">
+                <div class="modal-content">
+                  <h4>Хей-хей, привет!</h4>
+                  <p>Сайт ещё разрабатывается и не готов к использованию.
+                    <br>Это значит что здесь Вы ничего толкового не найдёте и бота добавить не сможете.
+                    <br>Сайт будет готов примерно 05.08.2020
+                    <br>Если же Вам просто интересно и Вы хотите посмотреть на сайт нажмите на кнопку</p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#" 
+                  class="modal-close waves-effect waves-green btn-flat modal-trigger">Ясненько</a>
+                </div>
+              </div>
+
+              <!-- * Модальное окно "Пользовательское соглашение" -->
+              <div id="modal1" class="modal modal-fixed-footer">
+                <div class="modal-content">
+                  <h4>Пользовательское соглашение</h4>
+                  <p>Прежде чем Вы добавите бота на сервер, пожалуйста, прочтите пользовательское 
+                    соглашение!<br></p>
+                </div>
+                <div class="modal-footer">
+                  <a href="#modal2" 
+                  class="modal-close waves-effect waves-green btn-flat modal-trigger">Соглашаюсь</a>
+                </div>
+              </div>
+       
+              <!-- * Скрипт для запуска модального окна при запуске страницы -->
+<script>
+  jQuery(document).ready(function(){
+      jQuery('#startmodal').modal();
+      jQuery(document).ready(function(){
+          jQuery('#startmodal').modal('open');
+      });
+});
+</script>
+
+  <!-- * Модальное окно "Выберите бота" -->
+  <div id="modal2" class="modal bottom-sheet">
+    <div class="modal-content left-align">
+      <h4>Выберите какого бота Вы хотите добавить</h4>
+
+      <ul class="collection">
+       <li class="collection-item avatar">
+    <img src="src/bot.jpg" alt="Стабильная" class="circle">
+    <span class="title">Oni💎</span>
+    <p class="description">
+      Стабильная версия бота
+      <br>
+      Не имеет некоторых функций
+    </p>
+    <a href="#!" 
+    class="secondary-content waves-effect waves-light btn grey darken-4 z-depth-3"><i class="material-icons left">add</i>ДОБАВИТЬ</a>
+  </li>
+
+<li class="collection-item avatar">
+    <img src="src/bot.jpg" alt="Стабильная" class="circle">
+    <span>Oni💎[ʙᴇᴛᴀ]</span>
+    <p class="description">
+      Не стабильная версия бота
+      <br>
+      Имеет бета функции которых нету в стабильной версии бота
+    </p>
+    <a href="#!" onclick="M.toast({html: 'Ой-ой! Пока что не доступно :с'})" 
+    class="secondary-content notactive btn tooltipped grey lighten-1 z-depth-1 " 
+    data-position="left" 
+    data-tooltip="Пока что не доступно, извините😅"><i class="material-icons left">add</i>ДОБАВИТЬ</a>
+  </li>
+</ul>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Отмена</a>
+    </div>
+  </div>
+          
+  <!-- * Скрипт для вызова модального окна  -->
+              <script>
+                document.addEventListener('DOMContentLoaded', function() {
+var elems = document.querySelectorAll('.modal');
+var instances = M.Modal.init(elems, options);
+});
+
+// jQuery
+
+$(document).ready(function(){
+
+   $('.modal').modal({
+  dismissible: true, // Закрыть модальное окно при нажатии за пределами
+  opacity: .5, // Зетменение фона
+  inDuration: 700, // Время анимации in
+  outDuration: 400, // Время анимации out
+})
+});  
+            </script>
+
+              <a onclick="M.toast({html: 'Ой-ой! Пока что не доступно :с'})"  
+              class="notactive btn tooltipped grey lighten-1 z-depth-1" 
+              data-position="bottom" 
+              data-tooltip="Пока что не доступно, извините😅">
                 <i class="material-icons left">get_app</i>Скачать исходник</a>
+
+                <!-- * Скрипт для вызова информативного окошка при наведении -->
                 <script>
                   document.addEventListener('DOMContentLoaded', function() {
                var elems = document.querySelectorAll('.tooltipped');
                var instances = M.Tooltip.init(elems, options);
              });
            
-             // Or with jQuery
+             // jQuery
            
              $(document).ready(function(){
                $('.tooltipped').tooltip();
@@ -119,7 +233,242 @@
             <img class="overview" src="src/oni.png" alt="Oni" />
         </div>
       </div>
+
+      <hr>
+
+    </section>
+
+
+    <!-- *Секция "Музыка" -->
+    <section id="music" class="music">
+<div class="container">
+  <div class="row"> 
+    <div class="col xl7 center-align about-col">
+    <h2 class="music-heading">Музыка и мультимедиа</h2>
+    <ul class="collapsible popout">
+      <li>
+        <div class="collapsible-header"><i class="material-icons">assistant</i>Высокое качество</div>
+        <div class="collapsible-body"><span>Воспроизвидение музыки в высоком качестве без пролагиваний
+           и лишних потраченых денег на воздух.</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">app_settings_alt</i>Функциональность</div>
+        <div class="collapsible-body"><span>- Возможность добавлять треки в списки ожиданий<br>
+          - создание сообственных плейлистов<br>
+          - отслеживание проигрывания трека в реальном времени<br>
+          - возможность слушать музыку из youtube и soundcloud.</span></div>
+      </li>
+      <li>
+        <div class="collapsible-header"><i class="material-icons">cloud_done</i>Бесперебойность</div>
+        <div class="collapsible-body"><span>Никаких внезапных вылетов! <br>
+           Бот работает до тех пор пока Вы его используете и покинет голосовой канал только 
+           в том случае если все выйдут и перестанут его использовать<br>
+           (p.s: Это сделано для экономии трафика)</span></div>
+      </li>
+      </ul>
+
+      <!-- * Скрипт для таблиц с описанием функионала -->
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.collapsible');
+    var instances = M.Collapsible.init(elems, options);
+  });
+
+  // jQuery
+
+  $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
+        
+      </script>
+
+    </div>
+    <div class="col xl1 center-align">
+      <img class="music-image" src="src/music.png" alt="music"/>
+  </div>
+</div>
+<hr>
+    </section>
+
+    <!-- * Секция "Арты и пикчи" -->
+    <section id="arts" class="arts">
+      <div id="container" class="container">
+        <div class="row"> 
+          <div class="col xl7 center-align">
+          <h2 class="music-heading">Арты и пикчи</h2>
+          <ul class="collapsible popout">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">api</i>
+                Разнообразность</div>
+              <div class="collapsible-body"><span>Арты и пикчи никогда не повторяют друг друга, 
+                всегда со вкусом и приятной атмосферой</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">list_all</i>
+                Разновидность типов</div>
+              <div class="collapsible-body"><span>Вы всегда можете выбрать что именно хотите увидеть, 
+                будь то пикча из сакурой или что-то другое</span></div>
+            </li>
+            </ul>
+          </div>
+          <div class="col xl1 center-align">
+            <img class="arts-image" src="src/arts.png" alt="music"/>
+        </div>
+      </div>
       <hr>
     </section>
+
+    <!-- * Секция "Команды взаимодействия" -->
+    <section id="acts" class="acts">
+      <div class="container">
+        <div class="row"> 
+          <div class="col xl7 center-align">
+          <h2 class="acts-heading">Команды содействия</h2>
+          <ul class="collapsible popout">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">info</i>
+                Об командах</div>
+              <div class="collapsible-body"><span>Команды сделаны для взаимодействия, 
+                с человеком на расстоянии</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">stars</i>
+                Особенности</div>
+              <div class="collapsible-body"><span>Команды имеют довольно приятное оформление с пикчами и
+                прикольными надписями которые могут поднять настроение с:</span></div>
+            </li>
+            </ul>
+          </div>
+          <div class="col xl1 center-align">
+            <img class="act-image" src="src/act.png" alt="acts"/>
+        </div>
+      </div>
+      <hr>
+    </section>
+
+    <!-- * Секция "Команды Развлечений" -->
+    <section id="fun" class="fun">
+      <div class="container">
+        <div class="row"> 
+          <div class="col xl7 center-align">
+          <h2 class="fun-heading">Развлечения</h2>
+          <ul class="collapsible popout">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">info</i>
+                Об командах</div>
+              <div class="collapsible-body"><span>Эти команды сделаны на крайний случай, когда Вам станет скучно, 
+                даа.. их можно назвать безделушками, но они спасают от скуки :D</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">sentiment_satisfied_alt</i>
+                Прэколюхи</div>
+              <div class="collapsible-body"><span>Довольно интересные команды о которых можно много рассказать,
+                но лучше Вам самим попробовать</span></div>
+            </li>
+            </ul>
+          </div>
+          <div class="col xl1 center-align">
+            <img class="fun-image" src="src/act.png" alt="fun"/>
+        </div>
+      </div>
+      <hr>
+    </section>
+
+    <!-- * Секция "Статистика осу" -->
+    <section id="osu" class="osu">
+      <div class="container">
+        <div class="row"> 
+          <div class="col xl7 center-align">
+          <h2 class="osu-heading">Статистика osu!</h2>
+          <ul class="collapsible popout">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">stars</i>
+                Об особенностях</div>
+              <div class="collapsible-body"><span> - Довольно отзывчивая статистика, что б получить результат 
+                долго ждать не приходится<br>
+                - команды приятно оформлены<br>
+                - есть возможность рендера карт прямо в чат<br>
+                - просмотр статистики и сложности карт(включая всех их особенностей)</span></div>
+            </li>
+            <li>
+              <div class="collapsible-header"><i class="material-icons">save_alt</i>
+                Сохранение профиля</div>
+              <div class="collapsible-body"><span>Бот привяжет Ваш профиль к командам и на следующий раз не попросит
+                вводить Ваш ник. Так же он будет выводить последние результаты прямо в чат</span></div>
+            </li>
+            </ul>
+          </div>
+          <div class="col xl1 center-align">
+            <img class="osu-image" src="src/osu.png" alt="osu"/>
+        </div>
+      </div>
+      <hr>
+    </section>
+
+     <!-- * Секция "Модерация" -->
+     <section id="moder" class="moder">
+      <div class="container">
+        <div class="row"> 
+          <div class="col xl7 center-align">
+          <h2 class="moder-heading">Модерация</h2>
+          <ul class="collapsible popout">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">construction</i>
+                Лёгкая модерация</div>
+              <div class="collapsible-body"><span>Написание команд производится легко и быстро</span></div>
+            </li>
+            </ul>
+          </div>
+          <div class="col xl1 center-align">
+            <img class="moder-image" src="src/moder.png" alt="moderation"/>
+        </div>
+      </div>
+      <hr>
+    </section>
+
+    <!-- * Секция "NSFW" -->
+    <section id="nsfw" class="nsfw">
+      <div class="container">
+        <div class="row"> 
+          <div class="col xl7 center-align">
+          <h2 class="nsfw-heading">NSFW</h2>
+          <ul class="collapsible popout">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">warning</i>
+                Ну как бы...</div>
+              <div class="collapsible-body">
+                <span>Здесь не будет описания для такого, потому что нельзя ( ͡° ͜ʖ ͡°)</span></div>
+            </li>
+            </ul>
+          </div>
+          <div class="col xl1 center-align">
+            <img class="nsfw-image" src="src/moder.png" alt="nsfw"/>
+        </div>
+      </div>
+      <hr>
+    </section>
+
+    <!-- * Секция "Дополнительные команды" -->
+    <section id="instruments" class="instruments">
+      <div class="container">
+        <div class="row"> 
+          <div class="col xl7 center-align">
+          <h2 class="instruments-heading">Дополнительные команды</h2>
+          <ul class="collapsible popout">
+            <li>
+              <div class="collapsible-header"><i class="material-icons">help_outline</i>
+                Описание</div>
+              <div class="collapsible-body"><span>По большей части это "команды инструменты" которые не нашли себе места
+                 ни в одном модуле. Бывают полезными в некоторых случаях.</span></div>
+            </li>
+            </ul>
+          </div>
+          <div class="col xl1 center-align">
+            <img class="instrument-image" src="src/moder.png" alt="instruments"/>
+        </div>
+      </div>
+      <hr>
+    </section>
+
   </body>
 </html>
