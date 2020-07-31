@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
     <link rel="stylesheet" href="css/morphext.css" />
     <link rel="stylesheet" href="css/onistyle.css" />
@@ -29,6 +30,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="js/morphext.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
 
 
     <!-- * Структура для выпадающего меню на навбаре-->
@@ -90,10 +95,10 @@
         <hr>
         <div class="row">
           <div class="col xl7 center-align about-col">
-            <img class="responsive-img circle" src="src/logo.png" alt="Oni" width="200" height="200" />
-            <p class="about-text">Oni [ʙᴇᴛᴀ]</p>
-            <h1 class="about-heading">Дискорд бот для</h1>
-            <span class="about-span" id="js-rotating"
+            <img class="wow fadeInLeft responsive-img circle" src="src/logo.png" alt="Oni" width="200" height="200" />
+            <p class="wow fadeInLeft about-text">Oni [ʙᴇᴛᴀ]</p>
+            <h1 class="wow fadeInLeft about-heading">Дискорд бот для</h1>
+            <span class="wow fadeInLeft about-span" id="js-rotating"
               >музыки, развлечений, артов, пикч, модерации, бугуртов, Вас</span
             >
 
@@ -109,8 +114,9 @@
 
 <!-- * Отдельный контейнер для кнопок-->
             <div class="button-container">
-              <a id="addbutton" class="waves-effect waves-light btn grey darken-4 z-depth-3 modal-trigger" 
-              href="#modal1">
+              <a id="addbutton" class="wow zoomIn waves-effect waves-light btn grey darken-4 z-depth-3 modal-trigger" 
+              href="#modal1"
+              data-wow-delay="1s">
               <i class="material-icons left">cloud</i>Добавить на сервер</a>
 
               <!-- * Мадальное окно "Предупреждение о бете" -->
@@ -203,9 +209,10 @@ $(document).ready(function(){
             </script>
 
               <a onclick="M.toast({html: 'Ой-ой! Пока что не доступно :с'})"  
-              class="download-button notactive btn tooltipped grey lighten-1 z-depth-1" 
+              class="wow zoomIn download-button notactive btn tooltipped grey lighten-1 z-depth-1" 
               data-position="bottom" 
-              data-tooltip="Пока что не доступно, извините😅">
+              data-tooltip="Пока что не доступно, извините😅"
+              data-wow-delay="1.1s">
                 <i class="material-icons left">get_app</i>Скачать исходник</a>
 
                 <!-- * Скрипт для вызова информативного окошка при наведении -->
@@ -219,7 +226,7 @@ $(document).ready(function(){
             </div>
           </div>
           <div class="col xl1 center-align">
-            <img class="overview" src="src/oni.png" alt="Oni" />
+            <img class="wow fadeInRight overview"  src="src/oni.png" alt="Oni" />
         </div>
       </div>
 
@@ -233,21 +240,21 @@ $(document).ready(function(){
 <div class="container">
   <div class="row music-row"> 
     <div class="col xl7 center-align about-col">
-    <h2 class="music-heading">Музыка и мультимедиа</h2>
+    <h2 class="wow fadeInDown music-heading" data-wow-delay="0.5s">Музыка и мультимедиа</h2>
     <ul class="collapsible popout">
-      <li>
+      <li class="wow fadeInLeft" data-wow-delay="0.5s">
         <div class="collapsible-header"><i class="material-icons">assistant</i>Высокое качество</div>
         <div class="collapsible-body"><span>Воспроизвидение музыки в высоком качестве без пролагиваний
            и лишних потраченых денег на воздух.</span></div>
       </li>
-      <li>
+      <li class="wow fadeInLeft" data-wow-delay="0.5s">
         <div class="collapsible-header"><i class="material-icons">app_settings_alt</i>Функциональность</div>
         <div class="collapsible-body"><span>- Возможность добавлять треки в списки ожиданий<br>
           - создание сообственных плейлистов<br>
           - отслеживание проигрывания трека в реальном времени<br>
           - возможность слушать музыку из youtube и soundcloud.</span></div>
       </li>
-      <li>
+      <li class="wow fadeInLeft" data-wow-delay="0.5s">
         <div class="collapsible-header"><i class="material-icons">cloud_done</i>Бесперебойность</div>
         <div class="collapsible-body"><span>Никаких внезапных вылетов! <br>
            Бот работает до тех пор пока Вы его используете и покинет голосовой канал только 
@@ -268,7 +275,7 @@ $(document).ready(function(){
 
     </div>
     <div class="col xl1 center-align">
-      <img class="music-image" src="src/music.png" alt="music"/>
+      <img class="wow fadeInRight music-image" data-wow-delay="0.5s" src="src/music.png" alt="music"/>
   </div>
 </div>
 <hr>
@@ -279,15 +286,15 @@ $(document).ready(function(){
       <div id="container" class="container">
         <div class="row arts-row"> 
           <div class="col xl7 center-align">
-          <h2 class="music-heading">Арты и пикчи</h2>
+          <h2 class="wow fadeInDown music-heading" data-wow-delay="0.5s">Арты и пикчи</h2>
           <ul class="collapsible popout">
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">api</i>
                 Разнообразность</div>
               <div class="collapsible-body"><span>Арты и пикчи никогда не повторяют друг друга, 
                 всегда со вкусом и приятной атмосферой</span></div>
             </li>
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">list_all</i>
                 Разновидность типов</div>
               <div class="collapsible-body"><span>Вы всегда можете выбрать что именно хотите увидеть, 
@@ -296,7 +303,7 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="arts-image" src="src/arts.png" alt="music"/>
+            <img class="wow fadeInRight arts-image" data-wow-delay="0.5s" src="src/arts.png" alt="music"/>
         </div>
       </div>
       <hr>
@@ -307,15 +314,15 @@ $(document).ready(function(){
       <div class="container">
         <div class="row acts-row"> 
           <div class="col xl7 center-align">
-          <h2 class="acts-heading">Команды содействия</h2>
+          <h2 class="wow fadeInDown acts-heading" data-wow-delay="0.5s">Команды содействия</h2>
           <ul class="collapsible popout">
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">info</i>
                 Об командах</div>
               <div class="collapsible-body"><span>Команды сделаны для взаимодействия, 
                 с человеком на расстоянии</span></div>
             </li>
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">stars</i>
                 Особенности</div>
               <div class="collapsible-body"><span>Команды имеют довольно приятное оформление с пикчами и
@@ -324,7 +331,7 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="act-image" src="src/act.png" alt="acts"/>
+            <img class="wow fadeInRight act-image" data-wow-delay="0.5s" src="src/act.png" alt="acts"/>
         </div>
       </div>
       <hr>
@@ -335,15 +342,15 @@ $(document).ready(function(){
       <div class="container">
         <div class="row fun-row"> 
           <div class="col xl7 center-align">
-          <h2 class="fun-heading">Развлечения</h2>
+          <h2 class="wow fadeInDown fun-heading" data-wow-delay="0.5s">Развлечения</h2>
           <ul class="collapsible popout">
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">info</i>
                 Об командах</div>
               <div class="collapsible-body"><span>Эти команды сделаны на крайний случай, когда Вам станет скучно, 
                 даа.. их можно назвать безделушками, но они спасают от скуки :D</span></div>
             </li>
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">sentiment_satisfied_alt</i>
                 Прэколюхи</div>
               <div class="collapsible-body"><span>Довольно интересные команды о которых можно много рассказать,
@@ -352,7 +359,7 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="fun-image" src="src/fun.png" alt="fun"/>
+            <img class="wow fadeInRight fun-image" data-wow-delay="0.5s" src="src/fun.png" alt="fun"/>
         </div>
       </div>
       <hr>
@@ -363,9 +370,9 @@ $(document).ready(function(){
       <div class="container">
         <div class="row osu-row"> 
           <div class="col xl7 center-align">
-          <h2 class="osu-heading">Статистика osu!</h2>
+          <h2 class="wow fadeInDown osu-heading" data-wow-delay="0.5s">Статистика osu!</h2>
           <ul class="collapsible popout">
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">stars</i>
                 Об особенностях</div>
               <div class="collapsible-body"><span> - Довольно отзывчивая статистика, что б получить результат 
@@ -374,7 +381,7 @@ $(document).ready(function(){
                 - есть возможность рендера карт прямо в чат<br>
                 - просмотр статистики и сложности карт(включая всех их особенностей)</span></div>
             </li>
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">save_alt</i>
                 Сохранение профиля</div>
               <div class="collapsible-body"><span>Бот привяжет Ваш профиль к командам и на следующий раз не попросит
@@ -383,7 +390,7 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="osu-image" src="src/osu.png" alt="osu"/>
+            <img class="wow fadeInRight osu-image" data-wow-delay="0.5s" src="src/osu.png" alt="osu"/>
         </div>
       </div>
       <hr>
@@ -394,9 +401,9 @@ $(document).ready(function(){
       <div class="container">
         <div class="row moder-row"> 
           <div class="col xl7 center-align">
-          <h2 class="moder-heading">Модерация</h2>
+          <h2 class="wow fadeInDown moder-heading" data-wow-delay="0.5s">Модерация</h2>
           <ul class="collapsible popout">
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">construction</i>
                 Лёгкая модерация</div>
               <div class="collapsible-body"><span>Написание команд производится легко и быстро</span></div>
@@ -404,7 +411,7 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="moder-image" src="src/moder.png" alt="moderation"/>
+            <img class="wow fadeInRight moder-image" data-wow-delay="0.5s" src="src/moder.png" alt="moderation"/>
         </div>
       </div>
       <hr>
@@ -415,9 +422,9 @@ $(document).ready(function(){
       <div class="container">
         <div class="row nsfw-row"> 
           <div class="col xl7 center-align">
-          <h2 class="nsfw-heading">NSFW</h2>
+          <h2 class="wow fadeInDown nsfw-heading" data-wow-delay="0.5s">NSFW</h2>
           <ul class="collapsible popout">
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">warning</i>
                 Ну как бы...</div>
               <div class="collapsible-body">
@@ -427,7 +434,7 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="nsfw-image" src="src/lenny.png" alt="nsfw"/>
+            <img class="wow fadeInRight nsfw-image" data-wow-delay="0.5s" src="src/lenny.png" alt="nsfw"/>
         </div>
       </div>
       <hr>
@@ -438,9 +445,9 @@ $(document).ready(function(){
       <div class="container">
         <div class="row instruments-row"> 
           <div class="col xl7 center-align">
-          <h2 class="instruments-heading">Инструменты</h2>
+          <h2 class="wow fadeInDown instruments-heading" data-wow-delay="0.5s">Инструменты</h2>
           <ul class="collapsible popout">
-            <li>
+            <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">help_outline</i>
                 Описание</div>
               <div class="collapsible-body"><span>По большей части это "команды инструменты" которые не нашли себе места
@@ -449,7 +456,7 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="instrument-image" src="src/insruments.png" alt="instruments"/>
+            <img class="wow fadeInRight instrument-image" data-wow-delay="0.5s" src="src/insruments.png" alt="instruments"/>
         </div>
       </div>
     </section>
@@ -640,20 +647,25 @@ $(document).ready(function(){
 
   <div class="content">
     <div>
-      <div><h2 class="footer-text center-align">Oni <i class="fa fa-diamond" aria-hidden="true"></i></h2></div>
+      <div><h2 class="wow fadeInUp footer-text center-align" data-wow-delay="1s">Oni <i class="fa fa-diamond" aria-hidden="true"></i></h2></div>
       <div class="footer-button-container center-align">
-        <a id="addbutton" class="footer-button waves effect waves-light btn z-depth-3 modal-trigger" 
+        <a id="addbutton" class="wow fadeInUp footer-button waves effect waves-light btn z-depth-3 modal-trigger" 
+        data-wow-delay="1.5s"
         href="#modal1">
         <i class="material-icons left">cloud</i>Добавить на сервер</a>
         <a onclick="M.toast({html: 'Ой-ой! Пока что не доступно :с'})"  
-              class="footer-button-unactive notactive btn tooltipped z-depth-1" 
+              class="wow fadeInUp footer-button-unactive notactive btn tooltipped z-depth-1" 
+              data-wow-delay="1.5s"
               data-position="right" 
               data-tooltip="Пока что не доступно, извините😅">
                 <i class="material-icons left">get_app</i>Скачать исходник</a>
       </div>
     </div>
-    <div><a class="image" href="https://github.com/TFlashgamer" target="_blank" style="background-image: url(src/whitelogo.png)"></a>
-      <p>©2020 TSlash</p>
+    <div><a class="wow fadeInLeft image" href="https://github.com/TFlashgamer" 
+      data-wow-delay="2s"
+      target="_blank"
+      style="background-image: url(src/whitelogo.png)"></a>
+      <p class="wow fadeInLeft" data-wow-delay="2s">©2020 TSlash</p>
     </div>
   </div>
 </div>
