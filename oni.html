@@ -19,9 +19,13 @@
     <link rel="stylesheet" href="css/morphext.css" />
     <link rel="stylesheet" href="css/onistyle.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
+    <link rel="shortcut icon" href="src/logo.png" type="image/png" />
 
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
+  />
   </head>
 
   <body>
@@ -38,18 +42,18 @@
 
     <!-- * Структура для выпадающего меню на навбаре-->
     <ul id="dropdown1" class="dropdown-content">
-      <li><a href="#!">Ruby Guardians</a></li>
-      <li><a href="#!">Oni support</a></li>
+      <li><a class="dropdown-link" href="#!">Ruby Guardians</a></li>
+      <li><a class="dropdown-link" href="#!">Oni support</a></li>
       <li class="divider"></li>
-      <li><a href="#!">Discord: /TSlash#2499</a></li>
+      <li><p class="dropdown-text" href="#!">Discord: /TSlash#2499</p></li>
     </ul>
 
     <!-- * Структура для выпадающего меню на навбаре(адаптивная)-->
     <ul id="dropdown2" class="dropdown-content">
-      <li><a href="#!">Ruby Guardians</a></li>
-      <li><a href="#!">Oni support</a></li>
+      <li><a class="dropdown-link" href="#!">Ruby Guardians</a></li>
+      <li><a class="dropdown-link" href="#!">Oni support</a></li>
       <li class="divider"></li>
-      <li><a href="#!">Discord: /TSlash#2499</a></li>
+      <li><p class="dropdown-text" href="#!">Discord: /TSlash#2499</p></li>
     </ul>
 
     <!-- * Меню (навбар) -->
@@ -75,7 +79,7 @@
     </nav>
 
     <!-- * Адаптивное меню (навбар) -->
-    <ul class="sidenav" id="mobile-demo">
+    <ul class="sidenav mobile-sidenav" id="mobile-demo">
       <li><a class="nav-link" href="#">Об боте</a></li>
       <li><a class="nav-link" href="#">Команды</a></li>
       <li><a class="nav-link" href="#">Моё портфолио</a></li>
@@ -92,7 +96,7 @@
     <!-- *Секция "об боте" -->
     <section id="about" class="about">
       <div class="container page card-b">
-        <hr>
+        <hr class="wow fadeInLeft">
         <div class="row">
           <div class="col xl7 center-align about-col">
             <img class="wow fadeInLeft responsive-img circle" src="src/logo.png" alt="Oni" width="200" height="200" />
@@ -114,7 +118,7 @@
 
 <!-- * Отдельный контейнер для кнопок-->
             <div class="button-container">
-              <a id="addbutton" class="wow zoomIn waves-effect waves-light btn grey darken-4 z-depth-3 modal-trigger" 
+              <a id="addbutton" class="add wow zoomIn waves-effect waves-light btn grey darken-4 z-depth-3 modal-trigger" 
               href="#modal1"
               data-wow-delay="1s">
               <i class="material-icons left">cloud</i>Добавить на сервер</a>
@@ -130,29 +134,87 @@
                 </div>
                 <div class="modal-footer">
                   <a href="#" 
-                  class="modal-close waves-effect waves-green btn-flat modal-trigger">Ясненько</a>
+                  class="modal-close waves-effect waves-black btn-flat modal-trigger">Ясненько</a>
                 </div>
               </div>
 
               <!-- * Модальное окно "Пользовательское соглашение" -->
               <div id="modal1" class="modal modal-fixed-footer">
-                <div class="modal-content">
-                  <h4>Пользовательское соглашение</h4>
+                <div class="modal-content modal-license" id="modal-license">
+                  <h4 class="modal-heading" id="modal-heading">Пользовательское соглашение</h4>
                   <p>Прежде чем Вы добавите бота на сервер, пожалуйста, прочтите пользовательское 
-                    соглашение!<br></p>
+                    соглашение!</p><br>
+             <p class="left-align"> ОСНОВНЫЕ ПУНКТЫ ЛИЦЕНЗИИ FREEWARE.<br><br><br>
+          
+              
+              ЛИЦЕНЗИОННОЕ СОГЛАШЕНИЕ.<br><br>
+              Эта программа защищена национальными законами и международными соглашениями об авторском праве. 
+              Исключительные права на использование этой программой принадлежат ее автору/издателю.<br>
+              - Ботом и его компонентами можно пользоваться бесплатно, без лицензионных отчислений неограниченное время.<br>
+              - Запрещено коммерческое распространение программы. (За распространение программы запрещено брать деньги).<br>
+              - Бот поставляется "как есть"<br>
+              - Бот может включаться в состав платных сборников, помещаться на сайтах, 
+              отличных от сайта правообладателя только с разрешения правообладателя<br>
+              - Вы имеете полное право использовать бота на любом количестве своих серверов.<br>
+              - Использовать бота можно где угодно и как угодно (так что не ограничивайте себя :D).<br>
+              - Вы имеете полноке право на техническую поддержку с нашей стороны, если что то пойдёт не так
+              (это не касается beta версии Oni, а так же открытого исходного кода).<br>
+              - И последнее и самое важное. Оставьте свой отзыв об боте на нашем сервере в Discord,
+            скажите что б нам добавить/убрать/изменить или пофиксить, думаю Ваши идеи будут очень креативными.<br><br><br>
+              
+              ОГРАНИЧЕНИЕ ГАРАНТИЙНЫХ ОБЯЗАТЕЛЬСТВ.<br><br>
+              Бот может содержать ошибки. Правообладатель не несет ответственность за возможные ошибки.<br>
+              Правообладатель не гарантирует, что функции, содержащиеся в программе, будут удовлетворять заявленным требованиям
+              или что работа бота не прервется из-за ошибки.<br>
+              Правообладатель намеренно отказывается от всех письменно заявленных и предполагаемых по-умолчанию гарантийных обязательств, 
+              включая ограничения в применении гарантийных обязательств после определенного срока и годности продукта к продаже. <br>
+              Ни при каких обстоятельствах правообладатель не несет обязательств перед пользователем за любой вред,
+               физический или коммерческий, нанесенный данной программой, включая упущенную прибыль, потерю данных,
+                ущерб репутации или другой побочный или косвенный вред, произошедший из-за использования или неспособности использования
+                 данной программы. Также не принимаются иски на любые другие имущественные требования пользователя программы.<br><br><br>
+              
+              COPYRIGHT<br><br>
+              Все исключительные авторские права на программу принадлежат правообладателю.<br>
+              В боте можно поменять что либо или дополнять его новыми функциями, при этом обязательно 
+              указывается имя правообладателя, его контактная информация и сайт правообладателя.<br>
+              При распространении программы обязательно указывается имя правообладателя, его контактная
+               информация и сайт правообладателя.<br><br><br>
+              
+              КОНТРОЛЬ НАД СОБЛЮДЕНИЕМ ОБЯЗАТЕЛЬСТВ.<br><br>
+              Это лицензионное соглашение соответствует национальным законам об авторском праве. Данное соглашение основано на новой 
+              редакции этих законов, что отменяет все остальные договоренности и соглашения, ранее применяемые по отношению к данному 
+              продукту.<br>
+              Все спорные вопросы решаются по взаимной договоренности сторон, а если соглашения не было достигнуто, то в судах
+              общей юрисдикции.<br><br><br>
+              
+              КОНТАКТНАЯ ИНФОРМАЦИЯ<br><br>
+              Discord: /TSlash#2499<br><br></p>
+              <p class="right-align">©2020 TSlash</p>
                 </div>
                 <div class="modal-footer">
-                  <a href="#modal2" 
-                  class="modal-close waves-effect waves-green btn-flat modal-trigger">Соглашаюсь</a>
+                  <button href="#modal2" 
+                  class="accept modal-close waves-effect waves-black btn-flat modal-trigger">Соглашаюсь</button>
+
+                  <script>
+                    $(document).ready(function(){  
+                      $('.modal-license').scroll(function () {
+                          if ($(this).scrollTop() > 1000) {
+                            $('.accept').prop('disabled', false);
+                          } else {
+                            $('.accept').attr('disabled', true);
+                          }
+                      });
+                  });
+                  </script>
                 </div>
               </div>
        
               <!-- * Скрипт для запуска модального окна при запуске страницы -->
 <script>
-  jQuery(document).ready(function(){
-      jQuery('#startmodal').modal();
-      jQuery(document).ready(function(){
-          jQuery('#startmodal').modal('open');
+  $(document).ready(function(){
+      $('#startmodal').modal();
+      $(document).ready(function(){
+          $('#startmodal').modal('open');
       });
 });
 </script>
@@ -191,7 +253,7 @@
 </ul>
     </div>
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Отмена</a>
+      <a href="#!" class="modal-close waves-effect waves-black btn-flat">Отмена</a>
     </div>
   </div>
           
@@ -230,17 +292,26 @@ $(document).ready(function(){
         </div>
       </div>
 
-      <hr>
+      <hr class="wow fadeInRight">
 
     </section>
 
+
+    <div class="parallax-container parralax-about">
+      <div class="parallax"><img class="parallax-adaptivity" src="src/musicbackground.jpg"></div>
+    </div>
+    <script>
+       $(document).ready(function(){
+    $('.parallax').parallax();
+  });
+    </script>
 
     <!-- *Секция "Музыка" -->
     <section id="music" class="music">
 <div class="container">
   <div class="row music-row"> 
     <div class="col xl7 center-align about-col">
-    <h2 class="wow fadeInDown music-heading" data-wow-delay="0.5s">Музыка и мультимедиа</h2>
+    <h2 class="wow fadeInDown music-heading" data-wow-delay="0.5s">Музыка (Soundcloud, Youtube)</h2>
     <ul class="collapsible popout">
       <li class="wow fadeInLeft" data-wow-delay="0.5s">
         <div class="collapsible-header"><i class="material-icons">assistant</i>Высокое качество</div>
@@ -278,8 +349,11 @@ $(document).ready(function(){
       <img class="wow fadeInRight music-image" data-wow-delay="0.5s" src="src/music.png" alt="music"/>
   </div>
 </div>
-<hr>
     </section>
+
+    <div class="parallax-container">
+      <div class="parallax"><img class="parallax-adaptivity" src="src/artsbackground.jpg"></div>
+    </div>
 
     <!-- * Секция "Арты и пикчи" -->
     <section id="arts" class="arts">
@@ -306,8 +380,11 @@ $(document).ready(function(){
             <img class="wow fadeInRight arts-image" data-wow-delay="0.5s" src="src/arts.png" alt="music"/>
         </div>
       </div>
-      <hr>
     </section>
+
+    <div class="parallax-container">
+      <div class="parallax"><img class="parallax-adaptivity" src="src/actsbackground.jpg"></div>
+    </div>
 
     <!-- * Секция "Команды взаимодействия" -->
     <section id="acts" class="acts">
@@ -334,15 +411,18 @@ $(document).ready(function(){
             <img class="wow fadeInRight act-image" data-wow-delay="0.5s" src="src/act.png" alt="acts"/>
         </div>
       </div>
-      <hr>
     </section>
+
+    <div class="parallax-container">
+      <div class="parallax"><img class="parallax-adaptivity" src="src/funbackground.jpg"></div>
+    </div>
 
     <!-- * Секция "Команды Развлечений" -->
     <section id="fun" class="fun">
       <div class="container">
         <div class="row fun-row"> 
           <div class="col xl7 center-align">
-          <h2 class="wow fadeInDown fun-heading" data-wow-delay="0.5s">Развлечения</h2>
+          <h2 class="adaptive-text wow fadeInDown fun-heading" data-wow-delay="0.5s">Развлечения и веселье</h2>
           <ul class="collapsible popout">
             <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">info</i>
@@ -362,15 +442,18 @@ $(document).ready(function(){
             <img class="wow fadeInRight fun-image" data-wow-delay="0.5s" src="src/fun.png" alt="fun"/>
         </div>
       </div>
-      <hr>
     </section>
+
+    <div class="parallax-container">
+      <div class="parallax"><img class="parallax-adaptivity" src="src/osubackground.jpg"></div>
+    </div>
 
     <!-- * Секция "Статистика осу" -->
     <section id="osu" class="osu">
       <div class="container">
         <div class="row osu-row"> 
           <div class="col xl7 center-align">
-          <h2 class="wow fadeInDown osu-heading" data-wow-delay="0.5s">Статистика osu!</h2>
+          <h2 class="wow fadeInDown osu-heading" data-wow-delay="0.5s">Статистика, рендер osu!</h2>
           <ul class="collapsible popout">
             <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">stars</i>
@@ -393,15 +476,18 @@ $(document).ready(function(){
             <img class="wow fadeInRight osu-image" data-wow-delay="0.5s" src="src/osu.png" alt="osu"/>
         </div>
       </div>
-      <hr>
     </section>
+
+    <div class="parallax-container">
+      <div class="parallax"><img class="parallax-adaptivity" src="src/moderbackground.jpg"></div>
+    </div>
 
      <!-- * Секция "Модерация" -->
      <section id="moder" class="moder">
       <div class="container">
         <div class="row moder-row"> 
           <div class="col xl7 center-align">
-          <h2 class="wow fadeInDown moder-heading" data-wow-delay="0.5s">Модерация</h2>
+          <h2 class="wow fadeInDown moder-heading" data-wow-delay="0.5s">Модерация и контроль</h2>
           <ul class="collapsible popout">
             <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">construction</i>
@@ -414,16 +500,20 @@ $(document).ready(function(){
             <img class="wow fadeInRight moder-image" data-wow-delay="0.5s" src="src/moder.png" alt="moderation"/>
         </div>
       </div>
-      <hr>
+
     </section>
+
+    <div class="parallax-container">
+      <div class="parallax"><img class="parallax-adaptivity" src="src/nsfwbackground.jpg"></div>
+    </div>
 
     <!-- * Секция "NSFW" -->
     <section id="nsfw" class="nsfw">
       <div class="container">
         <div class="row nsfw-row"> 
           <div class="col xl7 center-align">
-          <h2 class="wow fadeInDown nsfw-heading" data-wow-delay="0.5s">NSFW</h2>
-          <ul class="collapsible popout">
+          <h2 class="wow fadeInDown nsfw-heading center-align" data-wow-delay="0.5s">NSFW и прочие штучки</h2>
+          <ul class="collapsible popout center-align">
             <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">warning</i>
                 Ну как бы...</div>
@@ -437,15 +527,18 @@ $(document).ready(function(){
             <img class="wow fadeInRight nsfw-image" data-wow-delay="0.5s" src="src/lenny.png" alt="nsfw"/>
         </div>
       </div>
-      <hr>
     </section>
+
+    <div class="parallax-container">
+      <div class="parallax"><img class="parallax-adaptivity" src="src/instrumentsbackground.jpg"></div>
+    </div>
 
     <!-- * Секция "Дополнительные команды" -->
     <section id="instruments" class="instruments">
       <div class="container">
         <div class="row instruments-row"> 
           <div class="col xl7 center-align">
-          <h2 class="wow fadeInDown instruments-heading" data-wow-delay="0.5s">Инструменты</h2>
+          <h2 class="adaptive-text wow fadeInDown instruments-heading" data-wow-delay="0.5s">Инструменты и утилиты</h2>
           <ul class="collapsible popout">
             <li class="wow fadeInLeft" data-wow-delay="0.5s">
               <div class="collapsible-header"><i class="material-icons">help_outline</i>
@@ -463,7 +556,7 @@ $(document).ready(function(){
 
     <!-- * Кнопка быстрой навигации -->
     <div class="fixed-action-btn toolbar">
-      <a class="btn-floating btn-large grey darken-4">
+      <a class="btn-floating waves-effect waves-light btn-large grey darken-4 tooltipped" data-position="left" data-tooltip="Быстрая навигация">
         <i class="large material-icons">clear_all</i>
       </a>
       <ul>
@@ -477,34 +570,26 @@ $(document).ready(function(){
         <li><a class="btn tooltipped" data-position="top" data-tooltip="Инструменты" href="#instruments"><i class="material-icons">build</i></a></li>
       </ul>
     </div>
+
+    <!-- * Кнопка быстрой навигации (скрипт инициализации) -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.fixed-action-btn');
-    var instances = M.FloatingActionButton.init(elems, {
-      toolbarEnabled: true,
-    });
-  });
-
-  // Or with jQuery
-
   $('.fixed-action-btn').floatingActionButton({
     toolbarEnabled: true,
   });
        
 </script>
 
+<!-- * При скроле ближе до футера, кнопка быстрой навигации исчезает -->
 <script>
   $(document).ready(function(){  
     $(window).scroll(function () {
-        if ($(this).scrollTop() > 6705) {
+        if ($(this).scrollTop() > 10700) {
           $('.toolbar').fadeOut();
         } else {
             $('.toolbar').fadeIn();
         }
     });
 });
-
-
 </script>
 
     <!-- * Футер -->
@@ -512,6 +597,7 @@ $(document).ready(function(){
       
 <div class="main"></div>
 <div class="footer">
+
   <!-- ! Очень, ооочень много координат для анимации пузырьков -->
   <div class="bubbles">
 

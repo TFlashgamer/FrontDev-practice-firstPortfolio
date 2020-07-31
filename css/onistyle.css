@@ -18,6 +18,10 @@ body::-webkit-scrollbar {
   background: black;
 }
 
+.parralax-about {
+  margin-top: 90px !important;
+}
+
 .toolbar {
   display: none;
 }
@@ -67,12 +71,22 @@ body::-webkit-scrollbar {
   margin-bottom: 120px;
 }
 
-.nav-wrapper {
+.nav-wrapper,
+.dropdown-content,
+.mobile-sidenav {
   background-color: #ebebeb;
+  color: black;
 }
 
-.nav-link {
-  color: black;
+.nav-link,
+.dropdown-link {
+  color: black !important;
+}
+
+.dropdown-text {
+  color: rgb(34, 34, 34) !important;
+  cursor: default;
+  text-align: center;
 }
 
 .footer-button {
@@ -320,7 +334,7 @@ hr {
 
 @media screen and (min-width: 300px) and (max-width: 499px) {
   .description {
-    margin-top: 20px !important;
+    margin-top: 24px !important;
   }
 }
 
@@ -578,15 +592,15 @@ hr {
 
 @media screen and (min-width: 1300px) {
   .dio {
-    width: 538px;
-    height: 302px;
+    width: 498px !important;
+    height: 302px !important;
   }
 }
 
 @media screen and (min-width: 1201px) and (max-width: 1299px) {
   .dio {
-    width: 332px;
-    height: 180px;
+    width: 298px !important;
+    height: 180px !important;
   }
 }
 
@@ -622,6 +636,65 @@ hr {
   .dio {
     width: 0;
     height: 0;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 499px) {
+  .adaptive-text {
+    font-size: 46px !important;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 499px) {
+  .about-col {
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 499px) {
+  .footer-button,
+  .footer-button-unactive {
+    font-size: 9px !important;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 499px) {
+  .modal-heading {
+    font-size: 25px !important;
+  }
+}
+
+/* ! Анимация пузырьков ведёт себя ооочень не стабильно, так что лучше её убрать на маленьких дисплеях */
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+  .bubble {
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 499px) {
+  .bubble {
+    width: 0 !important;
+    height: 0 !important;
+  }
+}
+
+/* ! С паралаксом такая же история */
+
+@media screen and (min-width: 500px) and (max-width: 599px) {
+  .parallax-container {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 499px) {
+  .parallax-container {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
   }
 }
 
