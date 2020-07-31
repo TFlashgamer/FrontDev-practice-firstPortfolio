@@ -1,6 +1,6 @@
+# Portfolio
 
-
-<a href="https://tflashgamer.github.io/" target="_blank"># Portfolio</a>
+<a href="https://tflashgamer.github.io/" target="_blank">potfolio link</a>
 
 - Робота 5/7
 - Тема: "Сайт портфоліо"
@@ -11,9 +11,9 @@
 [![Done](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger)
 
 
+# Bot site
 
-
-<a href="https://tflashgamer.github.io/oni.html" target="_blank"># Bot site</a>
+<a href="https://tflashgamer.github.io/oni.html" target="_blank">bot link</a>
 
 - Додаткова робота
 - Тема: "Сайт для Discord бота"
