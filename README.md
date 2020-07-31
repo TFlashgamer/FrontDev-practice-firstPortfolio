@@ -1,6 +1,6 @@
 # Portfolio
+<a href="https://tflashgamer.github.io/" target="_blank">portfolio link</a>
 
-<a href="https://tflashgamer.github.io/" target="_blank">potfolio link</a>
 
 - Робота 5/7
 - Тема: "Сайт портфоліо"
@@ -12,8 +12,8 @@
 
 
 # Bot site
-
 <a href="https://tflashgamer.github.io/oni.html" target="_blank">bot link</a>
+
 
 - Додаткова робота
 - Тема: "Сайт для Discord бота"
