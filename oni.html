@@ -66,7 +66,8 @@
           ><i class="material-icons">menu</i></a
         >
         <ul class="right hide-on-med-and-down">
-          <li><a class="wow fadeInDown nav-link" data-wow-delay="0.1s" href="#">Об боте</a></li>
+          <li><a class="wow fadeInDown nav-link" onclick="M.toast({html: 'Хмм, кажется, Вы уже и так на этой странице'})"
+             data-wow-delay="0.1s" href="#">Об боте</a></li>
           <li><a class="wow fadeInDown nav-link" data-wow-delay="0.2s" href="#">Команды</a></li>
           <li><a class="wow fadeInDown nav-link" data-wow-delay="0.3s" href="#">Моё портфолио</a></li>
           <li>
@@ -80,7 +81,7 @@
 
     <!-- * Адаптивное меню (навбар) -->
     <ul class="sidenav mobile-sidenav" id="mobile-demo">
-      <li><a class="nav-link" href="#">Об боте</a></li>
+      <li><a class="nav-link" onclick="M.toast({html: 'Хмм, кажется, Вы уже и так на этой странице'})" href="#">Об боте</a></li>
       <li><a class="nav-link" href="#">Команды</a></li>
       <li><a class="nav-link" href="#">Моё портфолио</a></li>
       <li>
@@ -123,6 +124,14 @@
               data-wow-delay="1s">
               <i class="material-icons left">cloud</i>Добавить на сервер</a>
 
+              <a onclick="M.toast({html: 'Ой-ой! Пока что не доступно :с'})"  
+              class="wow zoomIn download-button notactive btn tooltipped grey lighten-1 z-depth-1" 
+              data-position="bottom" 
+              data-tooltip="Пока что не доступно, извините😅"
+              data-wow-delay="1.1s">
+                <i class="material-icons left">get_app</i>Скачать исходник</a>
+
+
               <!-- * Мадальное окно "Предупреждение о бете" -->
               <div id="startmodal" class="modal">
                 <div class="modal-content">
@@ -140,6 +149,8 @@
 
               <!-- * Модальное окно "Пользовательское соглашение" -->
               <div id="modal1" class="modal modal-fixed-footer">
+
+                <!--* Контент с лицензией -->
                 <div class="modal-content modal-license" id="modal-license">
                   <h4 class="modal-heading" id="modal-heading">Пользовательское соглашение</h4>
                   <p>Прежде чем Вы добавите бота на сервер, пожалуйста, прочтите пользовательское 
@@ -195,6 +206,7 @@
                   <button href="#modal2" 
                   class="accept modal-close waves-effect waves-black btn-flat modal-trigger">Соглашаюсь</button>
 
+                  <!-- * Скрипт для ативации/дизактивации кнопки -->
                   <script>
                     $(document).ready(function(){  
                       $('.modal-license').scroll(function () {
@@ -206,6 +218,7 @@
                       });
                   });
                   </script>
+
                 </div>
               </div>
        
@@ -218,6 +231,7 @@
       });
 });
 </script>
+
 
   <!-- * Модальное окно "Выберите бота" -->
   <div id="modal2" class="modal bottom-sheet">
@@ -270,13 +284,6 @@ $(document).ready(function(){
 });  
             </script>
 
-              <a onclick="M.toast({html: 'Ой-ой! Пока что не доступно :с'})"  
-              class="wow zoomIn download-button notactive btn tooltipped grey lighten-1 z-depth-1" 
-              data-position="bottom" 
-              data-tooltip="Пока что не доступно, извините😅"
-              data-wow-delay="1.1s">
-                <i class="material-icons left">get_app</i>Скачать исходник</a>
-
                 <!-- * Скрипт для вызова информативного окошка при наведении -->
                 <script>    
              // jQuery
@@ -296,15 +303,19 @@ $(document).ready(function(){
 
     </section>
 
-
+<!-- * Параллакс -->
     <div class="parallax-container parralax-about">
       <div class="parallax"><img class="parallax-adaptivity" src="src/musicbackground.jpg"></div>
     </div>
+
+    <!-- * Скрипт для параллакса -->
     <script>
        $(document).ready(function(){
     $('.parallax').parallax();
   });
     </script>
+
+
 
     <!-- *Секция "Музыка" -->
     <section id="music" class="music">
@@ -345,12 +356,14 @@ $(document).ready(function(){
       </script>
 
     </div>
+
     <div class="col xl1 center-align">
       <img class="wow fadeInRight music-image" data-wow-delay="0.5s" src="src/music.png" alt="music"/>
   </div>
 </div>
     </section>
 
+    <!-- * Параллакс -->
     <div class="parallax-container">
       <div class="parallax"><img class="parallax-adaptivity" src="src/artsbackground.jpg"></div>
     </div>
@@ -382,6 +395,7 @@ $(document).ready(function(){
       </div>
     </section>
 
+    <!-- * Параллакс -->
     <div class="parallax-container">
       <div class="parallax"><img class="parallax-adaptivity" src="src/actsbackground.jpg"></div>
     </div>
@@ -413,6 +427,7 @@ $(document).ready(function(){
       </div>
     </section>
 
+    <!-- * Параллакс -->
     <div class="parallax-container">
       <div class="parallax"><img class="parallax-adaptivity" src="src/funbackground.jpg"></div>
     </div>
@@ -444,6 +459,7 @@ $(document).ready(function(){
       </div>
     </section>
 
+    <!-- * Параллакс -->
     <div class="parallax-container">
       <div class="parallax"><img class="parallax-adaptivity" src="src/osubackground.jpg"></div>
     </div>
@@ -478,6 +494,7 @@ $(document).ready(function(){
       </div>
     </section>
 
+    <!-- * Параллакс -->
     <div class="parallax-container">
       <div class="parallax"><img class="parallax-adaptivity" src="src/moderbackground.jpg"></div>
     </div>
@@ -503,6 +520,7 @@ $(document).ready(function(){
 
     </section>
 
+    <!-- * Параллакс -->
     <div class="parallax-container">
       <div class="parallax"><img class="parallax-adaptivity" src="src/nsfwbackground.jpg"></div>
     </div>
@@ -529,6 +547,7 @@ $(document).ready(function(){
       </div>
     </section>
 
+    <!-- * Параллакс -->
     <div class="parallax-container">
       <div class="parallax"><img class="parallax-adaptivity" src="src/instrumentsbackground.jpg"></div>
     </div>
@@ -556,18 +575,27 @@ $(document).ready(function(){
 
     <!-- * Кнопка быстрой навигации -->
     <div class="fixed-action-btn toolbar">
-      <a class="btn-floating waves-effect waves-light btn-large grey darken-4 tooltipped" data-position="left" data-tooltip="Быстрая навигация">
+      <a class="btn-floating waves-effect waves-light btn-large grey darken-4 tooltipped" 
+      data-position="left" data-tooltip="Быстрая навигация">
         <i class="large material-icons">clear_all</i>
       </a>
       <ul>
-        <li><a class="btn tooltipped" data-position="top" data-tooltip="Музыка" href="#music"><i class="material-icons">album</i></a></li>
-        <li><a class="btn tooltipped" data-position="top" data-tooltip="Арты и пикчи" href="#arts"><i class="material-icons">photo</i></a></li>
-        <li><a class="btn tooltipped" data-position="top" data-tooltip="Взаимодействие" href="#acts"><i class="material-icons">face</i></a></li>
-        <li><a class="btn tooltipped" data-position="top" data-tooltip="Развлечения" href="#fun"><i class="material-icons">mood</i></a></li>
-        <li><a class="btn tooltipped" data-position="top" data-tooltip="Osu!" href="#osu"><i class="material-icons">trip_origin</i></a></li>
-        <li><a class="btn tooltipped" data-position="top" data-tooltip="Модерация" href="#moder"><i class="material-icons">admin_panel_settings</i></a></li>
-        <li><a class="btn tooltipped" data-position="top" data-tooltip="NSFW" href="#nsfw"><i class="material-icons">error_outline</i></a></li>
-        <li><a class="btn tooltipped" data-position="top" data-tooltip="Инструменты" href="#instruments"><i class="material-icons">build</i></a></li>
+        <li><a class="btn tooltipped" data-position="top" 
+          data-tooltip="Музыка" href="#music"><i class="material-icons">album</i></a></li>
+        <li><a class="btn tooltipped" data-position="top" 
+          data-tooltip="Арты и пикчи" href="#arts"><i class="material-icons">photo</i></a></li>
+        <li><a class="btn tooltipped" data-position="top" 
+          data-tooltip="Взаимодействие" href="#acts"><i class="material-icons">face</i></a></li>
+        <li><a class="btn tooltipped" data-position="top" 
+          data-tooltip="Развлечения" href="#fun"><i class="material-icons">mood</i></a></li>
+        <li><a class="btn tooltipped" data-position="top" 
+          data-tooltip="Osu!" href="#osu"><i class="material-icons">trip_origin</i></a></li>
+        <li><a class="btn tooltipped" data-position="top" 
+          data-tooltip="Модерация" href="#moder"><i class="material-icons">admin_panel_settings</i></a></li>
+        <li><a class="btn tooltipped" data-position="top" 
+          data-tooltip="NSFW" href="#nsfw"><i class="material-icons">error_outline</i></a></li>
+        <li><a class="btn tooltipped" data-position="top" 
+          data-tooltip="Инструменты" href="#instruments"><i class="material-icons">build</i></a></li>
       </ul>
     </div>
 
@@ -731,9 +759,11 @@ $(document).ready(function(){
     <div class="bubble" style="--size:3.164260451181943rem; --distance:9.45083326659173rem; --position:67.66437139347826%; --time:2.5473759657115673s; --delay:-3.6304674831759685s;"></div>
   </div>
 
+  <!-- * Контент футера -->
   <div class="content">
     <div>
-      <div><h2 class="wow fadeInUp footer-text center-align" data-wow-delay="1s">Oni <i class="fa fa-diamond" aria-hidden="true"></i></h2></div>
+      <div><h2 class="wow fadeInUp footer-text center-align" data-wow-delay="1s">Oni <i class="fa fa-diamond" 
+        aria-hidden="true"></i></h2></div>
       <div class="footer-button-container center-align">
         <a id="addbutton" class="wow fadeInUp footer-button waves effect waves-light btn z-depth-3 modal-trigger" 
         data-wow-delay="1.5s"
