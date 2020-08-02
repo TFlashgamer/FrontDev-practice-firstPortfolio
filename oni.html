@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Oni💎</title>
+    <title>Oni</title>
 
     <!-- ? Работаем с фреймворком Materialize -->
     <link
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="css/morphext.css" />
     <link rel="stylesheet" href="css/onistyle.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="shortcut icon" href="src/logo.png" type="image/png" />
+    <link rel="shortcut icon" href="src/oni/logo.png" type="image/png" />
 
     <meta charset="UTF-8" />
     <meta
@@ -42,25 +42,25 @@
 
     <!-- * Структура для выпадающего меню на навбаре-->
     <ul id="dropdown1" class="dropdown-content">
-      <li><a class="dropdown-link" href="#!">Ruby Guardians</a></li>
-      <li><a class="dropdown-link" href="#!">Oni support</a></li>
+      <li><a class="dropdown-link" href="https://discord.gg/SPSQXJc">Ruby Guardians</a></li>
+      <li><a class="dropdown-link" href="#!" onclick="M.toast({html: 'Мы активно работаем над сервером поддержки, но, пока что он не доступен.'})">Oni support</a></li>
       <li class="divider"></li>
-      <li><p class="dropdown-text" href="#!">Discord: /TSlash#2499</p></li>
+      <li><p class="dropdown-text">Discord: /TSlash#2499</p></li>
     </ul>
 
     <!-- * Структура для выпадающего меню на навбаре(адаптивная)-->
     <ul id="dropdown2" class="dropdown-content">
-      <li><a class="dropdown-link" href="#!">Ruby Guardians</a></li>
-      <li><a class="dropdown-link" href="#!">Oni support</a></li>
+      <li><a class="dropdown-link" href="https://discord.gg/SPSQXJc">Ruby Guardians</a></li>
+      <li><a class="dropdown-link" href="#!" onclick="M.toast({html: 'Мы активно работаем над сервером поддержки, но, пока что он не доступен.'})">Oni support</a></li>
       <li class="divider"></li>
-      <li><p class="dropdown-text" href="#!">Discord: /TSlash#2499</p></li>
+      <li><p class="dropdown-text">Discord: /TSlash#2499</p></li>
     </ul>
 
     <!-- * Меню (навбар) -->
     <nav class="wow fadeInDown nav-nav">
       <div class="wow fadeInDown nav-wrapper">
         <a href="#!" class="brand-logo logo-text"
-          ><img class="wow fadeInLeft" data-wow-delay="1s" src="src/logo.png" alt="Oni💎" width="60" height="60" /></a
+          ><img class="wow fadeInLeft" data-wow-delay="1s" src="src/oni/logo.png" alt="Oni💎" width="60" height="60" /></a
         >
         <a href="#" data-target="mobile-demo" class="sidenav-trigger"
           ><i class="material-icons">menu</i></a
@@ -68,8 +68,8 @@
         <ul class="right hide-on-med-and-down">
           <li><a class="wow fadeInDown nav-link" onclick="M.toast({html: 'Хмм, кажется, Вы уже и так на этой странице'})"
              data-wow-delay="0.1s" href="#">Об боте</a></li>
-          <li><a class="wow fadeInDown nav-link" data-wow-delay="0.2s" href="#">Команды</a></li>
-          <li><a class="wow fadeInDown nav-link" data-wow-delay="0.3s" href="#">Моё портфолио</a></li>
+          <li><a class="wow fadeInDown nav-link" data-wow-delay="0.2s" href="onicommands.html">Команды</a></li>
+          <li><a class="wow fadeInDown nav-link" data-wow-delay="0.3s" href="https://tflashgamer.github.io/">Моё портфолио</a></li>
           <li>
             <a class="wow fadeInDown dropdown-trigger" data-wow-delay="0.4s" href="#!" data-target="dropdown1"
               >Поддержка<i class="material-icons right">arrow_drop_down</i></a
@@ -82,8 +82,8 @@
     <!-- * Адаптивное меню (навбар) -->
     <ul class="sidenav mobile-sidenav" id="mobile-demo">
       <li><a class="nav-link" onclick="M.toast({html: 'Хмм, кажется, Вы уже и так на этой странице'})" href="#">Об боте</a></li>
-      <li><a class="nav-link" href="#">Команды</a></li>
-      <li><a class="nav-link" href="#">Моё портфолио</a></li>
+      <li><a class="nav-link" href="onicommands.html">Команды</a></li>
+      <li><a class="nav-link" href="https://tflashgamer.github.io/">Моё портфолио</a></li>
       <li>
         <a class="dropdown-trigger" href="#!" data-target="dropdown2"
           >Поддержка<i class="material-icons right">arrow_drop_down</i></a
@@ -100,7 +100,7 @@
         <hr class="wow fadeInLeft">
         <div class="row">
           <div class="col xl7 center-align about-col">
-            <img class="wow fadeInLeft responsive-img circle" src="src/logo.png" alt="Oni" width="200" height="200" />
+            <img class="wow fadeInLeft responsive-img circle" src="src/oni/logo.png" alt="Oni" width="200" height="200" />
             <p class="wow fadeInLeft about-text">Oni [ʙᴇᴛᴀ]</p>
             <h1 class="wow fadeInLeft about-heading">Дискорд бот для</h1>
             <span class="wow fadeInLeft about-span" id="js-rotating"
@@ -240,19 +240,19 @@
 
       <ul class="collection">
        <li class="collection-item avatar">
-    <img src="src/bot.jpg" alt="Стабильная" class="circle">
+    <img src="src/oni/bot.jpg" alt="Стабильная" class="circle">
     <span class="title">Oni💎</span>
     <p class="description">
       Стабильная версия бота
       <br>
       Не имеет некоторых функций
     </p>
-    <a href="#!" 
+    <a href="https://discordapp.com/oauth2/authorize?client_id=539865580413386783&scope=bot&permissions=8" 
     class="secondary-content waves-effect waves-light btn grey darken-4 z-depth-3"><i class="material-icons left">add</i>ДОБАВИТЬ</a>
   </li>
 
 <li class="collection-item avatar">
-    <img src="src/bot.jpg" alt="Стабильная" class="circle">
+    <img src="src/oni/bot.jpg" alt="Не стабильная" class="circle">
     <span>Oni💎[ʙᴇᴛᴀ]</span>
     <p class="description">
       Не стабильная версия бота
@@ -295,7 +295,7 @@ $(document).ready(function(){
             </div>
           </div>
           <div class="col xl1 center-align">
-            <img class="wow fadeInRight overview"  src="src/oni.png" alt="Oni" />
+            <img class="wow fadeInRight overview"  src="src/oni/commands/oni.png" alt="Oni" />
         </div>
       </div>
 
@@ -305,7 +305,7 @@ $(document).ready(function(){
 
 <!-- * Параллакс -->
     <div class="parallax-container parralax-about">
-      <div class="parallax"><img class="parallax-adaptivity" src="src/musicbackground.jpg"></div>
+      <div class="parallax"><img class="parallax-adaptivity" src="src/oni/background/musicbackground.jpg"></div>
     </div>
 
     <!-- * Скрипт для параллакса -->
@@ -358,14 +358,14 @@ $(document).ready(function(){
     </div>
 
     <div class="col xl1 center-align">
-      <img class="wow fadeInRight music-image" data-wow-delay="0.5s" src="src/music.png" alt="music"/>
+      <img class="wow fadeInRight music-image" data-wow-delay="0.5s" src="src/oni/commands/music.png" alt="music"/>
   </div>
 </div>
     </section>
 
     <!-- * Параллакс -->
     <div class="parallax-container">
-      <div class="parallax"><img class="parallax-adaptivity" src="src/artsbackground.jpg"></div>
+      <div class="parallax"><img class="parallax-adaptivity" src="src/oni/background/artsbackground.jpg"></div>
     </div>
 
     <!-- * Секция "Арты и пикчи" -->
@@ -390,14 +390,14 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="wow fadeInRight arts-image" data-wow-delay="0.5s" src="src/arts.png" alt="music"/>
+            <img class="wow fadeInRight arts-image" data-wow-delay="0.5s" src="src/oni/commands/arts.png" alt="arts"/>
         </div>
       </div>
     </section>
 
     <!-- * Параллакс -->
     <div class="parallax-container">
-      <div class="parallax"><img class="parallax-adaptivity" src="src/actsbackground.jpg"></div>
+      <div class="parallax"><img class="parallax-adaptivity" src="src/oni/background/actsbackground.jpg"></div>
     </div>
 
     <!-- * Секция "Команды взаимодействия" -->
@@ -422,14 +422,14 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="wow fadeInRight act-image" data-wow-delay="0.5s" src="src/act.png" alt="acts"/>
+            <img class="wow fadeInRight act-image" data-wow-delay="0.5s" src="src/oni/commands/act.png" alt="acts"/>
         </div>
       </div>
     </section>
 
     <!-- * Параллакс -->
     <div class="parallax-container">
-      <div class="parallax"><img class="parallax-adaptivity" src="src/funbackground.jpg"></div>
+      <div class="parallax"><img class="parallax-adaptivity" src="src/oni/background/funbackground.jpg"></div>
     </div>
 
     <!-- * Секция "Команды Развлечений" -->
@@ -454,14 +454,14 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="wow fadeInRight fun-image" data-wow-delay="0.5s" src="src/fun.png" alt="fun"/>
+            <img class="wow fadeInRight fun-image" data-wow-delay="0.5s" src="src/oni/commands/fun.png" alt="fun"/>
         </div>
       </div>
     </section>
 
     <!-- * Параллакс -->
     <div class="parallax-container">
-      <div class="parallax"><img class="parallax-adaptivity" src="src/osubackground.jpg"></div>
+      <div class="parallax"><img class="parallax-adaptivity" src="src/oni/background/osubackground.jpg"></div>
     </div>
 
     <!-- * Секция "Статистика осу" -->
@@ -489,14 +489,14 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="wow fadeInRight osu-image" data-wow-delay="0.5s" src="src/osu.png" alt="osu"/>
+            <img class="wow fadeInRight osu-image" data-wow-delay="0.5s" src="src/oni/commands/osu.png" alt="osu"/>
         </div>
       </div>
     </section>
 
     <!-- * Параллакс -->
     <div class="parallax-container">
-      <div class="parallax"><img class="parallax-adaptivity" src="src/moderbackground.jpg"></div>
+      <div class="parallax"><img class="parallax-adaptivity" src="src/oni/background/moderbackground.jpg"></div>
     </div>
 
      <!-- * Секция "Модерация" -->
@@ -514,7 +514,7 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="wow fadeInRight moder-image" data-wow-delay="0.5s" src="src/moder.png" alt="moderation"/>
+            <img class="wow fadeInRight moder-image" data-wow-delay="0.5s" src="src/oni/commands/moder.png" alt="moderation"/>
         </div>
       </div>
 
@@ -522,7 +522,7 @@ $(document).ready(function(){
 
     <!-- * Параллакс -->
     <div class="parallax-container">
-      <div class="parallax"><img class="parallax-adaptivity" src="src/nsfwbackground.jpg"></div>
+      <div class="parallax"><img class="parallax-adaptivity" src="src/oni/background/nsfwbackground.jpg"></div>
     </div>
 
     <!-- * Секция "NSFW" -->
@@ -536,20 +536,20 @@ $(document).ready(function(){
               <div class="collapsible-header"><i class="material-icons">warning</i>
                 Ну как бы...</div>
               <div class="collapsible-body">
-                <span>Вы думали здесь будет описание для команд, но это был я, Дио!<img class="dio" src="src/Dio.jpg"></span></div>
+                <span>Вы думали здесь будет описание для команд, но это был я, Дио!<img class="dio" src="src/oni/Dio.jpg"></span></div>
                 
             </li>
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="wow fadeInRight nsfw-image" data-wow-delay="0.5s" src="src/lenny.png" alt="nsfw"/>
+            <img class="wow fadeInRight nsfw-image" data-wow-delay="0.5s" src="src/oni/commands/lenny.png" alt="nsfw"/>
         </div>
       </div>
     </section>
 
     <!-- * Параллакс -->
     <div class="parallax-container">
-      <div class="parallax"><img class="parallax-adaptivity" src="src/instrumentsbackground.jpg"></div>
+      <div class="parallax"><img class="parallax-adaptivity" src="src/oni/background/instrumentsbackground.jpg"></div>
     </div>
 
     <!-- * Секция "Дополнительные команды" -->
@@ -568,7 +568,7 @@ $(document).ready(function(){
             </ul>
           </div>
           <div class="col xl1 center-align">
-            <img class="wow fadeInRight instrument-image" data-wow-delay="0.5s" src="src/insruments.png" alt="instruments"/>
+            <img class="wow fadeInRight instrument-image" data-wow-delay="0.5s" src="src/oni/commands/insruments.png" alt="instruments"/>
         </div>
       </div>
     </section>
@@ -780,7 +780,7 @@ $(document).ready(function(){
     <div><a class="wow fadeInLeft image" href="https://github.com/TFlashgamer" 
       data-wow-delay="2s"
       target="_blank"
-      style="background-image: url(src/whitelogo.png)"></a>
+      style="background-image: url(src/oni/whitelogo.png)"></a>
       <p class="wow fadeInLeft" data-wow-delay="2s">©2020 TSlash</p>
     </div>
   </div>
