@@ -7,11 +7,18 @@
       content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
     />
 
+    <!-- ? Работаем с фреймворком Materialize -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
     <!-- * Привязка остальных css стилей для поправок во фреймворке -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="css/onicommands.css" />
     <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
     <link
       rel="stylesheet"
@@ -20,10 +27,949 @@
     <link rel="stylesheet" href="css/morphext.css" />
     <link rel="stylesheet" href="css/onistyle.css" />
     <link rel="stylesheet" href="css/animate.min.css" />
-    <link rel="shortcut icon" href="src/logo.png" type="image/png" />
+    <link rel="shortcut icon" href="src/oni/logo.png" type="image/png" />
 
     <title>Oni > Команды</title>
   </head>
 
-  <body></body>
+  <body>
+    <!-- ? JavaScript materialize-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="js/morphext.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+
+    <!-- * Структура для выпадающего меню на навбаре-->
+    <ul id="dropdown1" class="dropdown-content">
+      <li>
+        <a class="dropdown-link" href="https://discord.gg/SPSQXJc"
+          >Ruby Guardians</a
+        >
+      </li>
+      <li>
+        <a
+          class="dropdown-link"
+          href="#!"
+          onclick="M.toast({html: 'Мы активно работаем над сервером поддержки, но, пока что он не доступен.'})"
+          >Oni support</a
+        >
+      </li>
+      <li class="divider"></li>
+      <li><p class="dropdown-text">Discord: /TSlash#2499</p></li>
+    </ul>
+
+    <!-- * Структура для выпадающего меню на навбаре(адаптивная)-->
+    <ul id="dropdown2" class="dropdown-content">
+      <li>
+        <a class="dropdown-link" href="https://discord.gg/SPSQXJc"
+          >Ruby Guardians</a
+        >
+      </li>
+      <li>
+        <a
+          class="dropdown-link"
+          href="#!"
+          onclick="M.toast({html: 'Мы активно работаем над сервером поддержки, но, пока что он не доступен.'})"
+          >Oni support</a
+        >
+      </li>
+      <li class="divider"></li>
+      <li><p class="dropdown-text">Discord: /TSlash#2499</p></li>
+    </ul>
+
+    <!-- * Меню (навбар) -->
+    <nav class="wow fadeInDown nav-nav">
+      <div class="wow fadeInDown nav-wrapper">
+        <a href="oni.html" class="brand-logo logo-text"
+          ><img
+            class="wow fadeInLeft"
+            data-wow-delay="1s"
+            src="src/oni/logo.png"
+            alt="Oni💎"
+            width="60"
+            height="60"
+        /></a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+          ><i class="material-icons">menu</i></a
+        >
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <a
+              class="wow fadeInDown nav-link"
+              data-wow-delay="0.1s"
+              href="oni.html"
+              >Об боте</a
+            >
+          </li>
+          <li>
+            <a
+              class="wow fadeInDown nav-link"
+              data-wow-delay="0.2s"
+              onclick="M.toast({html: 'Хмм, кажется, Вы уже и так на этой странице'})"
+              href="#!"
+              >Команды</a
+            >
+          </li>
+          <li>
+            <a
+              class="wow fadeInDown nav-link"
+              data-wow-delay="0.3s"
+              href="https://tflashgamer.github.io/"
+              >Моё портфолио</a
+            >
+          </li>
+          <li>
+            <a
+              class="wow fadeInDown dropdown-trigger"
+              data-wow-delay="0.4s"
+              href="#!"
+              data-target="dropdown1"
+              >Поддержка<i class="material-icons right">arrow_drop_down</i></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- * Адаптивное меню (навбар) -->
+    <ul class="sidenav mobile-sidenav" id="mobile-demo">
+      <li>
+        <a class="nav-link" href="oni.html">Об боте</a>
+      </li>
+      <li>
+        <a
+          class="nav-link"
+          href="#!"
+          onclick="M.toast({html: 'Хмм, кажется, Вы уже и так на этой странице'})"
+          >Команды</a
+        >
+      </li>
+      <li>
+        <a class="nav-link" href="https://tflashgamer.github.io/"
+          >Моё портфолио</a
+        >
+      </li>
+      <li>
+        <a class="dropdown-trigger" href="#!" data-target="dropdown2"
+          >Поддержка<i class="material-icons right">arrow_drop_down</i></a
+        >
+      </li>
+    </ul>
+    <!-- * Скрипт для триггера выпадающего меню на навбаре -->
+    <script src="js/navbartrigger.js"></script>
+
+    <!-- * Скрипт для всплывающих сообщений -->
+    <script>
+      // jQuery
+
+      $(document).ready(function () {
+        $(".tooltipped").tooltip();
+      });
+    </script>
+
+
+<div class="row">
+  <div class="col s12">
+    <div class="row">
+        <div class="input-field col">
+          <i class="wow fadeInLeft material-icons prefix search-icon">search</i>
+          <input
+          type="text"
+          id="autocomplete-input"
+            class="wow fadeInUp autocomplete"
+          />
+          <label
+            class="wow fadeIn"
+            data-wow-delay="1s"
+            for="autocomplete-input"
+            >Введите название</label
+          >
+        </div>
+    </div>
+  </div>
+</div>
+
+    <script src="js/searchscript.js"></script>
+
+    <!-- * Слова в автоподборе -->
+    <script>
+      $(document).ready(function () {
+        $("input.autocomplete").autocomplete({
+          limit: 4,
+          data: {
+            Музыка: null,
+            Взаимодействие: null,
+            Арты: null,
+            Пикчи: null,
+            Развлечения: null,
+            Osu: null,
+            Модерация: null,
+            NSFW: null,
+            Инструменты: null,
+            Информация: null,
+          },
+        });
+      });
+    </script>
+
+    <ul id="myMenu" class="collapsible popout">
+      <li class="first-block wow fadeInUp" data-wow-delay="0.2s">
+        <div class="collapsible-header table-header">
+          <i class="material-icons">whatshot</i><p class="elastic">Информация (Рекомендовано прочитать)</p> 
+        </div>
+        <div class="collapsible-body first-block-child">
+       <span>Привет! Это информативная страница для команд бота. Можна сказать, что-то типо википедии на минималках
+         <br>В целом команд довольно много, по этому лучше использовать
+         поиск.
+        <br> Небольшой совет, если Вы ищете что-то по разделам, вводите запрос с большой буквы, если Вы ищете команду, тогда с маленькой.
+       </span>
+      </div>
+        </div>
+      </li>
+
+      <li class="wow fadeInUp" data-wow-delay="0.4s">
+        <div class="collapsible-header table-header">
+          <i class="material-icons">album</i><p class="elastic">Музыка</p> 
+        </div>
+        <div class="collapsible-body">
+          <!-- * Команды внутри -->
+          <ul class="collapsible expandable">
+            <li class="wow fadeInUp" data-wow-delay="0.1s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.2s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.3s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.4s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.5s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.6s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.7s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.8s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.9s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="1.0s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="1.1s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="1.2s">
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">album</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="wow fadeInUp" data-wow-delay="0.6s">
+        <div class="collapsible-header table-header">
+          <i class="material-icons">photo</i><p class="elastic">Арты и пикчи</p> 
+        </div>
+        <div class="collapsible-body">
+          <!-- * Команды внутри -->
+          <ul class="collapsible expandable">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">photo</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">photo</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">photo</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">photo</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">photo</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">photo</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">photo</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="wow fadeInUp" data-wow-delay="0.8s">
+        <div class="collapsible-header table-header">
+          <i class="material-icons">face</i><p class="elastic">Взаимодействие</p> 
+        </div>
+        <div class="collapsible-body">
+          <!-- * Команды внутри -->
+          <ul class="collapsible expandable">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">face</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="wow fadeInUp" data-wow-delay="1.0s">
+        <div class="collapsible-header table-header">
+          <i class="material-icons">mood</i><p class="elastic">Развлечения</p> 
+        </div>
+        <div class="collapsible-body">
+          <!-- * Команды внутри -->
+          <ul class="collapsible expandable">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">mood</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="wow fadeInUp" data-wow-delay="1.2s">
+        <div class="collapsible-header table-header">
+          <i class="material-icons">trip_origin</i><p class="elastic">Osu!</p> 
+        </div>
+        <div class="collapsible-body">
+          <!-- * Команды внутри -->
+          <ul class="collapsible expandable">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">trip_origin</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="wow fadeInUp" data-wow-delay="1.4s">
+        <div class="collapsible-header table-header">
+          <i class="material-icons">admin_panel_settings</i><p class="elastic">Модерация</p> 
+        </div>
+        <div class="collapsible-body">
+          <!-- * Команды внутри -->
+          <ul class="collapsible expandable">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">filter_drama</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">place</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">whatshot</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="wow fadeInUp" data-wow-delay="1.6s">
+        <div class="collapsible-header table-header">
+          <i class="material-icons">error_outline</i><p class="elastic">NSFW</p> 
+        </div>
+        <div class="collapsible-body">
+          <!-- * Команды внутри -->
+          <ul class="collapsible expandable">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">filter_drama</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">place</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">whatshot</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+
+      <li class="wow fadeInUp" data-wow-delay="1.8s">
+        <div class="collapsible-header table-header">
+          <i class="material-icons">build</i><p class="elastic">Инструменты</p> 
+        </div>
+        <div class="collapsible-body">
+          <!-- * Команды внутри -->
+          <ul class="collapsible expandable">
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">filter_drama</i>First
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">place</i>Second
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+            <li>
+              <div class="collapsible-header">
+                <i class="material-icons">whatshot</i>Third
+              </div>
+              <div class="collapsible-body">
+                <span>Lorem ipsum dolor sit amet.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+    <script>
+      $(document).ready(function () {
+        $(".collapsible").collapsible();
+      });
+    </script>
+  </body>
 </html>
