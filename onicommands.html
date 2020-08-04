@@ -200,16 +200,51 @@
         $("input.autocomplete").autocomplete({
           limit: 4,
           data: {
-            Музыка: null,
-            Взаимодействие: null,
-            Арты: null,
-            Пикчи: null,
             Развлечения: null,
             Osu: null,
             Модерация: null,
             NSFW: null,
             Инструменты: null,
             Информация: null,
+
+            /* Музыка
+================================================== */
+            Музыка: null,
+            play: null,
+            np: null,
+            queue: null,
+            search: null,
+            shuffle: null,
+            skip: null,
+            pause: null,
+            repeat: null,
+            stop: null,
+            volume: null,
+            scsearch: null,
+            playlist: null,
+            lyrics: null,
+            remove: null,
+            forceremove: null,
+            forceskip: null,
+            playnext: null,
+            skipto: null,
+            lastfm: null,
+
+            /* Арты и пикчи
+================================================== */
+            Арты: null,
+            Пикчи: null,
+            a: null,
+            neko: null,
+            nekogif: null,
+            foxgirl: null,
+            kemonomimi: null,
+            meow: null,
+            flowa: null,
+
+            /* Взаимодействие
+================================================== */
+            Взаимодействие: null,
           },
         });
       });
@@ -224,7 +259,10 @@
        <span>Привет! Это информативная страница для команд бота. Можна сказать, что-то типо википедии на минималках
          <br>В целом команд довольно много, по этому лучше использовать
          поиск.
-        <br> Небольшой совет, если Вы ищете что-то по разделам, вводите запрос с большой буквы, если Вы ищете команду, тогда с маленькой.
+        <br> Небольшой совет, если Вы ищете что-то по разделам, вводите запрос с большой буквы, если Вы ищете команду, тогда с маленькой. 
+        <br><strong>Q: Как работает поиск?</strong>
+        <br><strong>A: Довольно просто. Открываете нужный Вам раздел и вводите команду в поисковик. Нужная Вам команда выделится.
+        </strong>
        </span>
       </div>
         </div>
@@ -241,154 +279,186 @@
           <ul class="collapsible expandable">
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>First
+                <i class="material-icons">album</i><p class="elastic">play</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *play [url/название песни]</strong>
+                  <br><strong>Пример: *play From here CloudNone</strong>
+                  <br>Команда добавляет трек в список воспроизводимого.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.2s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Second
+                <i class="material-icons">album</i><p class="elastic">np</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span></span><strong>Использование: *np</strong>
+                <br>Показывает информацию о воспроизводящемся треке.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.3s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Third
+                <i class="material-icons">album</i><p class="elastic">queue</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *queue</strong>
+                <br>Показывает список поставленных Вами треков.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.4s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>First
+                <i class="material-icons">album</i><p class="elastic">search</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *search [url/название песни]</strong>
+                  <br><strong>Пример: *search From here CloudNone</strong>
+                  <br>Позволяет искать треки в YouTube и выбрать из списка подходящий Вам результат.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.5s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Second
+                <i class="material-icons">album</i><p class="elastic">shuffle</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *shuffle</strong>
+                  <br>Перемешивает все поставленние Вами треки в списке.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.6s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Third
+                <i class="material-icons">album</i><p class="elastic">skip</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *skip</strong>
+                  <br>Даёт возможность пропустить трек, или же запустить голосование за его пропуск.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.7s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>First
+                <i class="material-icons">album</i><p class="elastic">pause</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *pause</strong>
+                  <br>Ставит плеер бота на паузу. При повторной активации продолжает воспроизводить Вашу музыку.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.8s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Second
+                <i class="material-icons">album</i><p class="elastic">repeat</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *repeat</strong>
+                  <br>Включает режим повтора для бота, тем самым не удаляя треки из списка воспроизведения.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.9s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Third
+                <i class="material-icons">album</i><p class="elastic">stop</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *stop</strong>
+                  <br>Полностью очищает список поставленных треков и отключает бота от голосового канала.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.0s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>First
+                <i class="material-icons">album</i><p class="elastic">volume</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *volume [1-200] </strong>
+                  <br><strong>Пример: *volume 50</strong>
+                  <br>Меняет громкость в плеере бота.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.1s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Second
+                <i class="material-icons">album</i><p class="elastic">scsearch</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *scsearch [название песни]</strong>
+                  <br><strong>Пример: *scsearch From here CloudNone</strong>
+                  <br>Позволяет искать треки в SoundCloud и выбрать из списка подходящий Вам результат.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.2s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Third
+                <i class="material-icons">album</i><p class="elastic">playlist</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *playlist</strong>
+                  <br>Выводит список команд для взаимодействия с плейлистами.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>First
+                <i class="material-icons">album</i><p class="elastic">lyrics</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *lyrics</strong>
+                  <br><strong>Пример: *lyrics From here CloudNone</strong>
+                  <br><strong>Примечание: Если ввести команду без названия трека, будет взята лирика из трека который играет
+                    в это время.
+                  </strong>
+                  <br>Выводит слова песни (если они есть) в чат.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Second
+                <i class="material-icons">album</i><p class="elastic">remove</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *remove [номер из списка]</strong>
+                  <br><strong>Пример: *remove 7</strong>
+                  <br>Начинает голосование за удаление трека из воспроизводящегося списка.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Third
+                <i class="material-icons">album</i><p class="elastic">forceremove</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *forceremove [номер из списка]</strong>
+                  <br><strong>Пример: *forceremove 7</strong>
+                  <br>Удаляет трек из воспроизводящегося списка.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>First
+                <i class="material-icons">album</i><p class="elastic">forceskip</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *forceskip</strong>
+                  <br>Перманентно скипает трек.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Second
+                <i class="material-icons">album</i><p class="elastic">playnext</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *playnext [URL/название песни]</strong>
+                  <br><strong>Пример: *playnext From here CloudNone</strong>
+                  <br>Ставит трек следующим вне очереди.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>Third
+                <i class="material-icons">album</i><p class="elastic">skipto</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *skipto [Номер в списке]</strong>
+                  <br><strong>Пример: *skipto 7</strong>
+                  <br>Скипает к определённому треку в списке.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">album</i>First
+                <i class="material-icons">album</i><p class="elastic">lastfm</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *lastfm [Ник в Last-FM]</strong>
+                  <br><strong>Пример: *lastfm TSlash_</strong>
+                  <br>Статистика в Last-FM.</span>
               </div>
             </li>
           </ul>
@@ -406,58 +476,66 @@
           <ul class="collapsible expandable">
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">photo</i>First
+                <i class="material-icons">photo</i><p class="elastic">a</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *a</strong>
+                  <br>[a - arts]. Выдаёт рандомный, атмосферный аниме арт.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.2s">
               <div class="collapsible-header">
-                <i class="material-icons">photo</i>Second
+                <i class="material-icons">photo</i><p class="elastic">neko</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *neko</strong>
+                  <br>Выдаёт рандомный арт с неко.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.3s">
               <div class="collapsible-header">
-                <i class="material-icons">photo</i>Third
+                <i class="material-icons">photo</i><p class="elastic">nekogif</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+               <span><br><strong>Использование: *nekogif</strong>
+                <br>Выдаёт рандомную гифку с неко.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.4s">
               <div class="collapsible-header">
-                <i class="material-icons">photo</i>First
+                <i class="material-icons">photo</i><p class="elastic">foxgirl</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *foxgirl</strong>
+                  <br>Выдаёт рандомный арт с "лисой".</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.5s">
               <div class="collapsible-header">
-                <i class="material-icons">photo</i>Second
+                <i class="material-icons">photo</i><p class="elastic">kemonomimi</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *kemonomimi</strong>
+                  <br>Выдаёт рандомный, милый аниме арт.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.6s">
               <div class="collapsible-header">
-                <i class="material-icons">photo</i>Third
+                <i class="material-icons">photo</i><p class="elastic">meow</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *meow</strong>
+                  <br>Выдаёт рандомные пикчи с кошками.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.7s">
               <div class="collapsible-header">
-                <i class="material-icons">photo</i>First
+                <i class="material-icons">photo</i><p class="elastic">flowa</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *flowa</strong>
+                  <br><strong>Пример: *flowa sakura</strong>
+                  <br>Выдаёт рандомные пикчи с красивым видом или же просто природой.</span>
               </div>
             </li>
           </ul>
