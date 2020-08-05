@@ -42,6 +42,20 @@
       new WOW().init();
     </script>
 
+ <!-- * Прелоадер -->
+ <div class="preloader">
+  <div class="preloader__row">
+<img class="preloader-image" src="src/oni/logo.png">
+  </div>
+  <p class="wow fadeInDown preload-text" data-wow-delay="1s">Загружаем Вашу страницу</p>
+    <p class="wow fadeInDown preload-text" data-wow-delay="1.5s">Подождите немного, пожалуйтса</p>
+</div>
+<!-- * Привязка скрипта для прелоадера -->
+
+<script src="js/loading.js"></script>
+
+
+
     <!-- * Структура для выпадающего меню на навбаре-->
     <ul id="dropdown1" class="dropdown-content">
       <li>
@@ -195,61 +209,9 @@
     <script src="js/searchscript.js"></script>
 
     <!-- * Слова в автоподборе -->
-    <script>
-      $(document).ready(function () {
-        $("input.autocomplete").autocomplete({
-          limit: 4,
-          data: {
-            Развлечения: null,
-            Osu: null,
-            Модерация: null,
-            NSFW: null,
-            Инструменты: null,
-            Информация: null,
+    <script src="js/autoinit.js"></script>
 
-            /* Музыка
-================================================== */
-            Музыка: null,
-            play: null,
-            np: null,
-            queue: null,
-            search: null,
-            shuffle: null,
-            skip: null,
-            pause: null,
-            repeat: null,
-            stop: null,
-            volume: null,
-            scsearch: null,
-            playlist: null,
-            lyrics: null,
-            remove: null,
-            forceremove: null,
-            forceskip: null,
-            playnext: null,
-            skipto: null,
-            lastfm: null,
-
-            /* Арты и пикчи
-================================================== */
-            Арты: null,
-            Пикчи: null,
-            a: null,
-            neko: null,
-            nekogif: null,
-            foxgirl: null,
-            kemonomimi: null,
-            meow: null,
-            flowa: null,
-
-            /* Взаимодействие
-================================================== */
-            Взаимодействие: null,
-          },
-        });
-      });
-    </script>
-
+<!-- * Информативный блок -->
     <ul id="myMenu" class="collapsible popout">
       <li class="first-block wow fadeInUp" data-wow-delay="0.2s">
         <div class="collapsible-header table-header">
@@ -389,7 +351,7 @@
                   <br>Выводит список команд для взаимодействия с плейлистами.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.3s">
               <div class="collapsible-header">
                 <i class="material-icons">album</i><p class="elastic">lyrics</p>
               </div>
@@ -402,7 +364,7 @@
                   <br>Выводит слова песни (если они есть) в чат.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.4s">
               <div class="collapsible-header">
                 <i class="material-icons">album</i><p class="elastic">remove</p>
               </div>
@@ -412,7 +374,7 @@
                   <br>Начинает голосование за удаление трека из воспроизводящегося списка.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.5s">
               <div class="collapsible-header">
                 <i class="material-icons">album</i><p class="elastic">forceremove</p>
               </div>
@@ -422,7 +384,7 @@
                   <br>Удаляет трек из воспроизводящегося списка.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.6s">
               <div class="collapsible-header">
                 <i class="material-icons">album</i><p class="elastic">forceskip</p>
               </div>
@@ -431,7 +393,7 @@
                   <br>Перманентно скипает трек.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.7s">
               <div class="collapsible-header">
                 <i class="material-icons">album</i><p class="elastic">playnext</p>
               </div>
@@ -441,7 +403,7 @@
                   <br>Ставит трек следующим вне очереди.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.8s">
               <div class="collapsible-header">
                 <i class="material-icons">album</i><p class="elastic">skipto</p>
               </div>
@@ -451,7 +413,7 @@
                   <br>Скипает к определённому треку в списке.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.9s">
               <div class="collapsible-header">
                 <i class="material-icons">album</i><p class="elastic">lastfm</p>
               </div>
@@ -553,162 +515,197 @@
           <ul class="collapsible expandable">
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>First
+                <i class="material-icons">face</i><p class="elastic">pat</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *pat [@пользователь]</strong>
+                  <br><strong>Пример: *pat @sakura</strong>
+                  <br>Погладить кого-то.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.2s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Second
+                <i class="material-icons">face</i><p class="elastic">hug</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *hug [@пользователь]</strong>
+                  <br><strong>Пример: *hug @sakura</strong>
+                  <br>Обнять кого-то.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.3s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Third
+                <i class="material-icons">face</i><p class="elastic">kiss</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *kiss [@пользователь]</strong>
+                  <br><strong>Пример: *kiss @sakura</strong>
+                  <br>Поцеловать кого-то.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.4s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>First
+                <i class="material-icons">face</i><p class="elastic">slap</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *slap [@пользователь]</strong>
+                  <br><strong>Пример: *slap @sakura</strong>
+                  <br>Ударить кого-то.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.5s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Second
+                <i class="material-icons">face</i><p class="elastic">tickle</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *tickle [@пользователь]</strong>
+                  <br><strong>Пример: *tickle @sakura</strong>
+                  <br>Защекотать кого-то.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.6s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Third
+                <i class="material-icons">face</i><p class="elastic">cuddle</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *cuddle [@пользователь]</strong>
+                  <br><strong>Пример: *cuddle @sakura</strong>
+                  <br>Прижаться к кому-то.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.7s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>First
+                <i class="material-icons">face</i><p class="elastic">poke</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *poke [@пользователь]</strong>
+                  <br><strong>Пример: *poke @sakura</strong>
+                  <br>Тыкнуть в кого-то.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.8s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Second
+                <i class="material-icons">face</i><p class="elastic">smug</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *smug</strong>
+                  <br>Самодовольно улыбаться.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.9s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Third
+                <i class="material-icons">face</i><p class="elastic">baka</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *baka [@пользователь]</strong>
+                  <br><strong>Пример: *baka @sakura</strong>
+                  <br>Накричать на кого-то.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.0s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>First
+                <i class="material-icons">face</i><p class="elastic">feed</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *feed [@пользователь]</strong>
+                  <br><strong>Пример: *feed @sakura</strong>
+                  <br>Покормить кого-то (поделиться едой).</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.1s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Second
+                <i class="material-icons">face</i><p class="elastic">bite</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *bite [@пользователь]</strong>
+                  <br><strong>Пример: *bite @sakura</strong>
+                  <br>Укусить кого-то.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.2s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Third
+                <i class="material-icons">face</i><p class="elastic">bloodsuck</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *bloodsuck [@пользователь]</strong>
+                  <br><strong>Пример: *bloodsuck @sakura</strong>
+                  <br>Выпить кровь у кого-то.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.3s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>First
+                <i class="material-icons">face</i><p class="elastic">holdhand</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *holdhand [@пользователь]</strong>
+                  <br><strong>Пример: *holdhand @sakura</strong>
+                  <br>Держаться за руки с кем-то.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.4s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Second
+                <i class="material-icons">face</i><p class="elastic">stare</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *stare [@пользователь]</strong>
+                  <br><strong>Пример: *stare @sakura</strong>
+                  <br>Посмотреть на кого-то.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.5s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Third
+                <i class="material-icons">face</i><p class="elastic">smile</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *smile [@пользователь]</strong>
+                  <br><strong>Пример: *smile @sakura</strong>
+                  <br>Улыбаться кому-то.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.6s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>First
+                <i class="material-icons">face</i><p class="elastic">blush</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *blush</strong>
+                  <br>Покраснеть.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.7s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Second
+                <i class="material-icons">face</i><p class="elastic">sleepy</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *sleepy</strong>
+                  <br>Быть сонным.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.8s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>Third
+                <i class="material-icons">face</i><p class="elastic">dance</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *dance</strong>
+                  <br>Танцевать.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.9s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>First
+                <i class="material-icons">face</i><p class="elastic">cry</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *cry</strong>
+                  <br>Плакать.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="2.0s">
               <div class="collapsible-header">
-                <i class="material-icons">face</i>First
+                <i class="material-icons">face</i><p class="elastic">highfive</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *highfive [@пользователь]</strong>
+                  <br><strong>Пример: *highfive @sakura</strong>
+                  <br>Дать пять кому-то.</span>
               </div>
             </li>
           </ul>
@@ -726,98 +723,116 @@
           <ul class="collapsible expandable">
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>First
+                <i class="material-icons">mood</i><p class="elastic">b</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *b</strong>
+                  <br>[b - bugurt] Кидает рандомный бугурт.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.2s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>Second
+                <i class="material-icons">mood</i><p class="elastic">8ball</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *8ball [вопрос]</strong>
+                  <br><strong>Пример: *8ball я молодец?</strong>
+                  <br>Задать волшебному шару вопрос.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.3s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>Third
+                <i class="material-icons">mood</i><p class="elastic">fact</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *fact</strong>
+                  <br>Рандомный интересный факт.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.4s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>First
+                <i class="material-icons">mood</i><p class="elastic">catfact</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *catfact</strong>
+                  <br>Рандомный факт о кошках.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.5s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>Second
+                <i class="material-icons">mood</i><p class="elastic">coinflip</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *coinflip</strong>
+                  <br>Подбросить монетку.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.6s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>Third
+                <i class="material-icons">mood</i><p class="elastic">rolldice</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *rolldice</strong>
+                  <br>Бросить кубик.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.7s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>First
+                <i class="material-icons">mood</i><p class="elastic">why</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *why</strong>
+                  <br>Рандомный вопрос.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.8s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>Second
+                <i class="material-icons">mood</i><p class="elastic">owoify</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *owoify [текст]</strong>
+                  <br><strong>Пример: *owoify some pretty text</strong>
+                  <br>Преображает текст.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.9s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>Third
+                <i class="material-icons">mood</i><p class="elastic">lovemeter</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *lovemeter [@пользователь @пользователь]</strong>
+                  <br><strong>Пример: *lovemeter @sakura @tree</strong>
+                  <br>Выдаёт совместимость с человеком (не воспринимайте в серьёз).</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.0s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>First
+                <i class="material-icons">mood</i><p class="elastic">joke</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *joke</strong>
+                  <br>Плохие шутки.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.1s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>Second
+                <i class="material-icons">mood</i><p class="elastic">gif</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *gif [тег]</strong>
+                  <br><strong>Пример: *gif neko</strong>
+                  <br>Достать гифку из сервиса Giphy.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.2s">
               <div class="collapsible-header">
-                <i class="material-icons">mood</i>Third
+                <i class="material-icons">mood</i><p class="elastic">fantasyname</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *fantasyname [тег]</strong>
+                  <br><strong>Пример: *fantasyname elph</strong>
+                  <br><strong>Примечание: напишите команду без тега, что б узнать подробнее.</strong>
+                  <br>Генератор ника.</span>
               </div>
             </li>
           </ul>
@@ -835,114 +850,144 @@
           <ul class="collapsible expandable">
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>First
+                <i class="material-icons">trip_origin</i><p class="elastic">addpp</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *addpp [количество pp] [ник] [beatmap_id]</strong>
+                  <br><strong>Пример: *addpp 40 TSlash 791635</strong>
+                  <br>Расчитайте новый общий пп после достижения новой наилучшей игры.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.2s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>Second
+                <i class="material-icons">trip_origin</i><p class="elastic">ar</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *ar [Число ar] [+МОД]</strong>
+                  <br><strong>Пример: *ar 6 +DT</strong>
+                  <br>Расчитайте темп карты в милисекундах с применёнными модами.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.3s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>Third
+                <i class="material-icons">trip_origin</i><p class="elastic">bpm</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *bpm [beatmap url] [+МОД]</strong>
+                  <br><strong>Пример: *bpm httpl://osu.ppy.sh/beatmaps/360107#osu/791635 +DT</strong>
+                  <br>Показывает визуальный bpm график для карты.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.4s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>First
+                <i class="material-icons">trip_origin</i><p class="elastic">compare</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *compare [ник]</strong>
+                  <br><strong>Пример: *сompare sakura</strong>
+                  <br>Сравнить последнюю карту с наилучшей.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.5s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>Second
+                <i class="material-icons">trip_origin</i><p class="elastic">ign-set</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *ign-set [Ник]</strong>
+                  <br><strong>Пример: *ign-set sakura</strong>
+                  <br>Устанавливает ваш осу ник, чтобы вы могли использовать команду *osu команды без указания имени пользователя.
+                </span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.6s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>Third
+                <i class="material-icons">trip_origin</i><p class="elastic">osu-track</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *osu-track [Ник]</strong>
+                  <br><strong>Пример: *osu-track sakura</strong>
+                  <br>Начинает отслеживать лучшие игры пользователя и выдавать результаты в канале.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.7s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>First
+                <i class="material-icons">trip_origin</i><p class="elastic">osu-untrack</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *osu-untrack [Ник]</strong>
+                  <br><strong>Пример: *osu-untrack sakura</strong>
+                  <br>Перестаёт следить за играми пользователя.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.8s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>Second
+                <i class="material-icons">trip_origin</i><p class="elastic">osu</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *osu [Ник]</strong>
+                  <br><strong>Пример: *osu sakura</strong>
+                  <br>Показывает статистику осу.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.9s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>Third
+                <i class="material-icons">trip_origin</i><p class="elastic">recent</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *recent [Ник]</strong>
+                  <br><strong>Пример: *recent sakura</strong>
+                  <br>Показывает последнюю сыгранную карту пользователем.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.0s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>First
+                <i class="material-icons">trip_origin</i><p class="elastic">render</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *render [beatmap url] [+Мод] [AR8] [CS6] 
+                  [preview/strains/aim/speed/fail] [mp4] [plain] [120fps] [mm:ss] [353x] [4s]</strong>
+                  <br><strong>Пример: *render strains 60fps 20s</strong>
+                  <br>Рендерит гифку или видео игры на карте.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.1s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>Second
+                <i class="material-icons">trip_origin</i><p class="elastic">score</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *score [beatmap url] [Ник] [+Мод]</strong>
+                  <br><strong>Пример: *score httpl://osu.ppy.sh/beatmaps/360107#osu/791635 sakura</strong>
+                  <br>Ищет результаты сыгранных карт.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.2s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>Third
+                <i class="material-icons">trip_origin</i><p class="elastic">strains</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *strains [beatmap url] [+МОД] [AR8] [CS6] [aim/speed]</strong>
+                  <br><strong>Пример: *strains httpl://osu.ppy.sh/beatmaps/360107#osu/791635 +HD sakura</strong>
+                  <br>Показывает график сложности карты.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.3s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>First
+                <i class="material-icons">trip_origin</i><p class="elastic">top</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *top [Ник]</strong>
+                  <br><strong>Пример: *top sakura</strong>
+                  <br>Показывает лучшую игру.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.4s">
               <div class="collapsible-header">
-                <i class="material-icons">trip_origin</i>Second
+                <i class="material-icons">trip_origin</i><p class="elastic">with</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *with [+мод]</strong>
+                  <br><strong>Пример: *with +DT</strong>
+                  <br>Показывает результат с модом.</span>
               </div>
             </li>
           </ul>
@@ -960,90 +1005,100 @@
           <ul class="collapsible expandable">
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">admin_panel_settings</i>First
+                <i class="material-icons">admin_panel_settings</i><p class="elastic">warn</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *warn [@пользователь]</strong>
+                  <br><strong>Пример: *warn @sakura</strong>
+                  <br>Выдать предупреждение нарушителю.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.2s">
               <div class="collapsible-header">
-                <i class="material-icons">admin_panel_settings</i>Second
+                <i class="material-icons">admin_panel_settings</i><p class="elastic">ban</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *ban [@пользователь] [причина]</strong>
+                  <br><strong>Пример: *ban @sakura сделал что то плохое</strong>
+                  <br>Бан пользователя. Желательно указывать причину.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.3s">
               <div class="collapsible-header">
-                <i class="material-icons">admin_panel_settings</i>Third
+                <i class="material-icons">admin_panel_settings</i><p class="elastic">edit</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *edit [id сообщения] [новое сообщение]</strong>
+                  <br><strong>Пример: *edit 706240349160341580 привет</strong>
+                  <br>Переписывает сообщение от бота.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.4s">
               <div class="collapsible-header">
-                <i class="material-icons">admin_panel_settings</i>First
+                <i class="material-icons">admin_panel_settings</i><p class="elastic">kick</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *kick [@пользователь] [причина]</strong>
+                  <br><strong>Пример: *kick @/TSlash плохой человек</strong>
+                  <br>Выгоняет пользователя из сервера. Желательно указывать причину.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.5s">
               <div class="collapsible-header">
-                <i class="material-icons">admin_panel_settings</i>Second
+                <i class="material-icons">admin_panel_settings</i><p class="elastic">mute</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *mute [@пользователь] [причина]</strong>
+                  <br><strong>Пример: *mute @/TSlash зачем вообще говорить, лол?</strong>
+                  <br>Мутит пользователя. Желательно указывать причину.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.6s">
               <div class="collapsible-header">
-                <i class="material-icons">admin_panel_settings</i>Third
+                <i class="material-icons">admin_panel_settings</i><p class="elastic">pin</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *pin [id сообщения]</strong>
+                  <br><strong>Пример: *pin 706240285096542233</strong>
+                  <br>Закрепляет сообщение в канале.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.7s">
               <div class="collapsible-header">
-                <i class="material-icons">admin_panel_settings</i>First
+                <i class="material-icons">admin_panel_settings</i><p class="elastic">prune</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *prune [количество сообщений]</strong>
+                  <br><strong>Пример: *prune 7</strong>
+                  <br>Очищает чат от сообщений.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.8s">
               <div class="collapsible-header">
-                <i class="material-icons">admin_panel_settings</i>Second
+                <i class="material-icons">admin_panel_settings</i><p class="elastic">send</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *send [сообщение]</strong>
+                  <br><strong>Пример: *send привет</strong>
+                  <br>Отправляет сообщение от имени бота.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.9s">
               <div class="collapsible-header">
-                <i class="material-icons">admin_panel_settings</i>Third
+                <i class="material-icons">admin_panel_settings</i><p class="elastic">serverinfo</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *serverinfo</strong>
+                  <br>Показывает полную информацию об сервере.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.0s">
               <div class="collapsible-header">
-                <i class="material-icons">admin_panel_settings</i>First
+                <i class="material-icons">admin_panel_settings</i><p class="elastic">userinfo</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
-              </div>
-            </li>
-            <li class="wow fadeInUp" data-wow-delay="1.1s">
-              <div class="collapsible-header">
-                <i class="material-icons">admin_panel_settings</i>Second
-              </div>
-              <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *userinfo</strong>
+                  <br>Показывает полную информацию об пользователе.</span>
               </div>
             </li>
           </ul>
@@ -1052,275 +1107,371 @@
 
 
 <!-- * NSFW -->
-      <li class="wow fadeInUp" data-wow-delay="1.6s">
+      <li class="wow fadeInUp tooltipped" data-position="top" 
+      data-tooltip="Лучше не открывать этот пункт, поверьте на слово." data-wow-delay="1.6s">
         <div class="collapsible-header table-header">
           <i class="material-icons">error_outline</i><p class="elastic">NSFW</p> 
         </div>
         <div class="collapsible-body">
           <!-- * Команды внутри -->
           <ul class="collapsible expandable">
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>First
+                <i class="material-icons">info</i>Нуу.. Я предупреждал...
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+             <span>Здесь и в правду, много... команд...</span>
+            </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.1s">
+              <div class="collapsible-header">
+                <i class="material-icons">error_outline</i><p class="elastic">hg</p>
+              </div>
+              <div class="collapsible-body">
+                <span><br><strong>Использование: *hg</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.2s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Second
+                <i class="material-icons">error_outline</i><p class="elastic">pussy</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *pussy</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.3s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Third
+                <i class="material-icons">error_outline</i><p class="elastic">ng</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *ng</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.4s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>First
+                <i class="material-icons">error_outline</i><p class="elastic">nekop</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *nekop</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.5s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Second
+                <i class="material-icons">error_outline</i><p class="elastic">lesbian</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *lesbian</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.6s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Third
+                <i class="material-icons">error_outline</i><p class="elastic">kuni</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *kuni</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.7s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>First
+                <i class="material-icons">error_outline</i><p class="elastic">cumsluts</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *cumsluts</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.8s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Second
+                <i class="material-icons">error_outline</i><p class="elastic">classic</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *classic</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.9s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Third
+                <i class="material-icons">error_outline</i><p class="elastic">boobs</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *boobs</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.0s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>First
+                <i class="material-icons">error_outline</i><p class="elastic">bJ</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *bJ</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.1s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Second
+                <i class="material-icons">error_outline</i><p class="elastic">anal</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *anal</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="1.2s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Third
+                <i class="material-icons">error_outline</i><p class="elastic">avatars</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *avatars</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.3s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>First
+                <i class="material-icons">error_outline</i><p class="elastic">yuri</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *yuri</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.4s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Second
+                <i class="material-icons">error_outline</i><p class="elastic">trap</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *trap</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.5s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Third
+                <i class="material-icons">error_outline</i><p class="elastic">tits</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *tits</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.6s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>First
+                <i class="material-icons">error_outline</i><p class="elastic">gsg</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *gsg</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.7s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Second
+                <i class="material-icons">error_outline</i><p class="elastic">gs</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *gs</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.8s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Third
+                <i class="material-icons">error_outline</i><p class="elastic">sb</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *sb</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="1.9s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>First
+                <i class="material-icons">error_outline</i><p class="elastic">pwg</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *pwg</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="2.0s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Second
+                <i class="material-icons">error_outline</i><p class="elastic">pussyart</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *pussyart</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="2.1s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Third
+                <i class="material-icons">error_outline</i><p class="elastic">kemonomimis</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *kemonomimis</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="2.2s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>First
+                <i class="material-icons">error_outline</i><p class="elastic">kitsune</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *kitsune</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="2.3s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Second
+                <i class="material-icons">error_outline</i><p class="elastic">keta</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *keta</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="2.5s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Third
+                <i class="material-icons">error_outline</i><p class="elastic">holo</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *holo</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="2.6s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>First
+                <i class="material-icons">error_outline</i><p class="elastic">holoero</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *holoero</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="2.7s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Second
+                <i class="material-icons">error_outline</i><p class="elastic">hentai</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *hentai</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="2.8s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Third
+                <i class="material-icons">error_outline</i><p class="elastic">futanari</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *futanari</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="2.9s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>First
+                <i class="material-icons">error_outline</i><p class="elastic">femdom</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *femdom</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="3.0s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Second
+                <i class="material-icons">error_outline</i><p class="elastic">feetgif</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *feetgif</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="3.1s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Third
+                <i class="material-icons">error_outline</i><p class="elastic">erofeet</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *erofeet</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="3.2s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>First
+                <i class="material-icons">error_outline</i><p class="elastic">feet</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *feet</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="3.3s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Second
+                <i class="material-icons">error_outline</i><p class="elastic">ero</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *ero</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
-            <li class="wow fadeInUp" data-wow-delay="0.1s">
+            <li class="wow fadeInUp" data-wow-delay="3.4s">
               <div class="collapsible-header">
-                <i class="material-icons">error_outline</i>Third
+                <i class="material-icons">error_outline</i><p class="elastic">erokitsune</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><br><strong>Использование: *erokitsune</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="3.5s">
+              <div class="collapsible-header">
+                <i class="material-icons">error_outline</i><p class="elastic">erokemonomimi</p>
+              </div>
+              <div class="collapsible-body">
+                <span><br><strong>Использование: *erokemonomimi</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="3.6s">
+              <div class="collapsible-header">
+                <i class="material-icons">error_outline</i><p class="elastic">eroneko</p>
+              </div>
+              <div class="collapsible-body">
+                <span><br><strong>Использование: *eroneko</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="3.7s">
+              <div class="collapsible-header">
+                <i class="material-icons">error_outline</i><p class="elastic">eroyuri</p>
+              </div>
+              <div class="collapsible-body">
+                <span><br><strong>Использование: *eroyuri</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="3.8s">
+              <div class="collapsible-header">
+                <i class="material-icons">error_outline</i><p class="elastic">cumarts</p>
+              </div>
+              <div class="collapsible-body">
+                <span><br><strong>Использование: *cumarts</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="3.9s">
+              <div class="collapsible-header">
+                <i class="material-icons">error_outline</i><p class="elastic">blowjob</p>
+              </div>
+              <div class="collapsible-body">
+                <span><br><strong>Использование: *blowjob</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
+              </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="4.0s">
+              <div class="collapsible-header">
+                <i class="material-icons">error_outline</i><p class="elastic">pussygif</p>
+              </div>
+              <div class="collapsible-body">
+                <span><br><strong>Использование: *pussygif</strong>
+                  <br>Извините, описание для этих команд не доступно.</span>
               </div>
             </li>
           </ul>
@@ -1338,66 +1489,87 @@
           <ul class="collapsible expandable">
             <li class="wow fadeInUp" data-wow-delay="0.1s">
               <div class="collapsible-header">
-                <i class="material-icons">build</i>First
+                <i class="material-icons">build</i><p class="elastic">afk</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *afk</strong>
+                  <br>Дайте людям знать, что Вы отошли от клавиатуры.
+                </span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.2s">
               <div class="collapsible-header">
-                <i class="material-icons">build</i>Second
+                <i class="material-icons">build</i><p class="elastic">time</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *time [ /full]</strong>
+                  <br>Позволяет узнать время, а если ввести full, то дату полностью.
+                </span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.3s">
               <div class="collapsible-header">
-                <i class="material-icons">build</i>Third
+                <i class="material-icons">build</i><p class="elastic">dstatus</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *dstatus</strong>
+                  <br>Позволяет узнать статус дискорд серверов.
+                </span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.4s">
               <div class="collapsible-header">
-                <i class="material-icons">build</i>First
+                <i class="material-icons">build</i><p class="elastic">ffz</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *ffz [название эмодзи]</strong>
+                  <br><strong>Пример: *ffz thinking.</strong>
+                  <br>Позволяет достать кастомное эмодзи.
+                </span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.5s">
               <div class="collapsible-header">
-                <i class="material-icons">build</i>Second
+                <i class="material-icons">build</i><p class="elastic">viewers</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *viewers [ник на твиче]</strong>
+                  <br><strong>Пример: *viewers sakura</strong>
+                  <br>Позволяет узнать статистику просмотров на стриме Twitch
+                </span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.6s">
               <div class="collapsible-header">
-                <i class="material-icons">build</i>Third
+                <i class="material-icons">build</i><p class="elastic">uptime</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *uptime [ник на твиче]</strong>
+                  <br><strong>Пример: *uptime sakura</strong>
+                  <br>Позволяет узнать какдолго идёт стрим на Twitch
+                </span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.7s">
               <div class="collapsible-header">
-                <i class="material-icons">build</i>First
+                <i class="material-icons">build</i><p class="elastic">msgs</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *msgs [текст для голосования 2 варианта]</strong>
+                  <br><strong>Пример: *msgs яблоки апельсины</strong>
+                  <br>Запускает голосование в чате.
+                </span>
               </div>
             </li>
             <li class="wow fadeInUp" data-wow-delay="0.8s">
               <div class="collapsible-header">
-                <i class="material-icons">build</i>Second
+                <i class="material-icons">build</i><p class="elastic">reactions</p>
               </div>
               <div class="collapsible-body">
-                <span>Lorem ipsum dolor sit amet.</span>
+                <span><strong>Использование: *reactions [текст для голосования 2 варианта]</strong>
+                  <br><strong>Пример: *reactions яблоки апельсины</strong>
+                  <br>Запускает голосование по реакциям.
+                </span>
               </div>
             </li>
           </ul>

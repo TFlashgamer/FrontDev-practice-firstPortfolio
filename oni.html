@@ -39,6 +39,19 @@
       new WOW().init();
     </script>
 
+ <!-- * Прелоадер -->
+ <div class="preloader">
+  <div class="preloader__row">
+<img class="preloader-image" src="src/oni/logo.png">
+  </div>
+  <p class="wow fadeInDown preload-text" data-wow-delay="1s">Привет!</p>
+    <p class="wow fadeInDown preload-text" data-wow-delay="1.5s">Загрузка страницы займёт немного времени.</p>
+    <p class="wow fadeInDown preload-text" data-wow-delay="2s">Подождите немного, пожалуйтса</p>
+</div>
+<!-- * Привязка скрипта для прелоадера -->
+
+<script src="js/loading.js"></script>
+
 
     <!-- * Структура для выпадающего меню на навбаре-->
     <ul id="dropdown1" class="dropdown-content">
@@ -135,22 +148,6 @@
               data-wow-delay="1.1s">
                 <i class="material-icons left">get_app</i>Скачать исходник</a>
 
-
-              <!-- * Мадальное окно "Предупреждение о бете" -->
-              <div id="startmodal" class="modal">
-                <div class="modal-content">
-                  <h4>Хей-хей, привет!</h4>
-                  <p>Сайт ещё разрабатывается и не готов к использованию.
-                    <br>Это значит что здесь Вы ничего толкового не найдёте и бота добавить не сможете.
-                    <br>Сайт будет готов примерно 05.08.2020
-                    <br>Если же Вам просто интересно и Вы хотите посмотреть на сайт нажмите на кнопку</p>
-                </div>
-                <div class="modal-footer">
-                  <a href="#" 
-                  class="modal-close waves-effect waves-black btn-flat modal-trigger">Ясненько</a>
-                </div>
-              </div>
-
               <!-- * Модальное окно "Пользовательское соглашение" -->
               <div id="modal1" class="modal modal-fixed-footer">
 
@@ -226,17 +223,6 @@
                 </div>
               </div>
        
-              <!-- * Скрипт для запуска модального окна при запуске страницы -->
-<script>
-  $(document).ready(function(){
-      $('#startmodal').modal();
-      $(document).ready(function(){
-          $('#startmodal').modal('open');
-      });
-});
-</script>
-
-
   <!-- * Модальное окно "Выберите бота" -->
   <div id="modal2" class="modal bottom-sheet">
     <div class="modal-content left-align">
