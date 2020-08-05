@@ -18,8 +18,8 @@
 - Додаткова робота
 - Тема: "Сайт для Discord бота"
 - Використано: HTML, CSS, JS, Framework: Materialize
-- Робота закінчена на 75%
+- Робота закінчена на 100%
 
 [![Build Status](http://img.shields.io/travis/badges/badgerbadgerbadger.svg?style=flat-square)](https://travis-ci.org/badges/badgerbadgerbadger)
-
+[![Done](http://img.shields.io/coveralls/badges/badgerbadgerbadger.svg?style=flat-square)](https://coveralls.io/r/badges/badgerbadgerbadger)
 
