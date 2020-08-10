@@ -9,6 +9,7 @@
   />
 
   <!-- * Привязка стилей -->
+
     <link rel="stylesheet" type="text/css" href="css/animate.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link
@@ -24,16 +25,19 @@
     <script>
       new WOW().init();
     </script>
+
     <title>TSlash</title>
 
   </head>
 
-  <body data-vide-bg="src/portfolio/particle" data-vide-options="loop: true, muted: true">
+  <body>
 
     <!-- * Курсор -->
+    <!-- ! С фоном лагает
     <div class='cursor' id="cursor"></div>
     <div class='cursor2' id="cursor2"></div>
     <div class='cursor3' id="cursor3"></div>
+-->
 
     <!-- * Прелоадер -->
     <div class="preloader">
@@ -134,12 +138,42 @@
     <main>
       <!-- * Секция "about"  -->
       <section id="about" class="about">
-        <h1 class="about-heading" text="aboutheading">
-          Добро пожаловать! Я /TSlash
-        </h1>
-        <p class="about-description" text="aboutdescription">
-          Я занимаюсь FrontEnd разработкой и так же серверной частью на node.js
-        </p>
+        <!-- * particles.js Фон -->
+<div id="particles-js">
+  <script src="js/particles.min.js"></script>
+<script src="js/app.js"></script>
+    <div class="text-container">
+     <h1 class="wow fadeInDown about-heading" text="aboutheading" data-wow-delay="1s">
+      Добро пожаловать! Я /TSlash
+    </h1>
+    <p class="wow fadeInDown about-description" text="aboutdescription" data-wow-delay="2s">
+      Я занимаюсь FrontEnd разработкой и так же серверной частью на node.js
+    </p>
+  </div>
+</div>
+      <script>
+        var count_particles, stats, update;
+        stats = new Stats();
+        stats.setMode(0);
+        stats.domElement.style.position = "absolute";
+        stats.domElement.style.left = "0px";
+        stats.domElement.style.top = "0px";
+        document.body.appendChild(stats.domElement);
+        count_particles = document.querySelector(".js-count-particles");
+        update = function () {
+          stats.begin();
+          stats.end();
+          if (
+            window.pJSDom[0].pJS.particles &&
+            window.pJSDom[0].pJS.particles.array
+          ) {
+            count_particles.innerText =
+              window.pJSDom[0].pJS.particles.array.length;
+          }
+          requestAnimationFrame(update);
+        };
+        requestAnimationFrame(update);
+      </script>
       </section>
 
        <!-- * Секция "projects"  -->
@@ -280,8 +314,9 @@
       </section>
       
       <!-- * Привязка скрипта для курсора -->
+      <!--  ! Лагет с включённым фоном
       <script src="js/cursor.js"></script>
-
+-->
     </main>
 
 <!-- * Футер -->
