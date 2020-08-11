@@ -12,6 +12,9 @@
     <script src="js/wow.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script src="js/jquery.vide.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <title text="allprojecttitle">Все работы</title>
   </head>
 
@@ -40,15 +43,15 @@
           ☰
         </div>
         <div class="spacer"></div>
-        <a class="item hover-target" href="index.html">
+        <a class="menu-item hover-target" href="index.html">
             <span text="allprojectmenumain">Головна</span></a>
           <a
-            class="item hover-target"
+            class="menu-item hover-target"
             href="https://github.com/TFlashgamer?tab=overview&from=2020-06-01&to=2020-06-30"
             ><span>GitHub</span></a>
-          <a class="item hover-target" href="oni.html"><span>Discord bot</span></a>
+          <a class="menu-item hover-target" href="oni.html"><span>Discord bot</span></a>
         <script src="js/languages.js"></script>
-        <a class="item hover-target">
+        <a class="menu-item hover-target">
           <input id="lang" type="checkbox" onclick="changeLagnuage()" />
           <label for="lang" class="rus" id="langanimation"
             ><span>Текущий язык: RUS</span></label
@@ -61,93 +64,226 @@
       </div>
     <main>
 
-      <section id="projects" class="projects">
-        <div class="project-container">
-          <script>
-            new WOW().init();
-          </script>
-          <h2 class="wow fadeInLeft project-heading" data-wow-delay="2s" text="allprojectheading">
-            Все мои работы
-          </h2>
-        </div>
+      <section id="projects" class="wow fadeIn allproject-projects" data-wow-delay="5s">
         <div class="project-grid">
-          <!-- * FrontDev1 -->
-          <a class="wow fadeInLeft project hover-target" data-wow-delay="1s" href="projects/FrontDev1/index.html" >
-            <img
-              class="project-image"
-              src="src/portfolio/job/job1.png"
-              alt="Сайт предназначен кому то"
-            />
 
-            <p class="project-title" text="projecttitle1">
-              Сайт предназначен кому то
-            </p>
-            <span class="code1" text="code1"><</span>
-            <span class="code2" text="code2">/></span>
-          </a>
-          <!-- * FrontDev2 -->
-          <a class="wow fadeInLeft project hover-target" data-wow-delay="1.2s" href="projects/FrontDev2/index.html">
-            <img
-              class="project-image"
-              src="src/portfolio/job/job2.png"
-              alt="Сайт с опросом"
-            />
-
-            <p class="project-title" text="projecttitle2">
-              Сайт с опросом
-            </p>
-            <span class="code1" text="code1"><</span>
-            <span class="code2" text="code2">/></span>
-          </a>
-          <!-- * FrontDev3 -->
-          <a class="wow fadeInLeft project hover-target" data-wow-delay="1.4s" href="projects/FrontDev3/index.html">
-            <img
-              class="project-image"
-              src="src/portfolio/job/job3.png"
-              alt="Сайт лендинг для продаж продуктов"
-            />
-
-            <p class="project-title" text="projecttitle3">
-              Сайт лендинг для продаж продуктов
-            </p>
-            <span class="code1" text="code1"><</span>
-            <span class="code2" text="code2">/></span>
-          </a>
-          <!-- * FrontDev4 -->
-          <a class="wow fadeInLeft project hover-target" data-wow-delay="1.6s" href="projects/FrontDev4/index.html">
-            <img class="project-image" src="src/portfolio/job/job4.png" alt="Сайт справка" />
-
-            <p class="project-title" text="projecttitle4">
-              Сайт справка
-            </p>
-            <span class="code1" text="code1"><</span>
-            <span class="code2" text="code2">/></span>
-          </a>
-          <!-- * Discord Bot -->
-          <a class="wow fadeInLeft project hover-target" data-wow-delay="1.8s" href="oni.html">
-            <img
-              class="project-image"
-              src="src/portfolio/bot.jpg"
-              alt="Oni діскорд бот"
-            />
-
-            <p class="project-title" text="projecttitle5">
-              Oni Discord бот
-            </p>
-            <span class="code1" text="code1"><</span>
-            <span class="code2" text="code2">/></span>
-          </a>
-          <!-- * Soon -->
-          <a class="wow fadeInLeft project hover-target" data-wow-delay="2s" href="wrongway.html">
-            <img class="project-image" src="src/portfolio/job/soon.jpg" alt="Скоро..." />
-
-            <p class="project-title" text="projecttitle6">
-              В ближайшее время здесь будут новые работы...
-            </p>
-            <span class="code1" text="code1"><</span>
-            <span class="code2" text="code2">/></span>
-          </a>
-        </div>
+          <!--? testing -->
+          <div class="portfolio-container">
+          <div class="items">
+            <div class="wow fadeInUp item"
+            data-wow-delay="5.1s"
+             onclick="location.href='projects/FrontDev1/index.html';">
+              <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+                <defs>
+                  <clipPath id="clip-0">
+                    <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+                  </clipPath>
+                </defs>
+                <text text="projecttitle1" class="svg-text" dy=".3em" x="50%" y="50%">
+                 Сайт предназначен кому то 
+                </text>
+                <g clip-path="url(#clip-0)">
+                  <image
+                  class="portfolio-image"
+                    height="110%"
+                    preserveAspectRatio="xMinYMin slice"
+                    width="100%"
+                    xlink:href="src/portfolio/job/job1.png"
+                  ></image>
+                  <text text="projecttitle1" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+                    Сайт предназначен кому то
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <div class="wow fadeInUp item"
+            data-wow-delay="5.2s"
+            onclick="location.href='projects/FrontDev2/index.html';">
+              <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+                <defs>
+                  <clipPath id="clip-1">
+                    <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+                  </clipPath>
+                </defs>
+                <text text="projecttitle2" class="svg-text" dy=".3em" x="50%" y="50%">
+                  Сайт с опросом
+                </text>
+                <g clip-path="url(#clip-1)">
+                  <image
+                  class="portfolio-image"
+                    height="110%"
+                    preserveAspectRatio="xMinYMin slice"
+                    width="100%"
+                    xlink:href="src/portfolio/job/job2.png"
+                  ></image>
+                  <text text="projecttitle2" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+                    Сайт с опросом
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <div class="wow fadeInUp item"
+            data-wow-delay="5.3s"
+            onclick="location.href='projects/FrontDev3/index.html';">
+              <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+                <defs>
+                  <clipPath id="clip-2">
+                    <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+                  </clipPath>
+                </defs>
+                <text text="projecttitle3" class="svg-text" dy=".3em" x="50%" y="50%">
+                  Сайт лендинг для продаж продуктов
+                </text>
+                <g clip-path="url(#clip-2)">
+                  <image
+                  class="portfolio-image"
+                    height="110%"
+                    preserveAspectRatio="xMinYMin slice"
+                    width="100%"
+                    xlink:href="src/portfolio/job/job3.png"
+                  ></image>
+                  <text text="projecttitle3" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+                    Сайт лендинг для продаж продуктов
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <div class="wow fadeInUp item"
+            data-wow-delay="5.4s"
+            onclick="location.href='projects/FrontDev4/index.html';">
+              <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+                <defs>
+                  <clipPath id="clip-3">
+                    <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+                  </clipPath>
+                </defs>
+                <text text="projecttitle4" class="svg-text" dy=".3em" x="50%" y="50%">
+                  Сайт справка
+                </text>
+                <g clip-path="url(#clip-3)">
+                  <image
+                  class="portfolio-image"
+                    height="110%"
+                    preserveAspectRatio="xMinYMin slice"
+                    width="100%"
+                    xlink:href="src/portfolio/job/job4.png"
+                  ></image>
+                  <text text="projecttitle4" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+                    Сайт справка
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <div class="wow fadeInUp item"
+            data-wow-delay="5.5s"
+            onclick="location.href='oni.html';">
+              <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+                <defs>
+                  <clipPath id="clip-4">
+                    <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+                  </clipPath>
+                </defs>
+                <text text="projecttitle5" class="svg-text" dy=".3em" x="50%" y="50%">
+                  Oni Discord бот
+                </text>
+                <g clip-path="url(#clip-4)">
+                  <image
+                  class="portfolio-image"
+                    height="110%"
+                    preserveAspectRatio="xMinYMin slice"
+                    width="100%"
+                    xlink:href="src/portfolio/bot.jpg"
+                  ></image>
+                  <text text="projecttitle5" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+                  Oni Discord бот
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <div class="wow fadeInUp item"
+            data-wow-delay="5.6s"
+            onclick="location.href='wrongway.html';">
+              <svg preserveAspectRatio="xMidYMid slice" viewBox="0 0 300 200">
+                <defs>
+                  <clipPath id="clip-5">
+                    <circle cx="0" cy="0" fill="#000" r="150px"></circle>
+                  </clipPath>
+                </defs>
+                <text text="projecttitle6" class="svg-text" dy=".3em" x="50%" y="50%">
+                  Скоро...
+                </text>
+                <g clip-path="url(#clip-5)">
+                  <image
+                  class="portfolio-image"
+                    height="110%"
+                    preserveAspectRatio="xMinYMin slice"
+                    width="100%"
+                    xlink:href="src/portfolio/job/soon.jpg"
+                  ></image>
+                  <text text="projecttitle6" class="svg-masked-text" dy=".3em" x="50%" y="50%">
+                    Скоро...
+                  </text>
+                </g>
+              </svg>
+            </div>
+           </div>
+          
+                  </div>
+                    <script id="rendered-js">
+                      /*
+                       * Noel Delgado | @pixelia_me
+                       */
+                    
+                      var items = [],
+                        point = document.querySelector("svg").createSVGPoint();
+                    
+                      function getCoordinates(e, svg) {
+                        point.x = e.clientX;
+                        point.y = e.clientY;
+                        return point.matrixTransform(svg.getScreenCTM().inverse());
+                      }
+                    
+                      function changeColor(e) {
+                        document.body.className = e.currentTarget.className;
+                      }
+                    
+                      function Item(config) {
+                        Object.keys(config).forEach(function (item) {
+                          this[item] = config[item];
+                        }, this);
+                        this.el.addEventListener("mousemove", this.mouseMoveHandler.bind(this));
+                      }
+                    
+                      Item.prototype = {
+                        update: function update(c) {
+                          this.clip.setAttribute("cx", c.x);
+                          this.clip.setAttribute("cy", c.y);
+                        },
+                        mouseMoveHandler: function mouseMoveHandler(e) {
+                          this.update(getCoordinates(e, this.svg));
+                        }
+                      };
+                    
+                      [].slice
+                        .call(document.querySelectorAll(".item"), 0)
+                        .forEach(function (item, index) {
+                          items.push(
+                            new Item({
+                              el: item,
+                              svg: item.querySelector("svg"),
+                              clip: document.querySelector("#clip-" + index + " circle"),
+                            })
+                          );
+                        });
+                    
+                      [].slice
+                        .call(document.querySelectorAll("button"), 0)
+                        .forEach(function (button) {
+                          button.addEventListener("click", changeColor);
+                        });
+                        
+                      //# sourceURL=pen.js
+                    </script>
  </section>
  <script src="js/cursor.js"></script>
     </main>
