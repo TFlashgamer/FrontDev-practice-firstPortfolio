@@ -147,6 +147,8 @@ label[for="lang"] {
 /* ? Новое меню
 ?================================================== */
 .menu {
+  position: relative;
+  z-index: 1000;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.8);
   display: inline-block;
@@ -181,8 +183,9 @@ label[for="lang"] {
   transition: width 0.25s ease;
   transition-delay: 0.7s;
 }
-.item {
+.menu-item {
   position: relative;
+  z-index: 1000;
   margin-right: 30px;
   top: 10px;
   opacity: 0;
@@ -203,8 +206,8 @@ span {
   transition: color 0.5s ease;
 }
 
-.item:hover span {
-  color: rgb(113, 94, 121);
+.menu-item:hover span {
+  color: #545a64;
 }
 
 .menu-link {
@@ -215,68 +218,68 @@ span {
   width: 100%;
   transition-delay: 0s;
 }
-.menu:hover .item {
+.menu:hover .menu-item {
   opacity: 1;
   top: 0px;
 }
-.item:nth-child(1) {
+.menu-item:nth-child(1) {
   transition-delay: 0.45s;
 }
-.item:nth-child(2) {
+.menu-item:nth-child(2) {
   transition-delay: 0.4s;
 }
-.item:nth-child(3) {
+.menu-item:nth-child(3) {
   transition-delay: 0.35s;
 }
-.item:nth-child(4) {
+.menu-item:nth-child(4) {
   transition-delay: 0.3s;
 }
-.item:nth-child(5) {
+.menu-item:nth-child(5) {
   transition-delay: 0.25s;
 }
-.item:nth-child(6) {
+.menu-item:nth-child(6) {
   transition-delay: 0.2s;
 }
-.item:nth-child(7) {
+.menu-item:nth-child(7) {
   transition-delay: 0.15s;
 }
-.item:nth-child(8) {
+.menu-item:nth-child(8) {
   transition-delay: 0.1s;
 }
-.item:nth-child(9) {
+.menu-item:nth-child(9) {
   transition-delay: 0.05s;
 }
-.item:nth-child(10) {
+.menu-item:nth-child(10) {
   transition-delay: 0s;
 }
-.menu:hover .item:nth-child(1) {
+.menu:hover .menu-item:nth-child(1) {
   transition-delay: 0.25s;
 }
-.menu:hover .item:nth-child(2) {
+.menu:hover .menu-item:nth-child(2) {
   transition-delay: 0.3s;
 }
-.menu:hover .item:nth-child(3) {
+.menu:hover .menu-item:nth-child(3) {
   transition-delay: 0.35s;
 }
-.menu:hover .item:nth-child(4) {
+.menu:hover .menu-item:nth-child(4) {
   transition-delay: 0.4s;
 }
-.menu:hover .item:nth-child(5) {
+.menu:hover .menu-item:nth-child(5) {
   transition-delay: 0.45s;
 }
-.menu:hover .item:nth-child(6) {
+.menu:hover .menu-item:nth-child(6) {
   transition-delay: 0.5s;
 }
-.menu:hover .item:nth-child(7) {
+.menu:hover .menu-item:nth-child(7) {
   transition-delay: 0.55s;
 }
-.menu:hover .item:nth-child(8) {
+.menu:hover .menu-item:nth-child(8) {
   transition-delay: 0.6s;
 }
-.menu:hover .item:nth-child(9) {
+.menu:hover .menu-item:nth-child(9) {
   transition-delay: 0.65s;
 }
-.menu:hover .item:nth-child(10) {
+.menu:hover .menu-item:nth-child(10) {
   transition-delay: 0.7s;
 }
 
@@ -556,9 +559,9 @@ span {
   margin-left: auto;
   margin-right: auto;
   padding: 20px;
-  z-index: 100;
   text-align: center;
   width: 100%;
+  z-index: 1;
 }
 
 .about {
@@ -589,6 +592,109 @@ span {
 
 /* *Вторая секция "Портфолио"
 *================================================== */
+
+/* ? Тестовая часть
+?================================================== */
+
+a:hover {
+  opacity: 0.8;
+}
+
+.portfolio-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+svg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+circle {
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: -webkit-transform 200ms
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: -webkit-transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    -webkit-transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+text {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  text-anchor: middle;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.svg-text {
+  fill: #545a64;
+}
+
+.svg-masked-text {
+  fill: white;
+}
+
+.portfolio-image {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 200ms
+    cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: -webkit-transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94),
+    -webkit-transform 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.items {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  flex-flow: row wrap;
+  -webkit-box-pack: center;
+  justify-content: center;
+}
+
+.item {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  height: 200px;
+  margin: 5px;
+  cursor: pointer;
+  background-color: #1c1c1c;
+  border-radius: 2px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.02),
+    inset 0 0px 0px 1px rgba(0, 0, 0, 0.07);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: 0.4s ease-out;
+}
+
+.item:hover circle,
+.item:hover image {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/* * Стабильная часть */
+
 .projects {
   text-align: center;
   padding: 10rem 2rem;
@@ -631,10 +737,48 @@ span {
   content: "";
 }
 
+.allproject-projects {
+  text-align: center;
+  padding: 15rem 2rem;
+  margin: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 22, 22, 0.1) 0%,
+    rgba(24, 24, 24, 0.253) 3%,
+    rgba(24, 24, 24, 0.486) 6%,
+    rgba(24, 24, 24, 0.637) 9%,
+    rgba(24, 24, 24, 0.7) 10%,
+    rgba(24, 24, 24, 0.719) 20%,
+    rgba(24, 24, 24, 0.74) 30%,
+    rgba(24, 24, 24, 0.76) 40%,
+    rgba(24, 24, 24, 0.788) 50%,
+    rgba(24, 24, 24, 0.795) 60%,
+    rgba(24, 24, 24, 0.801) 70%,
+    rgba(24, 24, 24, 0.856) 80%,
+    rgba(24, 24, 24, 0.918) 90%,
+    rgb(24, 24, 24) 100%
+  );
+  background: -moz-linear-gradient(
+    to bottom,
+    rgba(22, 22, 22, 0.1) 0%,
+    rgba(24, 24, 24, 0.253) 3%,
+    rgba(24, 24, 24, 0.486) 6%,
+    rgba(24, 24, 24, 0.637) 9%,
+    rgba(24, 24, 24, 0.7) 10%,
+    rgba(24, 24, 24, 0.719) 20%,
+    rgba(24, 24, 24, 0.74) 30%,
+    rgba(24, 24, 24, 0.76) 40%,
+    rgba(24, 24, 24, 0.788) 50%,
+    rgba(24, 24, 24, 0.795) 60%,
+    rgba(24, 24, 24, 0.801) 70%,
+    rgba(24, 24, 24, 0.856) 80%,
+    rgba(24, 24, 24, 0.918) 90%,
+    rgb(24, 24, 24) 100%
+  );
+  content: "";
+}
+
 .project-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 4rem;
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -654,6 +798,7 @@ span {
   height: calc(100% - 6.8rem);
   width: 100%;
   object-fit: cover;
+  border-radius: 3px;
 }
 
 .project-title {
@@ -666,16 +811,17 @@ span {
 
 .project-button {
   font-size: 2rem;
-  background: rgb(255, 255, 255);
+  background: #1c1c1c;
   display: inline-block;
   padding: 1rem 2rem;
   border-radius: 2px;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: #545a64;
   font-family: "Comfortaa", cursive;
+  margin: 10px;
 }
 
-.project:hover {
+.item:hover {
   transform: translateY(8px);
   transition: 0.4s ease-out;
 }
@@ -701,6 +847,7 @@ span {
   max-width: 640px;
   margin: 0 auto 6rem auto;
   font-family: "Comfortaa", cursive;
+  color: #545a64;
 }
 
 .code1 {
@@ -794,7 +941,7 @@ footer {
   display: flex;
   justify-content: space-evenly;
   background: rgb(31, 31, 31);
-  border-top: 4px solid rgb(113, 94, 121);
+  border-top: 4px solid #545a64;
 }
 
 .footer-text {
@@ -903,21 +1050,21 @@ footer {
 }
 
 @media screen and (min-width: 700px) {
-  .item {
+  .menu-item {
     display: inline-block;
     background: rgba(24, 24, 24, 0.6);
   }
 }
 
 @media screen and (min-width: 600px) and (max-width: 699px) {
-  .item {
+  .menu-item {
     display: inline-block;
     background: rgba(24, 24, 24, 0.6);
   }
 }
 
 @media screen and (min-width: 500px) and (max-width: 599px) {
-  .item {
+  .menu-item {
     display: block;
     text-align: center;
     background: rgba(24, 24, 24, 0.9);
@@ -925,7 +1072,7 @@ footer {
 }
 
 @media screen and (min-width: 300px) and (max-width: 499px) {
-  .item {
+  .menu-item {
     display: block;
     background: rgba(24, 24, 24, 0.9);
     text-align: center;
