@@ -25,14 +25,18 @@
 <div class='cursor2' id="cursor2"></div>
 <div class='cursor3' id="cursor3"></div>
 
-    <!-- * Прелоадер -->
-    <div class="preloader">
-      <div class="preloader__row">
-        <div class="preloader__item"></div>
-        <div class="preloader__item"></div>
-      </div>
+   <!-- * Прелоадер -->
+   <div class="preloader">
+    <div class="preloader__row">
+      <div class="preloader__item"></div>
+      <div class="preloader__item"></div>
     </div>
-    <script src="js/loading.js"></script>
+    <p class="wow fadeInDown preload-text" data-wow-delay="1s">Привет!</p>
+      <p class="wow fadeInDown preload-text" data-wow-delay="1.5s">Если Вы здесь впервые</p>
+      <p class="wow fadeInDown preload-text" data-wow-delay="2s">Тогда загрузка займёт немного времени</p>
+  </div>
+<!-- * Привязка скрипта для прелоадера -->
+  <script src="js/loading.js"></script>
     <header>
       <div class="menu">
         <div
@@ -69,6 +73,9 @@
 
           <!--? testing -->
           <div class="portfolio-container">
+            <h1 class="wow fadeInUp allproject-heading"
+            data-wow-delay="5.1s"
+             text="allprojectheading">Все мои работы</h1>
           <div class="items">
             <div class="wow fadeInUp item"
             data-wow-delay="5.1s"
@@ -284,6 +291,17 @@
                         
                       //# sourceURL=pen.js
                     </script>
+                    <button class="wow fadeInUp infoButton" data-wow-delay="6s">
+                      <div class="infoButton-btn">
+                          <span class="infoButton-btn-text">i</span>
+                      </div>
+                      <div class="infoButton-container">
+                          <div class="infoButton-container-message">Как Вы можете заметить, здесь довольно мало работ.
+                            <br>Это портфолио только недавно создано и в ближайшее время здесь будет больше работ.
+                            <br>Как только будет новая работа, она появится здесь.</div>
+                      </div>
+                  </button>
+                  <script src="js/tooltip.js"></script>
  </section>
  <script src="js/cursor.js"></script>
     </main>
