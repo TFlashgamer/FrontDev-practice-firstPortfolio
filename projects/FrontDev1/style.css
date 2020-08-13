@@ -2,6 +2,47 @@
   outline: 0;
 }
 
+.navigations {
+  margin: 0px;
+  z-index: 2;
+  position: fixed;
+  top: 92%;
+  left: 0;
+}
+
+.back,
+.view {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 15px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: #e2e2e2;
+  background: rgb(37, 37, 37);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  border: rgb(37, 37, 37);
+  cursor: pointer;
+}
+
+.back:hover,
+.view:hover {
+  background: #ffffff;
+  box-shadow: 0 15px 20px rgba(255, 255, 255, 0.4);
+  color: rgb(0, 0, 0);
+  border: #ffffff;
+  transform: translateY(-7px);
+}
+
 header {
   text-align: center;
 }
