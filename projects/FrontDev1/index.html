@@ -2,39 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Elon Musk</title>
   </head>
 
   <body>
-    <div type="navigations" class="navigations" id="navigations">
-      <script>
-        navigations.onclick = function () {
-          navigations.classList.add("navigations-active");
-        };
-      </script>
-
-      <script>
-        function goBack() {
-          window.history.back();
-        }
-      </script>
-
-      <button onclick="goBack()" class="back">
-        Назад
-      </button>
-      <button
-        onclick="location.href='https://github.com/TFlashgamer/FrontDev-practice1';"
-        class="view"
-      >
-        github
-      </button>
-    </div>
-
     <div id="square">
       <!-- * За допомогою div робимо невеликий квадратний блок(фон) для хедеру -->
       <header>
@@ -50,7 +23,13 @@
     <main>
       <!-- * Додаємо на сторінку зображення з надписом -->
       <figure class="fig">
-        <img src="src/musk.jpg" width="1380" height="720" alt="Elon Musk" />
+        <img
+          class="figure-image"
+          src="src/musk.jpg"
+          width="1380"
+          height="720"
+          alt="Elon Musk"
+        />
         <!-- * Сам надпис під зображенням -->
         <figcaption>
           Ілон Маск проти ЗМІ. 2020 рік.
