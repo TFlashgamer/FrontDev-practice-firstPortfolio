@@ -1,7 +1,4 @@
-@import url(
-  https://fonts.googleapis.com/css?family=Roboto + Slab|PT + Sans + Caption&subset=latin,
-  cyrillic
-);
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab|PT+Sans+Caption&subset=latin,cyrillic");
 
 .navigations {
   margin: 0px;
@@ -180,4 +177,14 @@ main {
 .attention-text {
   color: #000000;
   text-align: center;
+}
+
+section {
+  margin: 15px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
 }
