@@ -109,10 +109,7 @@ $(document).ready(function () {
       prune: null,
       send: null,
       serverinfo: null,
-      userinfo: null,
-      /* ghtrjk
-================================================== */
-     
+      userinfo: null,     
     },
   });
 });
